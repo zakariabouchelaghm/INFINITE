@@ -1,0 +1,421 @@
+﻿<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Jumeirah Villa | INFINITE Holistic Architecture</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed": "#380c0c",
+                        "secondary-container": "#ece1d1",
+                        "on-secondary-fixed": "#201b11",
+                        "on-tertiary-fixed": "#291801",
+                        "surface-variant": "#efdfdf",
+                        "outline": "#857372",
+                        "on-error": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "tertiary": "#0f0600",
+                        "secondary": "#655d51",
+                        "primary-container": "#3e1010",
+                        "background": "#fff8f7",
+                        "primary-fixed": "#ffdad7",
+                        "on-tertiary-container": "#9f8260",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-container": "#6b6357",
+                        "surface-container": "#faeaea",
+                        "primary-fixed-dim": "#ffb3af",
+                        "primary": "#1b0001",
+                        "outline-variant": "#d7c2c0",
+                        "on-error-container": "#93000a",
+                        "on-primary-fixed-variant": "#6f3634",
+                        "surface-container-low": "#fff0f0",
+                        "surface-dim": "#e6d6d6",
+                        "error-container": "#ffdad6",
+                        "on-primary-container": "#bb7471",
+                        "surface-container-lowest": "#ffffff",
+                        "surface": "#fff8f7",
+                        "on-surface": "#221a1a",
+                        "on-background": "#221a1a",
+                        "on-surface-variant": "#534342",
+                        "tertiary-fixed-dim": "#e2c19b",
+                        "surface-tint": "#8b4d4a",
+                        "surface-container-highest": "#efdfdf",
+                        "inverse-primary": "#ffb3af",
+                        "error": "#ba1a1a",
+                        "surface-container-high": "#f4e5e4",
+                        "tertiary-fixed": "#ffddb6",
+                        "secondary-fixed": "#ece1d1",
+                        "on-secondary-fixed-variant": "#4d463a",
+                        "on-tertiary-fixed-variant": "#594325",
+                        "tertiary-container": "#2e1c03",
+                        "surface-bright": "#fff8f7",
+                        "secondary-fixed-dim": "#d0c5b6",
+                        "on-tertiary": "#ffffff",
+                        "inverse-on-surface": "#fdeded",
+                        "inverse-surface": "#372e2e"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0px",
+                        "lg": "0px",
+                        "xl": "0px",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "margin-mobile": "20px",
+                        "unit": "8px",
+                        "container-max": "1280px",
+                        "margin-desktop": "64px"
+                    },
+                    "fontFamily": {
+                        "headline-lg-mobile": ["Libre Caslon Text"],
+                        "body-md": ["Manrope"],
+                        "body-lg": ["Manrope"],
+                        "headline-lg": ["Libre Caslon Text"],
+                        "display-lg": ["Libre Caslon Text"],
+                        "label-caps": ["Manrope"],
+                        "headline-md": ["Libre Caslon Text"]
+                    },
+                    "fontSize": {
+                        "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "400"}],
+                        "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                        "label-caps": ["12px", {"lineHeight": "1.4", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                        "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .reveal-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal-up.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        body {
+            background-color: #fff8f7; /* Surface */
+            color: #221a1a; /* On-Surface */
+            overflow-x: hidden;
+        }
+    </style>
+<style>
+/* ===== RESPONSIVE FIXES ===== */
+@media (max-width: 767px) {
+  .text-display-lg { font-size: clamp(28px,8vw,48px) !important; line-height: 1.2 !important; }
+  .text-headline-lg { font-size: clamp(22px,6vw,36px) !important; line-height: 1.25 !important; }
+  .text-headline-md { font-size: clamp(20px,5vw,28px) !important; }
+  [class*="px-margin-desktop"] { padding-left: 20px !important; padding-right: 20px !important; }
+  .py-stack-lg { padding-top: 64px !important; padding-bottom: 64px !important; }
+  .pt-40 { padding-top: 6rem !important; }
+  .mb-stack-lg { margin-bottom: 64px !important; }
+  .mt-stack-lg { margin-top: 64px !important; }
+  .gap-20 { gap: 2rem !important; }
+  .gap-16 { gap: 1.5rem !important; }
+  .p-12 { padding: 1.5rem !important; }
+  .py-32 { padding-top: 3rem !important; padding-bottom: 3rem !important; }
+  .py-24 { padding-top: 2rem !important; padding-bottom: 2rem !important; }
+  .mb-24 { margin-bottom: 2rem !important; }
+  .mb-20 { margin-bottom: 1.5rem !important; }
+  header.relative.min-h-screen { min-height: 70vh !important; }
+  .h-\[85vh\], .h-\[90vh\] { min-height: 55vh !important; height: auto !important; }
+}
+@media (max-width: 640px) {
+  .md\:col-span-5, .md\:col-span-7, .md\:col-span-4, .md\:col-span-8,
+  .md\:col-span-3, .md\:col-span-6, .md\:col-span-2, .md\:col-span-12 {
+    grid-column: span 1 / span 1 !important;
+  }
+  .md\:col-start-6, .md\:col-start-7 { grid-column-start: 1 !important; }
+  .lg\:grid-cols-4 { grid-template-columns: 1fr 1fr !important; }
+  .md\:grid-cols-3 { grid-template-columns: 1fr !important; }
+  .md\:grid-cols-2 { grid-template-columns: 1fr !important; }
+  .md\:grid-cols-12 { grid-template-columns: 1fr !important; }
+  .order-2 { order: 2 !important; }
+  .order-1 { order: 1 !important; }
+  .text-right { text-align: left !important; }
+  .md\:text-right { text-align: left !important; }
+  .sticky.top-40 { position: static !important; }
+  .h-\[80vh\] { height: 50vh !important; }
+  .md\:h-\[600px\] { height: auto !important; }
+  .aspect-\[21\/9\] { aspect-ratio: 16/9 !important; }
+  .md\:pr-16, .md\:pl-16 { padding: 0 !important; }
+}
+</style></head>
+<body class="font-body-md text-body-md">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md transition-all duration-400 ease-in-out border-b border-primary/5">
+<div class="flex justify-between items-center px-margin-desktop py-4 w-full max-w-container-max mx-auto">
+<div class="flex items-center gap-4">
+<img alt="INFINITE Logo" class="h-12 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFmiThjT4IX5GBC37a5q4tnUK9zzxK6_JkuDxJlow9VCgFnpBaB5E2h0incMlvmJIYaYzZcUIv82iRJh4oX5G7Q2HRNWyWddgJZG4E9LBWVvdWIMfWvhO8XLJSRMF7Ve0mguEYoJQgZ2y2tm6JRKI0GoutKDlcHP7MJVi9RO9z2ScAfbtGuAAMzFzSrhYHZItxVD3FcpaCUUxM5tATUVpS0_ZRcMipvUIuT2qKzWQrt_Bz0FeuR_DsNMzMabQpcAQySOw"/>
+<span class="font-headline-md text-headline-md tracking-tighter text-primary">INFINITE</span>
+</div>
+<div class="hidden md:flex gap-10 items-center">
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-400 ease-in-out uppercase" href="index.html">Home</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-400 ease-in-out uppercase" href="approach.html">Approach</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-400 ease-in-out uppercase" href="journey.html">Journey</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-400 ease-in-out uppercase" href="services.html">Services</a>
+<a class="font-label-caps text-label-caps text-primary border-b-2 border-primary pb-1 transition-colors duration-400 ease-in-out uppercase" href="projects.html">Projects</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-400 ease-in-out uppercase" href="services.html#contact">Contact</a>
+</div>
+<button id="mobile-hamburger" class="md:hidden flex flex-col justify-center items-center gap-[5px] p-1 cursor-pointer border-none bg-transparent" aria-label="Open navigation menu" style="z-index:200;">
+  <span style="display:block;width:24px;height:2px;background:#3e1010;transition:all .3s;"></span>
+  <span style="display:block;width:24px;height:2px;background:#3e1010;transition:all .3s;"></span>
+  <span style="display:block;width:24px;height:2px;background:#3e1010;transition:all .3s;"></span>
+</button><a href="services.html#contact" style="text-decoration:none;"><button class="bg-primary text-on-primary px-8 py-3 font-label-caps text-label-caps uppercase tracking-widest transition-all duration-400 hover:opacity-90">
+            Inquire
+        </button></a>
+</div>
+</nav>
+<!-- Mobile Full-Screen Menu -->
+<div id="mobile-menu" style="display:none;position:fixed;inset:0;z-index:150;background:#fff8f7;flex-direction:column;align-items:center;justify-content:center;gap:2.5rem;" aria-hidden="true">
+  <button id="mobile-close" style="position:absolute;top:1.5rem;right:1.5rem;background:none;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;" aria-label="Close menu">
+    <span class="material-symbols-outlined" style="font-size:2rem;color:#3e1010;">close</span>
+  </button>
+  <a href="index.html" onclick="closeMobileMenu()" style="font-family:Manrope,sans-serif;font-size:13px;letter-spacing:0.15em;font-weight:600;color:#3e1010;text-transform:uppercase;text-decoration:none;">Home</a>
+  <a href="approach.html" onclick="closeMobileMenu()" style="font-family:Manrope,sans-serif;font-size:13px;letter-spacing:0.15em;font-weight:600;color:#3e1010;text-transform:uppercase;text-decoration:none;">Approach</a>
+  <a href="journey.html" onclick="closeMobileMenu()" style="font-family:Manrope,sans-serif;font-size:13px;letter-spacing:0.15em;font-weight:600;color:#3e1010;text-transform:uppercase;text-decoration:none;">Journey</a>
+  <a href="services.html" onclick="closeMobileMenu()" style="font-family:Manrope,sans-serif;font-size:13px;letter-spacing:0.15em;font-weight:600;color:#3e1010;text-transform:uppercase;text-decoration:none;">Services</a>
+  <a href="projects.html" onclick="closeMobileMenu()" style="font-family:Manrope,sans-serif;font-size:13px;letter-spacing:0.15em;font-weight:600;color:#3e1010;text-transform:uppercase;text-decoration:none;">Projects</a>
+  <a href="services.html#contact" onclick="closeMobileMenu()" style="font-family:Manrope,sans-serif;font-size:13px;letter-spacing:0.15em;font-weight:600;color:#3e1010;text-transform:uppercase;text-decoration:none;">Contact</a>
+  <a href="services.html#contact" style="background:#3e1010;color:#fff;padding:1rem 2.5rem;font-family:Manrope,sans-serif;font-size:12px;letter-spacing:0.2em;font-weight:600;text-transform:uppercase;text-decoration:none;margin-top:1rem;">Inquire</a>
+</div>
+<script>
+function openMobileMenu(){ var m=document.getElementById('mobile-menu'); if(m){m.style.display='flex';document.body.style.overflow='hidden';} }
+function closeMobileMenu(){ var m=document.getElementById('mobile-menu'); if(m){m.style.display='none';document.body.style.overflow='';} }
+(function(){
+  var btn=document.getElementById('mobile-hamburger');
+  var cls=document.getElementById('mobile-close');
+  if(btn) btn.addEventListener('click',openMobileMenu);
+  if(cls) cls.addEventListener('click',closeMobileMenu);
+})();
+</script>
+<!-- Hero Section -->
+<header class="relative w-full h-[90vh] flex items-end overflow-hidden">
+<img alt="Jumeirah Villa Exterior" class="absolute inset-0 w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLsPDDZHBRLEae4fSxWdnXQiJi_XzpW9o25C5O0fPhFAPZBQKtVePqyDre-1a1Cd_ejrYYKiR-8qFHqnQaCfR07DqYfgqJ8IsQsztTkGCuycwKAClTmzCFs6mujWXSdQDE-v7O5QHX2LVvAndlWrXCneez4VoImG_Hzw-ti2BJM0xOiWYM6k1OGpM6iGa94oCzlixye56IX-t1hluAE8qjPIDUBq9PKh4FM92BBJcD-nvOOHzT2cf36GVdhc"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+<div class="relative w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop pb-24 text-white">
+<div class="max-w-3xl">
+<p class="font-label-caps text-label-caps mb-4 tracking-[0.2em] uppercase">Private Residence | Jumeirah</p>
+<h1 class="font-display-lg text-headline-lg-mobile md:text-display-lg mb-6 leading-tight">Jumeirah Villa: A Coastal Sanctuary</h1>
+<p class="font-body-lg text-body-lg opacity-90 max-w-xl">Where Mediterranean tradition meets modern precision. A holistic study in light, texture, and the rhythm of the Arabian coast.</p>
+</div>
+</div>
+</header>
+<!-- Project Intro / Grid Layout -->
+<section class="py-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<div class="md:col-span-4 flex flex-col justify-center reveal-up">
+<h2 class="font-headline-lg text-headline-md mb-8 border-l-2 border-primary pl-6">The Narrative</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-6">
+                    Nestled in the heart of Jumeirah, this project redefines coastal luxury through a lens of minimalist architectural purity. The villa serves as a bridge between the intense desert sun and the cooling influence of the sea.
+                </p>
+<div class="flex flex-col gap-4 mt-8 border-t border-outline-variant/30 pt-8">
+<div>
+<span class="font-label-caps text-label-caps text-primary opacity-60">LOCATION</span>
+<p class="font-body-md text-body-md font-bold">Jumeirah, Dubai</p>
+</div>
+<div>
+<span class="font-label-caps text-label-caps text-primary opacity-60">AREA</span>
+<p class="font-body-md text-body-md font-bold">1,250 SQ.M</p>
+</div>
+<div>
+<span class="font-label-caps text-label-caps text-primary opacity-60">TYPE</span>
+<p class="font-body-md text-body-md font-bold">Holistic Fit-Out &amp; Architectural Design</p>
+</div>
+</div>
+</div>
+<div class="md:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<div class="reveal-up" style="transition-delay: 100ms;">
+<div class="aspect-[4/5] bg-surface-container-high relative overflow-hidden group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A detailed shot of white textured plaster walls of a modern villa in Jumeirah. The lighting is soft morning sunlight creating subtle shadows. Mediterranean flora like bougainvillea and olive branches are in the foreground, creating a serene, high-end architectural vibe. The color palette is dominated by cream, parchment, and deep greens." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCF5adlfWLh7qtA6ioEViHa6-kL8XQNZ07AfD7yiAeOGIhuSOZZoPlLDLgWZ5cSRkSQyt72uaGnckHFNsRJeA8WIknbTECjQ1NC1s-QLUy7sAHPdsD_qywG0IyoEQg0LdAO-77ya72vzuUP3gYQzBBKSZhLXkBc8tytiQf7fqddT7bhmh1luUpF1QG2CAnIYm27botrb1zknoaKRI3EgVy0RBpw9q89Ty33o8760-ml9Sn0Q44sab4QmA"/>
+</div>
+<p class="mt-4 font-label-caps text-[10px] tracking-widest text-on-surface-variant italic">TEXTURE &amp; FORM: REFINED WHITE PLASTER</p>
+</div>
+<div class="reveal-up mt-12 md:mt-24" style="transition-delay: 200ms;">
+<div class="aspect-[4/5] bg-surface-container-high relative overflow-hidden group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A luxury swimming pool reflecting a modern Mediterranean-style villa under a clear blue sky. The pool is lined with deep teal tiles and surrounded by cream-colored stone decking. Lush landscaping with palm trees and terracotta pots filled with pink flowers frames the view. The atmosphere is sophisticated, quiet, and exudes high-end Dubai living." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDY24oe7-Uccq2Hsb3ZbZdoTohqAD5b8o5GDEG5DZ6W5VNoWDkr26Y0zIlJQ1-782fKLFO0iWlljAa_QfOmwGSAEuGhwbQMqRv-1aSPRBv1ONqe0tEpfdYFgPgggsXQ3k0bkkQ0mK_0z_t1sUVcHlLWX-L56MdQF0KGQAX7JgGUtTVY7Nx-yS5yWh0x4IzsUc---Vcoe_wgojcxNwzY9WvjB6hJdIbutZVHEe1rEJn7FFqLXLC5EU7l0Q"/>
+</div>
+<p class="mt-4 font-label-caps text-[10px] tracking-widest text-on-surface-variant italic">AQUATIC RHYTHM: THE INFINITY PERIPHERY</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Human-Centric Planning -->
+<section class="bg-surface-container-low py-32 overflow-hidden">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex flex-col md:flex-row gap-gutter items-center">
+<div class="w-full md:w-1/2 reveal-up">
+<h3 class="font-label-caps text-label-caps text-primary mb-4">PHILOSOPHY</h3>
+<h2 class="font-display-lg text-headline-lg-mobile md:text-headline-lg mb-8">Human-Centric Planning</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-12">
+                        At INFINITE, we design for the human soul. Every corridor, transition, and void in the Jumeirah Villa has been calibrated to foster a sense of instinctive movement and effortless belonging. We prioritize the flow of natural light as a primary building material, ensuring that spaces breathe with the inhabitants.
+                    </p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary text-3xl">architecture</span>
+<div>
+<h4 class="font-body-md font-bold mb-2">Spatial Intelligence</h4>
+<p class="font-body-md text-on-surface-variant opacity-80">Optimized floorplans that prioritize privacy while maintaining openness.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary text-3xl">light_mode</span>
+<div>
+<h4 class="font-body-md font-bold mb-2">Solar Mapping</h4>
+<p class="font-body-md text-on-surface-variant opacity-80">Passive cooling techniques integrated into the structural shell.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="w-full md:w-1/2 relative h-[500px] mt-12 md:mt-0 reveal-up" style="transition-delay: 200ms;">
+<div class="absolute top-0 right-0 w-[80%] h-[90%] z-10 border border-outline-variant/50 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Modern architectural interior featuring an open-plan living room with floor-to-ceiling glass windows looking out to a Mediterranean garden. The floor is polished cream limestone, reflecting the soft sunlight. Minimalist furniture in beige and oak wood sits elegantly in the space. The mood is calm, intellectual, and extremely luxurious." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDRP58N63QUhSW0B0EulGRyezCFP1gSaSnQlVns67jT1seR2nslVW59-7y3ZeNrRfK8ok98UIHWX4yVs9UK77fvk6okaXQ4fqD6Fd3xOR9Tpt0pp4qwL80lDSBahfyDfB2mMKtf-tdmfCStmAEoNgeyuZ3AlAKppbgwdcD4h1kx2nrVd7zv6WYRm3VMiVezSyqRQza1hLsq2YsNexoFHgxEbvb2K5d6BdudL6bOizh6dgtK_IUOwBloA"/>
+</div>
+<div class="absolute bottom-0 left-0 w-[50%] h-[60%] z-20 border-4 border-surface shadow-xl overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A macro detail shot of high-quality architectural materials: a slice of travertine stone, a sample of light oak wood, and a piece of textured white plaster. The lighting is focused and warm, highlighting the tactile quality of the surfaces. The style is minimalist and architectural." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCD1In_xsTwhnUoHcPjvuFG33hpwKEdW5lqTbW3AbM7jKFyjTT6Mg5NBDrDLUnzDzqENbbFKoJtkFmeMsRgaDkPiFs5vEmFQiYTKAyoK6i6i9htJlwuVp57ctrIvB_mZZkY7sA32ibqcHUwxGRQZxnNulLfiyoCuSo2E7DhYC-PFAygWBj5PZDPyOaDX3Fl9yCug-OB1Wb-16m0Yek8DzODnHWvzzliOXIFXEuwuMXc60VKrluBXcS4Aw"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Sensory Design -->
+<section class="py-32 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto text-center">
+<div class="max-w-2xl mx-auto mb-20 reveal-up">
+<h2 class="font-display-lg text-headline-lg-mobile md:text-display-lg mb-6">Sensory Design</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                Architecture is not merely seen; it is felt. In this villa, the touch of textured walls, the sound of water features, and the scent of Mediterranean gardens are meticulously orchestrated to create a complete sensory environment.
+            </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter reveal-up" style="transition-delay: 150ms;">
+<div class="p-12 bg-white border border-outline-variant/10 group hover:bg-primary transition-all duration-500">
+<span class="material-symbols-outlined text-5xl text-primary group-hover:text-white transition-colors mb-6">air</span>
+<h4 class="font-headline-md text-headline-md mb-4 group-hover:text-white transition-colors">Atmospheric</h4>
+<p class="font-body-md text-on-surface-variant group-hover:text-white/80 transition-colors">Filtered air circulation and scent-mapping throughout the residence.</p>
+</div>
+<div class="p-12 bg-white border border-outline-variant/10 group hover:bg-primary transition-all duration-500 md:translate-y-8">
+<span class="material-symbols-outlined text-5xl text-primary group-hover:text-white transition-colors mb-6">layers</span>
+<h4 class="font-headline-md text-headline-md mb-4 group-hover:text-white transition-colors">Tactile</h4>
+<p class="font-body-md text-on-surface-variant group-hover:text-white/80 transition-colors">A curated selection of stone, timber, and fabrics that invite interaction.</p>
+</div>
+<div class="p-12 bg-white border border-outline-variant/10 group hover:bg-primary transition-all duration-500">
+<span class="material-symbols-outlined text-5xl text-primary group-hover:text-white transition-colors mb-6">hearing</span>
+<h4 class="font-headline-md text-headline-md mb-4 group-hover:text-white transition-colors">Acoustic</h4>
+<p class="font-body-md text-on-surface-variant group-hover:text-white/80 transition-colors">Soft surfaces and strategic dampening to create a haven of silence.</p>
+</div>
+</div>
+</section>
+<!-- Large Scale Imagery Section -->
+<section class="w-full reveal-up">
+<div class="h-[70vh] w-full relative group">
+<img class="w-full h-full object-cover" data-alt="A panoramic view of a modern luxury villa in Jumeirah at twilight. The interior lights glow warmly through large glass panels, while the exterior architecture is bathed in soft blue hour light. The infinity pool in the foreground reflects the starry sky and the architectural lines of the house. Mediterranean landscaping surrounds the property." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPGd3rQ958YY3FBx6x7UpUU3EXuuo3_DpYdXzWZP90X3NSM7x8tn6CLUEYPbVb2-lKxrdBZiiJZGG1A87m1XBT1OQiGcFZWDC3fD9Cu54_PYCEjg_FT0hFWAROJZEYQvcdPeeeqSO8hzOroqUDjN0si3sWTKkngDITdnkDL0_WbInvR3-WU2irHMy9pt9eFi36U7xgEvxGibta1ZQibjUSvHhCIaO22_z7siPBCq6h9EJUMNu_C8N0FQ"/>
+<div class="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition-colors duration-700"></div>
+<div class="absolute bottom-12 left-margin-desktop text-white">
+<p class="font-label-caps text-label-caps tracking-widest">RESIDENCE EXTERIOR | TWILIGHT</p>
+</div>
+</div>
+</section>
+<!-- Next Project / Call to Action -->
+<section class="py-32 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center border-t border-outline-variant/30">
+<div class="text-center md:text-left reveal-up">
+<p class="font-label-caps text-label-caps text-primary opacity-60 mb-2">CONTINUE THE JOURNEY</p>
+<h3 class="font-headline-lg text-headline-lg">Palm Jumeirah Penthouse</h3>
+</div>
+<a class="mt-8 md:mt-0 flex items-center gap-4 group reveal-up" href="#" style="transition-delay: 100ms;">
+<span class="font-label-caps text-label-caps group-hover:mr-4 transition-all duration-400">VIEW NEXT PROJECT</span>
+<span class="material-symbols-outlined text-4xl">arrow_forward</span>
+</a>
+</section>
+<!-- Footer -->
+<footer class="bg-surface-container-highest">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter px-margin-mobile md:px-margin-desktop py-16 max-w-container-max mx-auto">
+<div class="md:col-span-4">
+<div class="font-headline-sm text-headline-sm text-primary mb-6 uppercase tracking-tighter">INFINITE</div>
+<p class="font-body-md text-on-surface-variant max-w-xs">Crafting architectural legacies in Dubai through a commitment to minimalism, precision, and human well-being.</p>
+</div>
+<div class="md:col-span-2 md:col-start-6">
+<h5 class="font-label-caps text-label-caps font-bold mb-6">STUDIO</h5>
+<ul class="flex flex-col gap-3 font-body-md text-on-surface-variant">
+<li><a class="hover:text-primary transition-all" href="approach.html">Philosophy</a></li>
+<li><a class="hover:text-primary transition-all" href="services.html">Services</a></li>
+<li><a class="hover:text-primary transition-all" href="journey.html">Journey</a></li>
+</ul>
+</div>
+<div class="md:col-span-2">
+<h5 class="font-label-caps text-label-caps font-bold mb-6">SOCIAL</h5>
+<ul class="flex flex-col gap-3 font-body-md text-on-surface-variant">
+<li><a class="hover:text-primary transition-all" href="#">Instagram</a></li>
+<li><a class="hover:text-primary transition-all" href="#">LinkedIn</a></li>
+<li><a class="hover:text-primary transition-all" href="#">Behance</a></li>
+</ul>
+</div>
+<div class="md:col-span-3">
+<h5 class="font-label-caps text-label-caps font-bold mb-6">INQUIRIES</h5>
+<p class="font-body-md text-on-surface-variant">studio@infinite-arch.com</p>
+<p class="font-body-md text-on-surface-variant">+971 4 000 0000</p>
+</div>
+</div>
+<div class="px-margin-mobile md:px-margin-desktop py-8 border-t border-outline-variant/20 max-w-container-max mx-auto flex flex-col md:flex-row justify-between gap-4">
+<p class="font-body-md text-on-surface-variant opacity-60 text-sm">© 2024 INFINITE Holistic Architecture &amp; Fit-Out. Dubai, UAE.</p>
+<div class="flex gap-6 font-body-md text-on-surface-variant opacity-60 text-sm">
+<a class="hover:text-primary" href="#">Privacy Policy</a>
+<a class="hover:text-primary" href="#">Terms of Service</a>
+</div>
+</div>
+</footer>
+<script>
+        // Simple scroll reveal
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal-up').forEach(el => observer.observe(el));
+
+        // Navbar interaction
+        let lastScroll = 0;
+        const nav = document.querySelector('nav');
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            if (currentScroll <= 0) {
+                nav.classList.remove('shadow-sm');
+                return;
+            }
+            if (currentScroll > lastScroll) {
+                nav.style.transform = 'translateY(-100%)';
+            } else {
+                nav.style.transform = 'translateY(0)';
+                nav.classList.add('shadow-sm');
+            }
+            lastScroll = currentScroll;
+        });
+    </script>
+</body></html>
+
+

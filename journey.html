@@ -1,0 +1,550 @@
+﻿<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Journey | INFINITE Holistic Architecture</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+        }
+        .glass-nav {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .step-line {
+            background: linear-gradient(to bottom, transparent, theme('colors.outline-variant') 10%, theme('colors.outline-variant') 90%, transparent);
+        }
+        .stagger-reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .stagger-reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "inverse-surface": "#372e2e",
+                      "surface-container-highest": "#efdfdf",
+                      "surface-container-lowest": "#ffffff",
+                      "tertiary-fixed": "#ffddb6",
+                      "on-background": "#221a1a",
+                      "surface-container-low": "#fff0f0",
+                      "tertiary": "#0f0600",
+                      "error-container": "#ffdad6",
+                      "on-tertiary-fixed": "#291801",
+                      "primary": "#3e1010",
+                      "on-surface-variant": "#534342",
+                      "background": "#fff3e3",
+                      "inverse-primary": "#ffb3af",
+                      "on-error": "#ffffff",
+                      "error": "#ba1a1a",
+                      "on-tertiary-fixed-variant": "#594325",
+                      "surface": "#fff8f7",
+                      "tertiary-container": "#2e1c03",
+                      "secondary-container": "#ece1d1",
+                      "tertiary-fixed-dim": "#e2c19b",
+                      "inverse-on-surface": "#fdeded",
+                      "on-primary-fixed-variant": "#6f3634",
+                      "secondary-fixed": "#ece1d1",
+                      "on-secondary": "#ffffff",
+                      "on-primary-container": "#bb7471",
+                      "outline": "#857372",
+                      "secondary-fixed-dim": "#d0c5b6",
+                      "surface-tint": "#8b4d4a",
+                      "on-tertiary": "#ffffff",
+                      "surface-bright": "#fff8f7",
+                      "secondary": "#655d51",
+                      "primary-container": "#3e1010",
+                      "on-primary-fixed": "#380c0c",
+                      "on-primary": "#ffffff",
+                      "surface-container-high": "#f4e5e4",
+                      "primary-fixed-dim": "#ffb3af",
+                      "surface-container": "#faeaea",
+                      "on-secondary-container": "#6b6357",
+                      "on-secondary-fixed-variant": "#4d463a",
+                      "on-tertiary-container": "#9f8260",
+                      "primary-fixed": "#ffdad7",
+                      "on-secondary-fixed": "#201b11",
+                      "on-error-container": "#93000a",
+                      "outline-variant": "#d7c2c0",
+                      "surface-dim": "#e6d6d6",
+                      "surface-variant": "#efdfdf",
+                      "on-surface": "#221a1a"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "stack-lg": "120px",
+                      "gutter": "24px",
+                      "unit": "8px",
+                      "margin-mobile": "20px",
+                      "container-max": "1280px",
+                      "margin-desktop": "64px"
+              },
+              "fontFamily": {
+                      "headline-md": ["Libre Caslon Text"],
+                      "display-lg-mobile": ["Libre Caslon Text"],
+                      "label-caps": ["Manrope"],
+                      "headline-sm": ["Libre Caslon Text"],
+                      "body-lg": ["Manrope"],
+                      "display-lg": ["Libre Caslon Text"],
+                      "body-md": ["Manrope"]
+              },
+              "fontSize": {
+                      "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "400"}],
+                      "display-lg-mobile": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "400"}],
+                      "label-caps": ["12px", {"lineHeight": "1.4", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                      "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                      "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+/* ===== RESPONSIVE FIXES ===== */
+@media (max-width: 767px) {
+  .text-display-lg { font-size: clamp(28px,8vw,48px) !important; line-height: 1.2 !important; }
+  .text-headline-lg { font-size: clamp(22px,6vw,36px) !important; line-height: 1.25 !important; }
+  .text-headline-md { font-size: clamp(20px,5vw,28px) !important; }
+  [class*="px-margin-desktop"] { padding-left: 20px !important; padding-right: 20px !important; }
+  .py-stack-lg { padding-top: 64px !important; padding-bottom: 64px !important; }
+  .pt-40 { padding-top: 6rem !important; }
+  .mb-stack-lg { margin-bottom: 64px !important; }
+  .mt-stack-lg { margin-top: 64px !important; }
+  .gap-20 { gap: 2rem !important; }
+  .gap-16 { gap: 1.5rem !important; }
+  .p-12 { padding: 1.5rem !important; }
+  .py-32 { padding-top: 3rem !important; padding-bottom: 3rem !important; }
+  .py-24 { padding-top: 2rem !important; padding-bottom: 2rem !important; }
+  .mb-24 { margin-bottom: 2rem !important; }
+  .mb-20 { margin-bottom: 1.5rem !important; }
+  header.relative.min-h-screen { min-height: 70vh !important; }
+  .h-\[85vh\], .h-\[90vh\] { min-height: 55vh !important; height: auto !important; }
+}
+@media (max-width: 640px) {
+  .md\:col-span-5, .md\:col-span-7, .md\:col-span-4, .md\:col-span-8,
+  .md\:col-span-3, .md\:col-span-6, .md\:col-span-2, .md\:col-span-12 {
+    grid-column: span 1 / span 1 !important;
+  }
+  .md\:col-start-6, .md\:col-start-7 { grid-column-start: 1 !important; }
+  .lg\:grid-cols-4 { grid-template-columns: 1fr 1fr !important; }
+  .md\:grid-cols-3 { grid-template-columns: 1fr !important; }
+  .md\:grid-cols-2 { grid-template-columns: 1fr !important; }
+  .md\:grid-cols-12 { grid-template-columns: 1fr !important; }
+  .order-2 { order: 2 !important; }
+  .order-1 { order: 1 !important; }
+  .text-right { text-align: left !important; }
+  .md\:text-right { text-align: left !important; }
+  .sticky.top-40 { position: static !important; }
+  .h-\[80vh\] { height: 50vh !important; }
+  .md\:h-\[600px\] { height: auto !important; }
+  .aspect-\[21\/9\] { aspect-ratio: 16/9 !important; }
+  .md\:pr-16, .md\:pl-16 { padding: 0 !important; }
+}
+</style></head>
+<body class="bg-background text-on-surface selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md transition-all duration-400 ease-in-out border-b border-primary/5">
+<div class="flex justify-between items-center px-margin-desktop py-4 w-full max-w-container-max mx-auto">
+<div class="flex items-center gap-4">
+<img alt="INFINITE Logo" class="h-12 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFmiThjT4IX5GBC37a5q4tnUK9zzxK6_JkuDxJlow9VCgFnpBaB5E2h0incMlvmJIYaYzZcUIv82iRJh4oX5G7Q2HRNWyWddgJZG4E9LBWVvdWIMfWvhO8XLJSRMF7Ve0mguEYoJQgZ2y2tm6JRKI0GoutKDlcHP7MJVi9RO9z2ScAfbtGuAAMzFzSrhYHZItxVD3FcpaCUUxM5tATUVpS0_ZRcMipvUIuT2qKzWQrt_Bz0FeuR_DsNMzMabQpcAQySOw"/>
+<span class="font-headline-md text-headline-md tracking-tighter text-primary">INFINITE</span>
+</div>
+<div class="hidden md:flex gap-10 items-center">
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-400 ease-in-out uppercase" href="index.html">Home</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-400 ease-in-out uppercase" href="approach.html">Approach</a>
+<a class="font-label-caps text-label-caps text-primary border-b-2 border-primary pb-1 transition-colors duration-400 ease-in-out uppercase" href="journey.html">Journey</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-400 ease-in-out uppercase" href="services.html">Services</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-400 ease-in-out uppercase" href="projects.html">Projects</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-400 ease-in-out uppercase" href="services.html#contact">Contact</a>
+</div>
+<button id="mobile-hamburger" class="md:hidden flex flex-col justify-center items-center gap-[5px] p-1 cursor-pointer border-none bg-transparent" aria-label="Open navigation menu" style="z-index:200;">
+  <span style="display:block;width:24px;height:2px;background:#3e1010;transition:all .3s;"></span>
+  <span style="display:block;width:24px;height:2px;background:#3e1010;transition:all .3s;"></span>
+  <span style="display:block;width:24px;height:2px;background:#3e1010;transition:all .3s;"></span>
+</button><a href="services.html#contact" style="text-decoration:none;"><button class="bg-primary text-on-primary px-8 py-3 font-label-caps text-label-caps uppercase tracking-widest transition-all duration-400 hover:opacity-90">
+            Inquire
+        </button></a>
+</div>
+</nav>
+<!-- Mobile Full-Screen Menu -->
+<div id="mobile-menu" style="display:none;position:fixed;inset:0;z-index:150;background:#fff8f7;flex-direction:column;align-items:center;justify-content:center;gap:2.5rem;" aria-hidden="true">
+  <button id="mobile-close" style="position:absolute;top:1.5rem;right:1.5rem;background:none;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;" aria-label="Close menu">
+    <span class="material-symbols-outlined" style="font-size:2rem;color:#3e1010;">close</span>
+  </button>
+  <a href="index.html" onclick="closeMobileMenu()" style="font-family:Manrope,sans-serif;font-size:13px;letter-spacing:0.15em;font-weight:600;color:#3e1010;text-transform:uppercase;text-decoration:none;">Home</a>
+  <a href="approach.html" onclick="closeMobileMenu()" style="font-family:Manrope,sans-serif;font-size:13px;letter-spacing:0.15em;font-weight:600;color:#3e1010;text-transform:uppercase;text-decoration:none;">Approach</a>
+  <a href="journey.html" onclick="closeMobileMenu()" style="font-family:Manrope,sans-serif;font-size:13px;letter-spacing:0.15em;font-weight:600;color:#3e1010;text-transform:uppercase;text-decoration:none;">Journey</a>
+  <a href="services.html" onclick="closeMobileMenu()" style="font-family:Manrope,sans-serif;font-size:13px;letter-spacing:0.15em;font-weight:600;color:#3e1010;text-transform:uppercase;text-decoration:none;">Services</a>
+  <a href="projects.html" onclick="closeMobileMenu()" style="font-family:Manrope,sans-serif;font-size:13px;letter-spacing:0.15em;font-weight:600;color:#3e1010;text-transform:uppercase;text-decoration:none;">Projects</a>
+  <a href="services.html#contact" onclick="closeMobileMenu()" style="font-family:Manrope,sans-serif;font-size:13px;letter-spacing:0.15em;font-weight:600;color:#3e1010;text-transform:uppercase;text-decoration:none;">Contact</a>
+  <a href="services.html#contact" style="background:#3e1010;color:#fff;padding:1rem 2.5rem;font-family:Manrope,sans-serif;font-size:12px;letter-spacing:0.2em;font-weight:600;text-transform:uppercase;text-decoration:none;margin-top:1rem;">Inquire</a>
+</div>
+<script>
+function openMobileMenu(){ var m=document.getElementById('mobile-menu'); if(m){m.style.display='flex';document.body.style.overflow='hidden';} }
+function closeMobileMenu(){ var m=document.getElementById('mobile-menu'); if(m){m.style.display='none';document.body.style.overflow='';} }
+(function(){
+  var btn=document.getElementById('mobile-hamburger');
+  var cls=document.getElementById('mobile-close');
+  if(btn) btn.addEventListener('click',openMobileMenu);
+  if(cls) cls.addEventListener('click',closeMobileMenu);
+})();
+</script>
+<!-- Hero Section -->
+<header class="pt-40 pb-stack-lg px-margin-desktop max-w-container-max mx-auto overflow-hidden">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-end">
+<div class="md:col-span-8">
+<span class="font-label-caps text-label-caps text-primary uppercase tracking-[0.2em] block mb-6">The Process</span>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg leading-tight text-primary">Crafting spaces with <br/><span class="italic font-light">Precision &amp; Soul.</span></h1>
+</div>
+<div class="md:col-span-4 pb-4">
+<p class="font-body-lg text-body-lg text-on-surface-variant">The journey from a blank canvas to a living sanctuary is a disciplined sequence of creative and technical milestones.</p>
+</div>
+</div>
+</header>
+<!-- Journey Steps -->
+<section class="py-stack-lg bg-surface-container-low overflow-hidden">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="relative">
+<!-- Vertical Line (Desktop) -->
+<div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-[1px] step-line -translate-x-1/2"></div>
+<!-- Phase 1 -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter mb-32 relative stagger-reveal">
+<div class="md:pr-16 text-right order-2 md:order-1">
+<span class="font-label-caps text-label-caps text-primary/50 mb-2 block">Phase 01</span>
+<h3 class="font-headline-md text-headline-md mb-4 text-primary">Discovery &amp; Vision</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">We begin with a deep immersion into your lifestyle, aspirations, and the site's unique energy. This initial dialogue forms the conceptual bedrock of the project.</p>
+</div>
+<div class="hidden md:flex justify-start items-center order-3 md:order-2">
+<div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-on-primary relative z-10 -ml-6">
+<span class="material-symbols-outlined">explore</span>
+</div>
+</div>
+<div class="md:pl-16 order-1 md:order-3">
+<div class="aspect-[4/3] w-full bg-surface-dim overflow-hidden grayscale hover:grayscale-0 transition-all duration-700 rounded-lg">
+<img class="w-full h-full object-cover" data-alt="A minimalist architectural mood board with tactile samples of limestone, dark walnut wood, and rough-cast concrete." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-vaCYYgEdLPXSIT8xtWZ_8uSBkW7CrGmWZ3s5p8gYN-GspVspDikZW0j89eQlq8MBB9u0_CyPwMmhqv3qAlXRoTWLpWSYeqfkiK7hyJwBFA5-muIRgTpHeA9I6EndDjYsHduIN8TgcuNlhtzeajLCopIWXZm2eXEVhOPBVDNA9DsKxHtiCi0U2jwiI8fhwivXVgo_e_5hd5tNYwuuAvhq2wYwLTUn0wlN7KotbYV0Or4V1GjYcf6VUg"/>
+</div>
+</div>
+</div>
+<!-- Phase 2 -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter mb-32 relative stagger-reveal">
+<div class="md:pr-16 order-1">
+<div class="aspect-[4/3] w-full bg-surface-dim overflow-hidden grayscale hover:grayscale-0 transition-all duration-700 rounded-lg">
+<img class="w-full h-full object-cover" data-alt="A close-up of a hand-sketched floor plan on translucent trace paper." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWM6bsetb7wD5yTvg8fCmjEw2xPViYjCZmXJabjajXZZ-slX_y6TM3u-HflE6a8x5u4FJEps-zeHEL46EeEj_3BfdVjshaNzG4Vh0sbCiqoQDE1uW8fV-KdQXV0WyjMLuZFtGjBhKDUYXGVIlqDP5OA05SMwf2tYly6OAj0qQ8UfHz9ZdsN5es8lH8TsDRf4ATDlDnRVqmHgx53DA6YtacOvIPlb7HTpEM87tDAhFImtFP9XMUVZW-0A"/>
+</div>
+</div>
+<div class="hidden md:flex justify-end items-center order-2">
+<div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-on-primary relative z-10 -mr-6">
+<span class="material-symbols-outlined">architecture</span>
+</div>
+</div>
+<div class="md:pl-16 text-left order-3">
+<span class="font-label-caps text-label-caps text-primary/50 mb-2 block">Phase 02</span>
+<h3 class="font-headline-md text-headline-md mb-4 text-primary">Conceptual Architecture</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Translating the vision into spatial geometry. We explore volume, circulation, and light through sketches and 3D modeling to define the project's silhouette.</p>
+</div>
+</div>
+<!-- Phase 3 -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter mb-32 relative stagger-reveal">
+<div class="md:pr-16 text-right order-2 md:order-1">
+<span class="font-label-caps text-label-caps text-primary/50 mb-2 block">Phase 03</span>
+<h3 class="font-headline-md text-headline-md mb-4 text-primary">Detailed Design</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Precision engineering meets aesthetic refinement. Every junction, material transition, and bespoke element is meticulously detailed for flawless execution.</p>
+</div>
+<div class="hidden md:flex justify-start items-center order-3 md:order-2">
+<div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-on-primary relative z-10 -ml-6">
+<span class="material-symbols-outlined">precision_manufacturing</span>
+</div>
+</div>
+<div class="md:pl-16 order-1 md:order-3">
+<div class="aspect-[4/3] w-full bg-surface-dim overflow-hidden grayscale hover:grayscale-0 transition-all duration-700 rounded-lg">
+<img class="w-full h-full object-cover" data-alt="Technical architectural detail showing a shadow gap junction." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlnzHPcPw3klAt8kwyeriz05X6BzN0ySu29UCpPbwgs9ajeVsPx1WrkVOVX47fVqhjM7oAoH6cNw9z7XtU2lRSYZL8CEL8_tKV45DEQzbO99TBQJP4gHIJXSgSqFOrT-f2IoFv2aBDbnYJQ48dW4SWJ4CUFy5oY8hDIp7h0uAa_mcaBb48tnVD4wb_zit_1GPJCz1OLVET6A8tdjPl5ZnmjXQpSglc20KdotUJrVO1cl7lrk2aGxBfmA"/>
+</div>
+</div>
+</div>
+<!-- Phase 4 -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter mb-32 relative stagger-reveal">
+<div class="md:pr-16 order-1">
+<div class="aspect-[4/3] w-full bg-surface-dim overflow-hidden grayscale hover:grayscale-0 transition-all duration-700 rounded-lg">
+<img class="w-full h-full object-cover" data-alt="A minimalist office desk with architectural blueprint rolls." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8u5bgZfQpPykr-kgWTuhJcKa6OdS-WPRkyxlaghLZwzXk5EaPNq8g_DqIufN5h47SVLSjELLKgxjEMtSaiPXCDdBDW2KY88KjiEtqO6Syl7ZUUnAfdRBfT1Vp2TKejoXzxbzKxOnMY7e7__MWCrSaxzGVP0ipeoDfunzmjQLu3zLb6kmZ1HzABPtbfLR2TFt4eZj107DHNPI3f2iHRER0NU7iWZko-b5U4Me-u7HQM3NA1_O42GkfSg"/>
+</div>
+</div>
+<div class="hidden md:flex justify-end items-center order-2">
+<div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-on-primary relative z-10 -mr-6">
+<span class="material-symbols-outlined">description</span>
+</div>
+</div>
+<div class="md:pl-16 text-left order-3">
+<span class="font-label-caps text-label-caps text-primary/50 mb-2 block">Phase 04</span>
+<h3 class="font-headline-md text-headline-md mb-4 text-primary">Approvals &amp; Permitting</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Navigating the complexities of local regulations. We manage all technical submissions to ensure the project meets every safety and legal standard without compromise.</p>
+</div>
+</div>
+<!-- Phase 5 -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter mb-32 relative stagger-reveal">
+<div class="md:pr-16 text-right order-2 md:order-1">
+<span class="font-label-caps text-label-caps text-primary/50 mb-2 block">Phase 05</span>
+<h3 class="font-headline-md text-headline-md mb-4 text-primary">Fit-Out &amp; Execution</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">The transformation begins. Our master craftsmen and engineers bring the blueprints to life, maintaining rigorous quality control and site management throughout.</p>
+</div>
+<div class="hidden md:flex justify-start items-center order-3 md:order-2">
+<div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-on-primary relative z-10 -ml-6">
+<span class="material-symbols-outlined">construction</span>
+</div>
+</div>
+<div class="md:pl-16 order-1 md:order-3">
+<div class="aspect-[4/3] w-full bg-surface-dim overflow-hidden grayscale hover:grayscale-0 transition-all duration-700 rounded-lg">
+<img class="w-full h-full object-cover" data-alt="A cinematic shot of an interior construction site in progress." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBX9MZ8NM39JR-2O1ooBadw1b8Z5D76cV8I0NnyMSSSmgkX-q0Mt4CdeWZZ_IoSrrUqnciR1j0NOfL1H6B-ACwsfZTOwpMG4ZVqXHo1gSTmTQchVZEvbUbsjFgRH53qkYuT7TEIveyMt1QVoPjyQCbM5TnlghiBjaWCVzbt4-e1Ll-BJ_w4W4BnrgLuMhxy129EfFRmm9Qvf7t0FwVYBbZQvWRx1fwLDFKRkyWxk73ntyEwnCgo1xu1Q"/>
+</div>
+</div>
+</div>
+<!-- Phase 6 -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter mb-32 relative stagger-reveal">
+<div class="md:pr-16 order-1">
+<div class="aspect-[4/3] w-full bg-surface-dim overflow-hidden grayscale hover:grayscale-0 transition-all duration-700 rounded-lg">
+<img class="w-full h-full object-cover" data-alt="Detailed view of a bespoke cabinetry handle." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWaY8I4vhhK0lMda_jVq3r3E4hTVFIS6_Kdzxxwm9cdeHDdSgo12dcls5XEwRK34-vPZsGEe9a2ka2nvx6l93ar9bVFOrAPo5RF2jeRkiEiN97P53rLfIDRO6mm2hJADcDzrya0HiyTWkIkACHhGNxo-QAVv0FYRUHLn3206iICvgvq4qgTSoWROTw6kgDjhpkipvDJdDVDlww_Q6TWNYN8Xvg6QUrgTCVe5LVcF4D3dkZWUrVpY6KRA"/>
+</div>
+</div>
+<div class="hidden md:flex justify-end items-center order-2">
+<div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-on-primary relative z-10 -mr-6">
+<span class="material-symbols-outlined">layers</span>
+</div>
+</div>
+<div class="md:pl-16 text-left order-3">
+<span class="font-label-caps text-label-caps text-primary/50 mb-2 block">Phase 06</span>
+<h3 class="font-headline-md text-headline-md mb-4 text-primary">Styling &amp; FF&amp;E</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">The final layers of comfort and personality. We curate furniture, art, and accessories that complement the architectural shell and complete the story.</p>
+</div>
+</div>
+<!-- Phase 7 -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter relative stagger-reveal">
+<div class="md:pr-16 text-right order-2 md:order-1">
+<span class="font-label-caps text-label-caps text-primary/50 mb-2 block">Phase 07</span>
+<h3 class="font-headline-md text-headline-md mb-4 text-primary">Handover &amp; Beyond</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">We don't just hand over keys; we curate the transition. A final walkthrough ensures every detail is perfect, followed by ongoing support as you inhabit the space.</p>
+</div>
+<div class="hidden md:flex justify-start items-center order-3 md:order-2">
+<div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-on-primary relative z-10 -ml-6">
+<span class="material-symbols-outlined">key</span>
+</div>
+</div>
+<div class="md:pl-16 order-1 md:order-3">
+<div class="aspect-[4/3] w-full bg-surface-dim overflow-hidden grayscale hover:grayscale-0 transition-all duration-700 rounded-lg">
+<img class="w-full h-full object-cover" data-alt="A wide-angle shot of a finished, luxury living room." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_FLYWUdfbJSZxVZ3sEdAkMubv50cvhRHw1k7BFiersF25ziV1YZGv2qNDYdU8vpURXWj6ynVUjZMwLfTKdMtQQprV_nvnL0RU7AowYNxFuuojTQHlqfRkLdiMKTvIWXW7l3gmKUK2jKEy0pFcbIp7mD_-Ep3noHxtWlaiBa4A-qjbEWdzJZYZR2hbroO0BFAo8Sy9PhsaUIMD6POtP29zhcHJ2L-W62cd1tyBevdHQzQDBzBfILq6VA"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Holistic Architecture Section -->
+<section class="py-stack-lg bg-primary text-on-primary relative overflow-hidden">
+<div class="max-w-container-max mx-auto px-margin-desktop relative z-10">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-5">
+<h2 class="font-display-lg text-display-lg-mobile md:text-headline-md mb-8">What Holistic Architecture <br/><span class="italic font-light">Means to Us.</span></h2>
+</div>
+<div class="md:col-span-7">
+<div class="space-y-12">
+<div>
+<span class="font-label-caps text-label-caps text-tertiary-fixed mb-4 block">Spatial Energy</span>
+<p class="font-body-lg text-body-lg text-on-primary-container leading-relaxed">Architecture is more than just static structures; it is the management of flow. We design for the way air, light, and human energy circulate through a space, ensuring every room feels alive and restorative.</p>
+</div>
+<div>
+<span class="font-label-caps text-label-caps text-tertiary-fixed mb-4 block">Material Integrity</span>
+<p class="font-body-lg text-body-lg text-on-primary-container leading-relaxed">We believe in the honesty of materials. By honoring the natural characteristics of stone, wood, and metal, we create environments that feel grounded, timeless, and tactilely rich.</p>
+</div>
+<div>
+<span class="font-label-caps text-label-caps text-tertiary-fixed mb-4 block">The Human Echo</span>
+<p class="font-body-lg text-body-lg text-on-primary-container leading-relaxed">A space should be a reflection of its inhabitant. Our holistic approach ensures that the environment resonates with your unique psychological and functional needs, fostering a sense of deep belonging.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Founder Section -->
+<section class="py-stack-lg bg-background px-margin-desktop">
+<div class="max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-5 order-2 md:order-1">
+<div class="relative">
+<div class="aspect-[3/4] w-full bg-surface-dim overflow-hidden grayscale rounded-lg">
+<img class="w-full h-full object-cover" data-alt="Portrait of Meriem Belkacem" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAxLAmOBu8vLc1hblVXeNvMxWBRkDoRqFlfM_nNbgaAVKVZhaBAsGlFNtpKFYir8djNfkNXZHwblHc8zYBNONLn7LpC5bDCry5UKTOnXfvryrOcHswYuQqZ80OKum5y_askFnAZGO56UqPLYYiRpZjhmC1fsrj0lhhCIG20o2lFBcjroP5Mht0RQxoZFNQlIM1P3jpCnUlzPB8Vt71vG1NvBUQ_VTmuPmeRHg_kNpQPWxuS3jV1s1QYA"/>
+</div>
+<div class="absolute -bottom-6 -right-6 bg-secondary-container p-8 hidden md:block rounded-lg shadow-xl">
+<span class="font-label-caps text-label-caps text-primary">FOUNDER &amp; LEAD ARCHITECT</span>
+</div>
+</div>
+</div>
+<div class="md:col-span-6 md:offset-1 order-1 md:order-2 mb-16 md:mb-0">
+<span class="font-label-caps text-label-caps text-primary/50 block mb-12">THE VISIONARY</span>
+<h2 class="font-headline-md text-headline-md mb-4 text-primary">Meriem Belkacem</h2>
+<blockquote class="font-headline-md text-headline-md italic text-primary/80 leading-snug mb-10">
+                        "A successful space is not only one people admire. It is one in which they feel more connected, more balanced and more themselves."
+                    </blockquote>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+                        With over 15 years of international experience in luxury fit-outs and residential architecture, Meriem founded INFINITE to bridge the gap between technical rigor and soulful design. Her work is celebrated for its quiet luxury and unwavering commitment to holistic principles.
+                    </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface-container-highest mt-stack-lg">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter px-margin-desktop py-stack-lg max-w-container-max mx-auto">
+<div class="md:col-span-4">
+<img alt="INFINITE" class="h-16 w-auto object-contain mb-6 grayscale brightness-50" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSDTVzCiCT48_zfNykxjHULyFk9TFgcforsP3CEGL6rTkGYqKGo91oa4YEYBcwjcUxxKpWRmEbtyJk6hhppaKiQTCgVqW-yow245HXaofBK6Ja7XrU3tqMOcsHOwFrK82n08OqO7nDitGW72Eaq9N5YBeP0oqOE3S9-SyPpgmld5YmNUasqJwpfNxhYfcYvKWsRIrXgkmwNz9jd_bzYRghKxNw6DspGBxSFf4Lktgila87KyYOtjIbj22hwr-hCDAIRyw"/>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xs mb-8">
+                    Elevating the human experience through integrated architectural excellence and holistic design.
+                </p>
+</div>
+<div class="md:col-span-2">
+<h4 class="font-label-caps text-label-caps text-primary mb-6 uppercase">Studio</h4>
+<nav class="flex flex-col gap-4">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-all" href="approach.html">Philosophy</a>
+<a class="font-label-caps text-label-caps text-primary border-b-2 border-primary pb-1 transition-colors duration-400 ease-in-out uppercase" href="journey.html">Journey</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-all" href="projects.html">Projects</a>
+</nav>
+<!-- Mobile Full-Screen Menu -->
+<div id="mobile-menu" style="display:none;position:fixed;inset:0;z-index:150;background:#fff8f7;flex-direction:column;align-items:center;justify-content:center;gap:2.5rem;" aria-hidden="true">
+  <button id="mobile-close" style="position:absolute;top:1.5rem;right:1.5rem;background:none;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;" aria-label="Close menu">
+    <span class="material-symbols-outlined" style="font-size:2rem;color:#3e1010;">close</span>
+  </button>
+  <a href="index.html" onclick="closeMobileMenu()" style="font-family:Manrope,sans-serif;font-size:13px;letter-spacing:0.15em;font-weight:600;color:#3e1010;text-transform:uppercase;text-decoration:none;">Home</a>
+  <a href="approach.html" onclick="closeMobileMenu()" style="font-family:Manrope,sans-serif;font-size:13px;letter-spacing:0.15em;font-weight:600;color:#3e1010;text-transform:uppercase;text-decoration:none;">Approach</a>
+  <a href="journey.html" onclick="closeMobileMenu()" style="font-family:Manrope,sans-serif;font-size:13px;letter-spacing:0.15em;font-weight:600;color:#3e1010;text-transform:uppercase;text-decoration:none;">Journey</a>
+  <a href="services.html" onclick="closeMobileMenu()" style="font-family:Manrope,sans-serif;font-size:13px;letter-spacing:0.15em;font-weight:600;color:#3e1010;text-transform:uppercase;text-decoration:none;">Services</a>
+  <a href="projects.html" onclick="closeMobileMenu()" style="font-family:Manrope,sans-serif;font-size:13px;letter-spacing:0.15em;font-weight:600;color:#3e1010;text-transform:uppercase;text-decoration:none;">Projects</a>
+  <a href="services.html#contact" onclick="closeMobileMenu()" style="font-family:Manrope,sans-serif;font-size:13px;letter-spacing:0.15em;font-weight:600;color:#3e1010;text-transform:uppercase;text-decoration:none;">Contact</a>
+  <a href="services.html#contact" style="background:#3e1010;color:#fff;padding:1rem 2.5rem;font-family:Manrope,sans-serif;font-size:12px;letter-spacing:0.2em;font-weight:600;text-transform:uppercase;text-decoration:none;margin-top:1rem;">Inquire</a>
+</div>
+<script>
+function openMobileMenu(){ var m=document.getElementById('mobile-menu'); if(m){m.style.display='flex';document.body.style.overflow='hidden';} }
+function closeMobileMenu(){ var m=document.getElementById('mobile-menu'); if(m){m.style.display='none';document.body.style.overflow='';} }
+(function(){
+  var btn=document.getElementById('mobile-hamburger');
+  var cls=document.getElementById('mobile-close');
+  if(btn) btn.addEventListener('click',openMobileMenu);
+  if(cls) cls.addEventListener('click',closeMobileMenu);
+})();
+</script>
+</div>
+<div class="md:col-span-2">
+<h4 class="font-label-caps text-label-caps text-primary mb-6 uppercase">Legal</h4>
+<nav class="flex flex-col gap-4">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-all" href="#">Privacy</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-all" href="#">Terms</a>
+</nav>
+<!-- Mobile Full-Screen Menu -->
+<div id="mobile-menu" style="display:none;position:fixed;inset:0;z-index:150;background:#fff8f7;flex-direction:column;align-items:center;justify-content:center;gap:2.5rem;" aria-hidden="true">
+  <button id="mobile-close" style="position:absolute;top:1.5rem;right:1.5rem;background:none;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;" aria-label="Close menu">
+    <span class="material-symbols-outlined" style="font-size:2rem;color:#3e1010;">close</span>
+  </button>
+  <a href="index.html" onclick="closeMobileMenu()" style="font-family:Manrope,sans-serif;font-size:13px;letter-spacing:0.15em;font-weight:600;color:#3e1010;text-transform:uppercase;text-decoration:none;">Home</a>
+  <a href="approach.html" onclick="closeMobileMenu()" style="font-family:Manrope,sans-serif;font-size:13px;letter-spacing:0.15em;font-weight:600;color:#3e1010;text-transform:uppercase;text-decoration:none;">Approach</a>
+  <a href="journey.html" onclick="closeMobileMenu()" style="font-family:Manrope,sans-serif;font-size:13px;letter-spacing:0.15em;font-weight:600;color:#3e1010;text-transform:uppercase;text-decoration:none;">Journey</a>
+  <a href="services.html" onclick="closeMobileMenu()" style="font-family:Manrope,sans-serif;font-size:13px;letter-spacing:0.15em;font-weight:600;color:#3e1010;text-transform:uppercase;text-decoration:none;">Services</a>
+  <a href="projects.html" onclick="closeMobileMenu()" style="font-family:Manrope,sans-serif;font-size:13px;letter-spacing:0.15em;font-weight:600;color:#3e1010;text-transform:uppercase;text-decoration:none;">Projects</a>
+  <a href="services.html#contact" onclick="closeMobileMenu()" style="font-family:Manrope,sans-serif;font-size:13px;letter-spacing:0.15em;font-weight:600;color:#3e1010;text-transform:uppercase;text-decoration:none;">Contact</a>
+  <a href="services.html#contact" style="background:#3e1010;color:#fff;padding:1rem 2.5rem;font-family:Manrope,sans-serif;font-size:12px;letter-spacing:0.2em;font-weight:600;text-transform:uppercase;text-decoration:none;margin-top:1rem;">Inquire</a>
+</div>
+<script>
+function openMobileMenu(){ var m=document.getElementById('mobile-menu'); if(m){m.style.display='flex';document.body.style.overflow='hidden';} }
+function closeMobileMenu(){ var m=document.getElementById('mobile-menu'); if(m){m.style.display='none';document.body.style.overflow='';} }
+(function(){
+  var btn=document.getElementById('mobile-hamburger');
+  var cls=document.getElementById('mobile-close');
+  if(btn) btn.addEventListener('click',openMobileMenu);
+  if(cls) cls.addEventListener('click',closeMobileMenu);
+})();
+</script>
+</div>
+<div class="md:col-span-2">
+<h4 class="font-label-caps text-label-caps text-primary mb-6 uppercase">Connect</h4>
+<nav class="flex flex-col gap-4">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-all" href="#">LinkedIn</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-all" href="#">Instagram</a>
+</nav>
+<!-- Mobile Full-Screen Menu -->
+<div id="mobile-menu" style="display:none;position:fixed;inset:0;z-index:150;background:#fff8f7;flex-direction:column;align-items:center;justify-content:center;gap:2.5rem;" aria-hidden="true">
+  <button id="mobile-close" style="position:absolute;top:1.5rem;right:1.5rem;background:none;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;" aria-label="Close menu">
+    <span class="material-symbols-outlined" style="font-size:2rem;color:#3e1010;">close</span>
+  </button>
+  <a href="index.html" onclick="closeMobileMenu()" style="font-family:Manrope,sans-serif;font-size:13px;letter-spacing:0.15em;font-weight:600;color:#3e1010;text-transform:uppercase;text-decoration:none;">Home</a>
+  <a href="approach.html" onclick="closeMobileMenu()" style="font-family:Manrope,sans-serif;font-size:13px;letter-spacing:0.15em;font-weight:600;color:#3e1010;text-transform:uppercase;text-decoration:none;">Approach</a>
+  <a href="journey.html" onclick="closeMobileMenu()" style="font-family:Manrope,sans-serif;font-size:13px;letter-spacing:0.15em;font-weight:600;color:#3e1010;text-transform:uppercase;text-decoration:none;">Journey</a>
+  <a href="services.html" onclick="closeMobileMenu()" style="font-family:Manrope,sans-serif;font-size:13px;letter-spacing:0.15em;font-weight:600;color:#3e1010;text-transform:uppercase;text-decoration:none;">Services</a>
+  <a href="projects.html" onclick="closeMobileMenu()" style="font-family:Manrope,sans-serif;font-size:13px;letter-spacing:0.15em;font-weight:600;color:#3e1010;text-transform:uppercase;text-decoration:none;">Projects</a>
+  <a href="services.html#contact" onclick="closeMobileMenu()" style="font-family:Manrope,sans-serif;font-size:13px;letter-spacing:0.15em;font-weight:600;color:#3e1010;text-transform:uppercase;text-decoration:none;">Contact</a>
+  <a href="services.html#contact" style="background:#3e1010;color:#fff;padding:1rem 2.5rem;font-family:Manrope,sans-serif;font-size:12px;letter-spacing:0.2em;font-weight:600;text-transform:uppercase;text-decoration:none;margin-top:1rem;">Inquire</a>
+</div>
+<script>
+function openMobileMenu(){ var m=document.getElementById('mobile-menu'); if(m){m.style.display='flex';document.body.style.overflow='hidden';} }
+function closeMobileMenu(){ var m=document.getElementById('mobile-menu'); if(m){m.style.display='none';document.body.style.overflow='';} }
+(function(){
+  var btn=document.getElementById('mobile-hamburger');
+  var cls=document.getElementById('mobile-close');
+  if(btn) btn.addEventListener('click',openMobileMenu);
+  if(cls) cls.addEventListener('click',closeMobileMenu);
+})();
+</script>
+</div>
+<div class="md:col-span-12 mt-20 pt-8 border-t border-outline-variant/30">
+<p class="font-body-md text-body-md text-on-surface-variant">
+                    © 2024 INFINITE Holistic Architecture &amp; Fit-Out. Dubai, UAE.
+                </p>
+</div>
+</div>
+</footer>
+<script>
+        // Reveal on Scroll Logic
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.stagger-reveal').forEach(el => observer.observe(el));
+
+        // Smooth Scroll Interactivity
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('py-4', 'shadow-sm');
+                nav.classList.remove('py-unit');
+            } else {
+                nav.classList.remove('py-4', 'shadow-sm');
+                nav.classList.add('py-unit');
+            }
+        });
+    </script>
+</body></html>
+
+

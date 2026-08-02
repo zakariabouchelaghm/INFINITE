@@ -1,0 +1,404 @@
+﻿<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Farm Villa | INFINITE Holistic Architecture</title>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;1,400&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-fixed": "#380c0c",
+                    "secondary-container": "#ece1d1",
+                    "on-secondary-fixed": "#201b11",
+                    "on-tertiary-fixed": "#291801",
+                    "surface-variant": "#efdfdf",
+                    "outline": "#857372",
+                    "on-error": "#ffffff",
+                    "on-primary": "#ffffff",
+                    "tertiary": "#0f0600",
+                    "secondary": "#655d51",
+                    "primary-container": "#3e1010",
+                    "background": "#fff8f7",
+                    "primary-fixed": "#ffdad7",
+                    "on-tertiary-container": "#9f8260",
+                    "on-secondary": "#ffffff",
+                    "on-secondary-container": "#6b6357",
+                    "surface-container": "#faeaea",
+                    "primary-fixed-dim": "#ffb3af",
+                    "primary": "#1b0001",
+                    "outline-variant": "#d7c2c0",
+                    "on-error-container": "#93000a",
+                    "on-primary-fixed-variant": "#6f3634",
+                    "surface-container-low": "#fff0f0",
+                    "surface-dim": "#e6d6d6",
+                    "error-container": "#ffdad6",
+                    "on-primary-container": "#bb7471",
+                    "surface-container-lowest": "#ffffff",
+                    "surface": "#fff8f7",
+                    "on-surface": "#221a1a",
+                    "on-background": "#221a1a",
+                    "on-surface-variant": "#534342",
+                    "tertiary-fixed-dim": "#e2c19b",
+                    "surface-tint": "#8b4d4a",
+                    "surface-container-highest": "#efdfdf",
+                    "inverse-primary": "#ffb3af",
+                    "error": "#ba1a1a",
+                    "surface-container-high": "#f4e5e4",
+                    "tertiary-fixed": "#ffddb6",
+                    "secondary-fixed": "#ece1d1",
+                    "on-secondary-fixed-variant": "#4d463a",
+                    "on-tertiary-fixed-variant": "#594325",
+                    "tertiary-container": "#2e1c03",
+                    "surface-bright": "#fff8f7",
+                    "secondary-fixed-dim": "#d0c5b6",
+                    "on-tertiary": "#ffffff",
+                    "inverse-on-surface": "#fdeded",
+                    "inverse-surface": "#372e2e"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "margin-mobile": "20px",
+                    "unit": "8px",
+                    "container-max": "1280px",
+                    "margin-desktop": "64px"
+            },
+            "fontFamily": {
+                    "headline-lg-mobile": ["Libre Caslon Text"],
+                    "body-md": ["Manrope"],
+                    "body-lg": ["Manrope"],
+                    "headline-lg": ["Libre Caslon Text"],
+                    "display-lg": ["Libre Caslon Text"],
+                    "label-caps": ["Manrope"],
+                    "headline-md": ["Libre Caslon Text"]
+            },
+            "fontSize": {
+                    "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "400"}],
+                    "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "1.4", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                    "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { background-color: #fff8f7; -webkit-font-smoothing: antialiased; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+        .parallax-section { background-attachment: fixed; background-position: center; background-repeat: no-repeat; background-size: cover; }
+        .mask-overlay { background: linear-gradient(to bottom, rgba(255, 248, 247, 0) 0%, rgba(255, 248, 247, 1) 100%); }
+        .reveal-line { overflow: hidden; }
+        .reveal-line span { display: inline-block; transform: translateY(100%); transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
+        .revealed span { transform: translateY(0%); }
+    </style>
+<style>
+/* ===== RESPONSIVE FIXES ===== */
+@media (max-width: 767px) {
+  .text-display-lg { font-size: clamp(28px,8vw,48px) !important; line-height: 1.2 !important; }
+  .text-headline-lg { font-size: clamp(22px,6vw,36px) !important; line-height: 1.25 !important; }
+  .text-headline-md { font-size: clamp(20px,5vw,28px) !important; }
+  [class*="px-margin-desktop"] { padding-left: 20px !important; padding-right: 20px !important; }
+  .py-stack-lg { padding-top: 64px !important; padding-bottom: 64px !important; }
+  .pt-40 { padding-top: 6rem !important; }
+  .mb-stack-lg { margin-bottom: 64px !important; }
+  .mt-stack-lg { margin-top: 64px !important; }
+  .gap-20 { gap: 2rem !important; }
+  .gap-16 { gap: 1.5rem !important; }
+  .p-12 { padding: 1.5rem !important; }
+  .py-32 { padding-top: 3rem !important; padding-bottom: 3rem !important; }
+  .py-24 { padding-top: 2rem !important; padding-bottom: 2rem !important; }
+  .mb-24 { margin-bottom: 2rem !important; }
+  .mb-20 { margin-bottom: 1.5rem !important; }
+  header.relative.min-h-screen { min-height: 70vh !important; }
+  .h-\[85vh\], .h-\[90vh\] { min-height: 55vh !important; height: auto !important; }
+}
+@media (max-width: 640px) {
+  .md\:col-span-5, .md\:col-span-7, .md\:col-span-4, .md\:col-span-8,
+  .md\:col-span-3, .md\:col-span-6, .md\:col-span-2, .md\:col-span-12 {
+    grid-column: span 1 / span 1 !important;
+  }
+  .md\:col-start-6, .md\:col-start-7 { grid-column-start: 1 !important; }
+  .lg\:grid-cols-4 { grid-template-columns: 1fr 1fr !important; }
+  .md\:grid-cols-3 { grid-template-columns: 1fr !important; }
+  .md\:grid-cols-2 { grid-template-columns: 1fr !important; }
+  .md\:grid-cols-12 { grid-template-columns: 1fr !important; }
+  .order-2 { order: 2 !important; }
+  .order-1 { order: 1 !important; }
+  .text-right { text-align: left !important; }
+  .md\:text-right { text-align: left !important; }
+  .sticky.top-40 { position: static !important; }
+  .h-\[80vh\] { height: 50vh !important; }
+  .md\:h-\[600px\] { height: auto !important; }
+  .aspect-\[21\/9\] { aspect-ratio: 16/9 !important; }
+  .md\:pr-16, .md\:pl-16 { padding: 0 !important; }
+}
+</style></head>
+<body class="font-body-md text-on-surface selection:bg-primary-fixed-dim selection:text-primary">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md transition-all duration-400 ease-in-out border-b border-primary/5">
+<div class="flex justify-between items-center px-margin-desktop py-4 w-full max-w-container-max mx-auto">
+<div class="flex items-center gap-4">
+<img alt="INFINITE Logo" class="h-12 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFmiThjT4IX5GBC37a5q4tnUK9zzxK6_JkuDxJlow9VCgFnpBaB5E2h0incMlvmJIYaYzZcUIv82iRJh4oX5G7Q2HRNWyWddgJZG4E9LBWVvdWIMfWvhO8XLJSRMF7Ve0mguEYoJQgZ2y2tm6JRKI0GoutKDlcHP7MJVi9RO9z2ScAfbtGuAAMzFzSrhYHZItxVD3FcpaCUUxM5tATUVpS0_ZRcMipvUIuT2qKzWQrt_Bz0FeuR_DsNMzMabQpcAQySOw"/>
+<span class="font-headline-md text-headline-md tracking-tighter text-primary">INFINITE</span>
+</div>
+<div class="hidden md:flex gap-10 items-center">
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-400 ease-in-out uppercase" href="index.html">Home</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-400 ease-in-out uppercase" href="approach.html">Approach</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-400 ease-in-out uppercase" href="journey.html">Journey</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-400 ease-in-out uppercase" href="services.html">Services</a>
+<a class="font-label-caps text-label-caps text-primary border-b-2 border-primary pb-1 transition-colors duration-400 ease-in-out uppercase" href="projects.html">Projects</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-400 ease-in-out uppercase" href="services.html#contact">Contact</a>
+</div>
+<button id="mobile-hamburger" class="md:hidden flex flex-col justify-center items-center gap-[5px] p-1 cursor-pointer border-none bg-transparent" aria-label="Open navigation menu" style="z-index:200;">
+  <span style="display:block;width:24px;height:2px;background:#3e1010;transition:all .3s;"></span>
+  <span style="display:block;width:24px;height:2px;background:#3e1010;transition:all .3s;"></span>
+  <span style="display:block;width:24px;height:2px;background:#3e1010;transition:all .3s;"></span>
+</button><a href="services.html#contact" style="text-decoration:none;"><button class="bg-primary text-on-primary px-8 py-3 font-label-caps text-label-caps uppercase tracking-widest transition-all duration-400 hover:opacity-90">
+            Inquire
+        </button></a>
+</div>
+</nav>
+<!-- Mobile Full-Screen Menu -->
+<div id="mobile-menu" style="display:none;position:fixed;inset:0;z-index:150;background:#fff8f7;flex-direction:column;align-items:center;justify-content:center;gap:2.5rem;" aria-hidden="true">
+  <button id="mobile-close" style="position:absolute;top:1.5rem;right:1.5rem;background:none;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;" aria-label="Close menu">
+    <span class="material-symbols-outlined" style="font-size:2rem;color:#3e1010;">close</span>
+  </button>
+  <a href="index.html" onclick="closeMobileMenu()" style="font-family:Manrope,sans-serif;font-size:13px;letter-spacing:0.15em;font-weight:600;color:#3e1010;text-transform:uppercase;text-decoration:none;">Home</a>
+  <a href="approach.html" onclick="closeMobileMenu()" style="font-family:Manrope,sans-serif;font-size:13px;letter-spacing:0.15em;font-weight:600;color:#3e1010;text-transform:uppercase;text-decoration:none;">Approach</a>
+  <a href="journey.html" onclick="closeMobileMenu()" style="font-family:Manrope,sans-serif;font-size:13px;letter-spacing:0.15em;font-weight:600;color:#3e1010;text-transform:uppercase;text-decoration:none;">Journey</a>
+  <a href="services.html" onclick="closeMobileMenu()" style="font-family:Manrope,sans-serif;font-size:13px;letter-spacing:0.15em;font-weight:600;color:#3e1010;text-transform:uppercase;text-decoration:none;">Services</a>
+  <a href="projects.html" onclick="closeMobileMenu()" style="font-family:Manrope,sans-serif;font-size:13px;letter-spacing:0.15em;font-weight:600;color:#3e1010;text-transform:uppercase;text-decoration:none;">Projects</a>
+  <a href="services.html#contact" onclick="closeMobileMenu()" style="font-family:Manrope,sans-serif;font-size:13px;letter-spacing:0.15em;font-weight:600;color:#3e1010;text-transform:uppercase;text-decoration:none;">Contact</a>
+  <a href="services.html#contact" style="background:#3e1010;color:#fff;padding:1rem 2.5rem;font-family:Manrope,sans-serif;font-size:12px;letter-spacing:0.2em;font-weight:600;text-transform:uppercase;text-decoration:none;margin-top:1rem;">Inquire</a>
+</div>
+<script>
+function openMobileMenu(){ var m=document.getElementById('mobile-menu'); if(m){m.style.display='flex';document.body.style.overflow='hidden';} }
+function closeMobileMenu(){ var m=document.getElementById('mobile-menu'); if(m){m.style.display='none';document.body.style.overflow='';} }
+(function(){
+  var btn=document.getElementById('mobile-hamburger');
+  var cls=document.getElementById('mobile-close');
+  if(btn) btn.addEventListener('click',openMobileMenu);
+  if(cls) cls.addEventListener('click',closeMobileMenu);
+})();
+</script>
+<main class="pt-20 overflow-hidden">
+<!-- Hero Section -->
+<section class="relative h-[90vh] w-full overflow-hidden flex items-end">
+<div class="absolute inset-0 z-0">
+<img alt="Architectural photography of a Farm Villa combining rustic stone walls with modern glass facades, set in a lush landscape at sunset." class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLuzEXbw0H3e6IaVukZFRmP47D7-RlNsqV6hLsPgHmyVHBgPW3mrNtXDMeZ3WnIxuaJdgR1SBm8wrg5eUfyWM_yQkILoplPwcHO66xM-WcsaCDfg9ohK9sEFU-lDmDg8Fa_QVCLrXW-W7QYUI39KuowfTSS0lr1kmXRt7WYLlLSYhC6U-NrMDbtH3rka4bOcQHq6UxFD7Nies9XOZufkuTwmSyjNMXL0vJ59q3Mhnu367arOfUFO3inwGsk"/>
+<div class="absolute inset-0 bg-black/10"></div>
+</div>
+<div class="relative z-10 w-full px-margin-mobile md:px-margin-desktop pb-20 max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<div class="md:col-span-8">
+<span class="font-label-caps text-label-caps text-surface-container-lowest mb-4 block tracking-[0.2em]">PROJECT 04 // ITALY</span>
+<h1 class="font-display-lg text-display-lg md:text-[80px] text-surface-container-lowest reveal-line">
+<span>Farm Villa</span>
+</h1>
+</div>
+</div>
+</div>
+</section>
+<!-- Project Intro: The Natural Context -->
+<section class="py-24 md:py-32 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-start">
+<div class="md:col-start-2 md:col-span-3">
+<h2 class="font-label-caps text-label-caps text-primary mb-8 border-l border-primary/20 pl-4 py-1">THE NATURAL CONTEXT</h2>
+</div>
+<div class="md:col-span-6">
+<p class="font-headline-md text-headline-md text-on-surface-variant leading-tight mb-12 italic">
+                        "The architecture does not sit upon the landscape, it emerges from it—a silent witness to the passage of time."
+                    </p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<p class="font-body-lg text-body-lg text-on-surface-variant opacity-80">
+                            Situated amidst the rolling hills of the countryside, the Farm Villa represents a masterclass in contextual integration. The project began with a deep study of the site's topographical nuances, ensuring that the footprint of the new structure honored the existing olive groves and natural slopes.
+                        </p>
+<p class="font-body-lg text-body-lg text-on-surface-variant opacity-80">
+                            The orientation maximizes passive solar gain while frame-specific apertures act as living canvases, capturing the seasonal transitions of the valley below. Here, the boundaries between interior comfort and exterior wildness are intentionally blurred.
+                        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Visual Anchor -->
+<section class="px-margin-mobile md:px-margin-desktop mb-32">
+<div class="relative aspect-[21/9] w-full overflow-hidden">
+<img class="w-full h-full object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-1000" data-alt="A wide architectural shot of the Farm Villa at dusk. The warm interior lighting glows through expansive floor-to-ceiling glass windows, contrasting with the cool, textured stone of the exterior walls. The surrounding landscape is bathed in the soft blue and purple hues of twilight, creating a peaceful and luxurious atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCW0FhN5d1X2xcs93aPDl5BlAz4d1E52VDkUJVt3gCFaobpL-rZmuHudp0p1mG-tj4DvmRMjayb3GnSVTArkM7FEYmzk0rEolro5UPPaYsWBTiT418QiKxH67NVwWFqM3CHot1mxJMuLN_4HwCI7gS7b1EJA9mtqHNo70EOE2B6Pqf0M3doP6QKqxxKaER8IvvMIUZmyGOBPzu7eh3qpD76UtX85SaKFd5kQm_tenbziBJYGtr7XOwGcA"/>
+</div>
+</section>
+<!-- Material Narrative -->
+<section class="bg-surface-container-low py-24 md:py-32">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<div class="md:col-span-5 order-2 md:order-1">
+<div class="space-y-12">
+<div class="border-b border-outline-variant pb-8">
+<h3 class="font-label-caps text-label-caps text-primary mb-4">RECLAIMED TIMBER</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Sourced from local heritage structures, the structural beams retain their original patina, grounding the modern interior with historical weight.</p>
+</div>
+<div class="border-b border-outline-variant pb-8">
+<h3 class="font-label-caps text-label-caps text-primary mb-4">QUARRIED STONE</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Hand-cut local limestone creates a monolithic thermal mass that regulates temperature while echoing the ancient geology of the region.</p>
+</div>
+<div class="border-b border-outline-variant pb-8">
+<h3 class="font-label-caps text-label-caps text-primary mb-4">STRUCTURAL GLASS</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">High-performance triple-glazing systems allow for massive spans with minimal framing, bringing the sky into the living space.</p>
+</div>
+</div>
+</div>
+<div class="md:col-span-6 md:col-start-7 order-1 md:order-2 mb-12 md:mb-0">
+<h2 class="font-display-lg text-display-lg text-primary mb-8">Material Narrative</h2>
+<div class="aspect-square w-full bg-white relative">
+<img class="w-full h-full object-cover" data-alt="Macro close-up detail of the building materials used in the Farm Villa. A weathered piece of reclaimed dark wood rests against a rough-hewn, light-colored limestone block. A sliver of polished dark metal and a reflection of a green tree in clear glass complete the composition. The lighting is soft and directional, highlighting the rich textures." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpB1T9cFQt5yALM5IxCsHzHzsnTD8beFZFuXLv2WkrWqfNGKJDDAXtNAFiG0AAfrnd-ZZnB5UfqUcSiAXPaFzvxg3ORP3Z3LRHvNlbQg6tNcnm2tyGhhBZpq6jNeCtbGn6DGDAvEjS_hF9NG7emWmU60MDa_Qdyv5tZp7eWMJbVxlQGTlsuuZURFhcSRCxJ2rOTAcuyEU0WEQLPLFJB8GQDBu0oKxsVaXb_nnjJydtXz_kEVpR8e37Yw"/>
+<div class="absolute bottom-8 right-8 bg-surface/90 backdrop-blur p-6 max-w-xs shadow-sm">
+<p class="font-label-caps text-[10px] tracking-[0.2em] mb-2 uppercase text-primary">Sensory Detail</p>
+<p class="font-body-md text-on-surface italic">"Tactility is the primary language of the Villa. Every surface invites a touch."</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Spatial Energy -->
+<section class="py-24 md:py-40 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto overflow-hidden">
+<div class="text-center mb-24">
+<h2 class="font-display-lg text-display-lg text-primary mb-4">Spatial Energy</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto opacity-70">Design focused on the movement of light and the rhythm of domestic life.</p>
+</div>
+<div class="flex flex-col md:flex-row gap-gutter">
+<div class="flex-1 group">
+<div class="overflow-hidden mb-6 bg-surface-container">
+<img class="w-full aspect-[3/4] object-cover transition-transform duration-[2s] group-hover:scale-105" data-alt="An interior view of the Farm Villa's living room. The space is vast and open-plan with very high ceilings. The floor is made of large, neutral-toned stone tiles. Minimalist, modern furniture in earthy tones—tans, creams, and dark browns—is arranged thoughtfully. Sunlight streams through a huge window, casting dramatic shadows and illuminating floating dust motes." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWwbUFURDr8r8AOw4UyzJH0jjFUhKvREgdy0VwuDUFtt4Xu2zmOZnvQy8vBJBCRLC5-9E24eMsFXqSHtLDNf27Q6iB2p-2XM06cnX13VRGSnUK0eCRDQ0d9g3U-XaOFDo5KrlfGQAS48k6AOSO_0VNyrh9nVwSYRI6LvkmTLBk2LRc0OpFqqHR0BWE9h3huPCnDFQ09ykeNR2RkYtp-nUwBw44KBxRJFDJ93YAvOpNA2UeI-SqEn4OBg"/>
+</div>
+<h4 class="font-headline-md text-headline-md text-primary mb-2">The Atrium</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">A vertical shaft of light that connects the three levels of the home.</p>
+</div>
+<div class="flex-1 mt-12 md:mt-32 group">
+<div class="overflow-hidden mb-6 bg-surface-container">
+<img class="w-full aspect-[3/4] object-cover transition-transform duration-[2s] group-hover:scale-105" data-alt="A luxurious minimalist kitchen inside the Farm Villa. The cabinetry is made of dark reclaimed wood with a matte finish. A long, seamless island made of the same limestone as the exterior walls sits in the center. Modern built-in appliances are hidden behind wooden panels. The lighting is subtle, with warm under-cabinet LEDs and natural light from a window overlooking a garden." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlyaLiwjdwNln9oNJ4VbI0ooWsl1izVfBDqaatMeAz5zfozuTqqBEgR_-Ebl1PYlQC3qzLsWZqq1V2kVG-DHi3LCaliQAupwg1SVeGG83sdyxLbozOLAGG2Pw-LTF_ZdkIkknk0KjhHM3LKt-yLthR1KbyjEAJYEKLUrKzB753O6Pxj8ooJWSrpmfQ857kkg0PQa8Gi_zrMF22YZOupgZbX3go767fxiTzA8Q3CO6aErcWZCpwzHtjmQ"/>
+</div>
+<h4 class="font-headline-md text-headline-md text-primary mb-2">Social Hearth</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Designed around a monolithic stone island for culinary assembly.</p>
+</div>
+<div class="flex-1 group">
+<div class="overflow-hidden mb-6 bg-surface-container">
+<img class="w-full aspect-[3/4] object-cover transition-transform duration-[2s] group-hover:scale-105" data-alt="A serene master bedroom in the Farm Villa. A low-profile platform bed with white linen bedding is positioned to face a full-height glass wall. Beyond the glass is a private stone-walled terrace with a single olive tree. The interior walls are a warm plaster texture, and the lighting is soft and diffused. The overall feeling is one of supreme tranquility and connection to nature." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfliqVrysF2n01YYFqh9_3VgEJgqBN6Qk4mU5OjGi4iWsBkfC9q-rIq_J4fTF4qoFh4ZrIpll5VbYu-IiO2tPdBgUUZvQl7FwXmzfR8Uh9TTTE_Sjmh5UW9WHDg2zZRyDGhdhmw5dc1VTenP_YFzQY0P5ntTJQOC97CJqvIBjJGDF5Zi53oOQHV4GN0U3CjNQzPEtX0mDO5qfWaYozlJw_2IsC4AwNglusyhvIxZEUPGbFPRM2ApHO5w"/>
+</div>
+<h4 class="font-headline-md text-headline-md text-primary mb-2">Inner Sanctum</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Minimalist suites oriented toward the horizon for meditative rest.</p>
+</div>
+</div>
+</section>
+<!-- Final CTA / Quote -->
+<section class="bg-primary text-on-primary py-32 px-margin-mobile md:px-margin-desktop text-center">
+<div class="max-w-3xl mx-auto">
+<span class="material-symbols-outlined text-6xl mb-8 opacity-40">architecture</span>
+<h2 class="font-display-lg text-display-lg mb-12">Building your infinite journey.</h2>
+<div class="flex flex-col md:flex-row gap-gutter justify-center items-center">
+<a class="border border-on-primary px-10 py-4 font-label-caps text-label-caps tracking-widest hover:bg-on-primary hover:text-primary transition-all duration-400" href="services.html#contact">BOOK A CONSULTATION</a>
+<a class="font-label-caps text-label-caps tracking-widest flex items-center gap-2 group" href="projects.html">
+                        VIEW ALL PROJECTS 
+                        <span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Shell -->
+<footer class="bg-surface-container-highest dark:bg-tertiary-container">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter px-margin-mobile md:px-margin-desktop py-16 max-w-container-max mx-auto">
+<div class="md:col-span-4">
+<div class="font-headline-sm text-headline-sm text-primary dark:text-tertiary-fixed mb-6">INFINITE</div>
+<p class="font-body-md text-body-md text-on-surface-variant dark:text-on-tertiary-container max-w-xs mb-8">
+                    Holistic Architecture &amp; Fit-Out. Crafting spaces that transcend the ordinary.
+                </p>
+</div>
+<div class="md:col-span-2">
+<h4 class="font-label-caps text-label-caps text-primary dark:text-tertiary-fixed mb-6 uppercase tracking-widest">Studio</h4>
+<ul class="space-y-4">
+<li><a class="font-body-md text-body-md text-on-surface-variant dark:text-on-tertiary-container hover:text-primary dark:hover:text-tertiary-fixed transition-all" href="approach.html">Philosophy</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant dark:text-on-tertiary-container hover:text-primary dark:hover:text-tertiary-fixed transition-all" href="approach.html">Approach</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant dark:text-on-tertiary-container hover:text-primary dark:hover:text-tertiary-fixed transition-all" href="#">Journal</a></li>
+</ul>
+</div>
+<div class="md:col-span-2">
+<h4 class="font-label-caps text-label-caps text-primary dark:text-tertiary-fixed mb-6 uppercase tracking-widest">Connect</h4>
+<ul class="space-y-4">
+<li><a class="font-body-md text-body-md text-on-surface-variant dark:text-on-tertiary-container hover:text-primary dark:hover:text-tertiary-fixed transition-all" href="#">LinkedIn</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant dark:text-on-tertiary-container hover:text-primary dark:hover:text-tertiary-fixed transition-all" href="#">Instagram</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant dark:text-on-tertiary-container hover:text-primary dark:hover:text-tertiary-fixed transition-all" href="#">Pinterest</a></li>
+</ul>
+</div>
+<div class="md:col-span-4 flex flex-col md:items-end">
+<h4 class="font-label-caps text-label-caps text-primary dark:text-tertiary-fixed mb-6 uppercase tracking-widest">Inquiries</h4>
+<a class="font-headline-sm text-headline-sm text-primary dark:text-tertiary-fixed hover:opacity-60 transition-opacity" href="mailto:hello@infinite.arch">hello@infinite.arch</a>
+<p class="font-body-md text-body-md text-on-surface-variant dark:text-on-tertiary-container mt-4">Dubai, United Arab Emirates</p>
+</div>
+<div class="md:col-span-12 mt-16 pt-8 border-t border-outline-variant/30 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-body-md text-body-md text-on-surface-variant dark:text-on-tertiary-container opacity-60">
+                    © 2024 INFINITE Holistic Architecture &amp; Fit-Out. Dubai, UAE.
+                </p>
+<div class="flex gap-gutter">
+<a class="font-label-caps text-[10px] text-on-surface-variant hover:text-primary transition-all" href="#">Privacy</a>
+<a class="font-label-caps text-[10px] text-on-surface-variant hover:text-primary transition-all" href="#">Terms</a>
+</div>
+</div>
+</div>
+</footer>
+<script>
+        // Simple entrance reveal animation
+        document.addEventListener('DOMContentLoaded', () => {
+            const lines = document.querySelectorAll('.reveal-line');
+            lines.forEach(line => {
+                line.classList.add('revealed');
+            });
+
+            // Intersection Observer for fade-in animations on scroll
+            const observerOptions = {
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-reveal');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            // You can add data-reveal attributes to elements you want to animate
+            document.querySelectorAll('[data-reveal]').forEach(el => observer.observe(el));
+        });
+
+        // Smooth scroll for anchors
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body></html>
+
+
