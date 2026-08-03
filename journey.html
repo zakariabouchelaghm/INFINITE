@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 
 <html class="scroll-smooth" lang="en"><head>
 <meta charset="utf-8"/>
@@ -161,7 +161,8 @@
   .aspect-\[21\/9\] { aspect-ratio: 16/9 !important; }
   .md\:pr-16, .md\:pl-16 { padding: 0 !important; }
 }
-</style></head>
+</style>    <script type="module" src="https://cdn.jsdelivr.net/npm/@hotwired/turbo@8.0.4/+esm"></script>
+</head>
 <body class="bg-background text-on-surface selection:bg-secondary-container selection:text-on-secondary-container">
 <!-- TopNavBar -->
 <nav class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md transition-all duration-400 ease-in-out border-b border-primary/5">
@@ -230,13 +231,13 @@ function closeMobileMenu(){ var m=document.getElementById('mobile-menu'); if(m){
 <div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-[1px] step-line -translate-x-1/2"></div>
 <!-- Phase 1 -->
 <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter mb-32 relative stagger-reveal">
-<div class="md:pr-16 text-right order-2 md:order-1">
+<div class="md:pr-16 order-2 md:order-1 flex gap-6 justify-end items-start text-right">
+<div>
 <span class="font-label-caps text-label-caps text-primary/50 mb-2 block">Phase 01</span>
-<h3 class="font-headline-md text-headline-md mb-4 text-primary">Discovery &amp; Vision</h3>
+<h3 class="font-headline-md text-headline-md mb-4 text-primary">Discovery & Vision</h3>
 <p class="font-body-md text-body-md text-on-surface-variant">We begin with a deep immersion into your lifestyle, aspirations, and the site's unique energy. This initial dialogue forms the conceptual bedrock of the project.</p>
 </div>
-<div class="hidden md:flex justify-start items-center order-3 md:order-2">
-<div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-on-primary relative z-10 -ml-6">
+<div class="w-12 h-12 shrink-0 rounded-full bg-primary flex items-center justify-center text-on-primary mt-1">
 <span class="material-symbols-outlined">explore</span>
 </div>
 </div>
@@ -253,26 +254,26 @@ function closeMobileMenu(){ var m=document.getElementById('mobile-menu'); if(m){
 <img class="w-full h-full object-cover" data-alt="A close-up of a hand-sketched floor plan on translucent trace paper." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWM6bsetb7wD5yTvg8fCmjEw2xPViYjCZmXJabjajXZZ-slX_y6TM3u-HflE6a8x5u4FJEps-zeHEL46EeEj_3BfdVjshaNzG4Vh0sbCiqoQDE1uW8fV-KdQXV0WyjMLuZFtGjBhKDUYXGVIlqDP5OA05SMwf2tYly6OAj0qQ8UfHz9ZdsN5es8lH8TsDRf4ATDlDnRVqmHgx53DA6YtacOvIPlb7HTpEM87tDAhFImtFP9XMUVZW-0A"/>
 </div>
 </div>
-<div class="hidden md:flex justify-end items-center order-2">
-<div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-on-primary relative z-10 -mr-6">
+<div class="md:pl-16 order-3 flex gap-6 justify-start items-start text-left">
+<div class="w-12 h-12 shrink-0 rounded-full bg-primary flex items-center justify-center text-on-primary mt-1">
 <span class="material-symbols-outlined">architecture</span>
 </div>
-</div>
-<div class="md:pl-16 text-left order-3">
+<div>
 <span class="font-label-caps text-label-caps text-primary/50 mb-2 block">Phase 02</span>
 <h3 class="font-headline-md text-headline-md mb-4 text-primary">Conceptual Architecture</h3>
 <p class="font-body-md text-body-md text-on-surface-variant">Translating the vision into spatial geometry. We explore volume, circulation, and light through sketches and 3D modeling to define the project's silhouette.</p>
 </div>
 </div>
+</div>
 <!-- Phase 3 -->
 <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter mb-32 relative stagger-reveal">
-<div class="md:pr-16 text-right order-2 md:order-1">
+<div class="md:pr-16 order-2 md:order-1 flex gap-6 justify-end items-start text-right">
+<div>
 <span class="font-label-caps text-label-caps text-primary/50 mb-2 block">Phase 03</span>
 <h3 class="font-headline-md text-headline-md mb-4 text-primary">Detailed Design</h3>
 <p class="font-body-md text-body-md text-on-surface-variant">Precision engineering meets aesthetic refinement. Every junction, material transition, and bespoke element is meticulously detailed for flawless execution.</p>
 </div>
-<div class="hidden md:flex justify-start items-center order-3 md:order-2">
-<div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-on-primary relative z-10 -ml-6">
+<div class="w-12 h-12 shrink-0 rounded-full bg-primary flex items-center justify-center text-on-primary mt-1">
 <span class="material-symbols-outlined">precision_manufacturing</span>
 </div>
 </div>
@@ -289,26 +290,26 @@ function closeMobileMenu(){ var m=document.getElementById('mobile-menu'); if(m){
 <img class="w-full h-full object-cover" data-alt="A minimalist office desk with architectural blueprint rolls." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8u5bgZfQpPykr-kgWTuhJcKa6OdS-WPRkyxlaghLZwzXk5EaPNq8g_DqIufN5h47SVLSjELLKgxjEMtSaiPXCDdBDW2KY88KjiEtqO6Syl7ZUUnAfdRBfT1Vp2TKejoXzxbzKxOnMY7e7__MWCrSaxzGVP0ipeoDfunzmjQLu3zLb6kmZ1HzABPtbfLR2TFt4eZj107DHNPI3f2iHRER0NU7iWZko-b5U4Me-u7HQM3NA1_O42GkfSg"/>
 </div>
 </div>
-<div class="hidden md:flex justify-end items-center order-2">
-<div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-on-primary relative z-10 -mr-6">
+<div class="md:pl-16 order-3 flex gap-6 justify-start items-start text-left">
+<div class="w-12 h-12 shrink-0 rounded-full bg-primary flex items-center justify-center text-on-primary mt-1">
 <span class="material-symbols-outlined">description</span>
 </div>
-</div>
-<div class="md:pl-16 text-left order-3">
+<div>
 <span class="font-label-caps text-label-caps text-primary/50 mb-2 block">Phase 04</span>
-<h3 class="font-headline-md text-headline-md mb-4 text-primary">Approvals &amp; Permitting</h3>
+<h3 class="font-headline-md text-headline-md mb-4 text-primary">Approvals & Permitting</h3>
 <p class="font-body-md text-body-md text-on-surface-variant">Navigating the complexities of local regulations. We manage all technical submissions to ensure the project meets every safety and legal standard without compromise.</p>
+</div>
 </div>
 </div>
 <!-- Phase 5 -->
 <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter mb-32 relative stagger-reveal">
-<div class="md:pr-16 text-right order-2 md:order-1">
+<div class="md:pr-16 order-2 md:order-1 flex gap-6 justify-end items-start text-right">
+<div>
 <span class="font-label-caps text-label-caps text-primary/50 mb-2 block">Phase 05</span>
-<h3 class="font-headline-md text-headline-md mb-4 text-primary">Fit-Out &amp; Execution</h3>
+<h3 class="font-headline-md text-headline-md mb-4 text-primary">Fit-Out & Execution</h3>
 <p class="font-body-md text-body-md text-on-surface-variant">The transformation begins. Our master craftsmen and engineers bring the blueprints to life, maintaining rigorous quality control and site management throughout.</p>
 </div>
-<div class="hidden md:flex justify-start items-center order-3 md:order-2">
-<div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-on-primary relative z-10 -ml-6">
+<div class="w-12 h-12 shrink-0 rounded-full bg-primary flex items-center justify-center text-on-primary mt-1">
 <span class="material-symbols-outlined">construction</span>
 </div>
 </div>
@@ -325,26 +326,26 @@ function closeMobileMenu(){ var m=document.getElementById('mobile-menu'); if(m){
 <img class="w-full h-full object-cover" data-alt="Detailed view of a bespoke cabinetry handle." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWaY8I4vhhK0lMda_jVq3r3E4hTVFIS6_Kdzxxwm9cdeHDdSgo12dcls5XEwRK34-vPZsGEe9a2ka2nvx6l93ar9bVFOrAPo5RF2jeRkiEiN97P53rLfIDRO6mm2hJADcDzrya0HiyTWkIkACHhGNxo-QAVv0FYRUHLn3206iICvgvq4qgTSoWROTw6kgDjhpkipvDJdDVDlww_Q6TWNYN8Xvg6QUrgTCVe5LVcF4D3dkZWUrVpY6KRA"/>
 </div>
 </div>
-<div class="hidden md:flex justify-end items-center order-2">
-<div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-on-primary relative z-10 -mr-6">
+<div class="md:pl-16 order-3 flex gap-6 justify-start items-start text-left">
+<div class="w-12 h-12 shrink-0 rounded-full bg-primary flex items-center justify-center text-on-primary mt-1">
 <span class="material-symbols-outlined">layers</span>
 </div>
-</div>
-<div class="md:pl-16 text-left order-3">
+<div>
 <span class="font-label-caps text-label-caps text-primary/50 mb-2 block">Phase 06</span>
-<h3 class="font-headline-md text-headline-md mb-4 text-primary">Styling &amp; FF&amp;E</h3>
+<h3 class="font-headline-md text-headline-md mb-4 text-primary">Styling & FF&E</h3>
 <p class="font-body-md text-body-md text-on-surface-variant">The final layers of comfort and personality. We curate furniture, art, and accessories that complement the architectural shell and complete the story.</p>
+</div>
 </div>
 </div>
 <!-- Phase 7 -->
 <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter relative stagger-reveal">
-<div class="md:pr-16 text-right order-2 md:order-1">
+<div class="md:pr-16 order-2 md:order-1 flex gap-6 justify-end items-start text-right">
+<div>
 <span class="font-label-caps text-label-caps text-primary/50 mb-2 block">Phase 07</span>
-<h3 class="font-headline-md text-headline-md mb-4 text-primary">Handover &amp; Beyond</h3>
+<h3 class="font-headline-md text-headline-md mb-4 text-primary">Handover & Beyond</h3>
 <p class="font-body-md text-body-md text-on-surface-variant">We don't just hand over keys; we curate the transition. A final walkthrough ensures every detail is perfect, followed by ongoing support as you inhabit the space.</p>
 </div>
-<div class="hidden md:flex justify-start items-center order-3 md:order-2">
-<div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-on-primary relative z-10 -ml-6">
+<div class="w-12 h-12 shrink-0 rounded-full bg-primary flex items-center justify-center text-on-primary mt-1">
 <span class="material-symbols-outlined">key</span>
 </div>
 </div>
@@ -483,7 +484,6 @@ function closeMobileMenu(){ var m=document.getElementById('mobile-menu'); if(m){
 <div class="md:col-span-2">
 <h4 class="font-label-caps text-label-caps text-primary mb-6 uppercase">Connect</h4>
 <nav class="flex flex-col gap-4">
-<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-all" href="#">LinkedIn</a>
 <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-all" href="#">Instagram</a>
 </nav>
 <!-- Mobile Full-Screen Menu -->

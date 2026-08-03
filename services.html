@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 
 <html class="scroll-smooth" lang="en"><head>
 <meta charset="utf-8"/>
@@ -138,7 +138,8 @@
   .aspect-\[21\/9\] { aspect-ratio: 16/9 !important; }
   .md\:pr-16, .md\:pl-16 { padding: 0 !important; }
 }
-</style></head>
+</style>    <script type="module" src="https://cdn.jsdelivr.net/npm/@hotwired/turbo@8.0.4/+esm"></script>
+</head>
 <body class="bg-background text-on-surface font-body-md overflow-x-hidden">
 <!-- TopNavBar -->
 <nav class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md transition-all duration-400 ease-in-out border-b border-primary/5">
@@ -377,103 +378,94 @@ function closeMobileMenu(){ var m=document.getElementById('mobile-menu'); if(m){
 <div class="absolute -right-20 -bottom-20 w-96 h-96 bg-background rounded-full blur-[100px] opacity-10"></div>
 <div class="max-w-container-max mx-auto relative z-10">
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-20">
+<div class="flex flex-col justify-center">
+<h2 class="font-display-lg text-display-lg">Let's build something <span class="italic">unforgettable</span>.</h2>
+</div>
+<div class="bg-surface-container-lowest/10 backdrop-blur-sm p-8 md:p-12 border border-on-primary/10 flex flex-col justify-center">
+<div class="space-y-12">
 <div>
-<h2 class="font-display-lg text-display-lg mb-12">Let's build something <span class="italic">unforgettable</span>.</h2>
-<div class="space-y-8">
-<div>
-<p class="font-label-caps text-label-caps text-on-primary/60 mb-2 uppercase">Dubai Studio</p>
-<p class="font-body-lg text-body-lg">Building 4, Dubai Design District (d3)<br/>Dubai, United Arab Emirates</p>
+<p class="font-label-caps text-label-caps text-on-primary/60 mb-3 uppercase flex items-center gap-2"><span class="material-symbols-outlined text-lg">mail</span> Email Us</p>
+<p class="font-headline-sm text-headline-sm hover:text-surface-variant transition-colors"><a href="mailto:hello@infinite.ae">hello@infinite.ae</a></p>
 </div>
 <div>
-<p class="font-label-caps text-label-caps text-on-primary/60 mb-2 uppercase">Direct Inquiry</p>
-<p class="font-body-lg text-body-lg hover:text-surface-variant transition-colors"><a href="mailto:hello@infinite.ae">hello@infinite.ae</a></p>
-<p class="font-body-lg text-body-lg">+971 4 000 0000</p>
+<p class="font-label-caps text-label-caps text-on-primary/60 mb-3 uppercase flex items-center gap-2">
+<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+  <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c-.003 1.396.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+</svg> WhatsApp</p>
+<p class="font-headline-sm text-headline-sm hover:text-surface-variant transition-colors"><a href="https://wa.me/97140000000" target="_blank">+971 4 000 0000</a></p>
 </div>
 </div>
-</div>
-<div class="bg-surface-container-lowest/10 backdrop-blur-sm p-8 md:p-12 border border-on-primary/10">
-<form class="space-y-8">
-<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-<div class="relative">
-<label class="font-label-caps text-label-caps text-on-primary/70 uppercase block mb-2">Your Name</label>
-<input class="w-full bg-transparent border-b-2 border-on-primary/20 focus:border-on-primary outline-none py-2 transition-all text-body-md placeholder:text-on-primary/30" placeholder="John Doe" type="text"/>
-</div>
-<div class="relative">
-<label class="font-label-caps text-label-caps text-on-primary/70 uppercase block mb-2">Email Address</label>
-<input class="w-full bg-transparent border-b-2 border-on-primary/20 focus:border-on-primary outline-none py-2 transition-all text-body-md placeholder:text-on-primary/30" placeholder="john@example.com" type="email"/>
-</div>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-<div class="relative">
-<label class="font-label-caps text-label-caps text-on-primary/70 uppercase block mb-2">Project Type</label>
-<select class="w-full bg-transparent border-b-2 border-on-primary/20 focus:border-on-primary outline-none py-2 transition-all text-body-md appearance-none">
-<option class="bg-primary text-on-primary">Residential Architecture</option>
-<option class="bg-primary text-on-primary">Commercial Fit-Out</option>
-<option class="bg-primary text-on-primary">Interior Design</option>
-<option class="bg-primary text-on-primary">Other</option>
-</select>
-</div>
-<div class="relative">
-<label class="font-label-caps text-label-caps text-on-primary/70 uppercase block mb-2">Estimated Budget</label>
-<input class="w-full bg-transparent border-b-2 border-on-primary/20 focus:border-on-primary outline-none py-2 transition-all text-body-md placeholder:text-on-primary/30" placeholder="e.g. 500k - 1M AED" type="text"/>
-</div>
-</div>
-<div class="relative">
-<label class="font-label-caps text-label-caps text-on-primary/70 uppercase block mb-2">Project Vision</label>
-<textarea class="w-full bg-transparent border-b-2 border-on-primary/20 focus:border-on-primary outline-none py-2 transition-all text-body-md resize-none placeholder:text-on-primary/30" placeholder="Tell us about your space..." rows="4"></textarea>
-</div>
-<button class="w-full bg-on-primary text-primary py-5 font-label-caps text-label-caps uppercase tracking-widest font-bold hover:bg-surface transition-colors duration-400" type="submit">
-                        Submit Inquiry
-                    </button>
-</form>
 </div>
 </div>
 </div>
 </section>
-<!-- Footer -->
-<footer class="bg-surface-container-highest py-stack-lg px-margin-desktop">
-<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter max-w-container-max mx-auto">
-<div class="md:col-span-5 mb-12 md:mb-0">
-<div class="h-10 mb-6">
-<img alt="INFINITE Logo" class="h-full object-contain filter brightness-50" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCowv8mGMTazrKg1OZ0WIuIp07JZyT-SXZfsBaAeXZuDKzfnGJgPYvd_o6rUZxSzfGO8_ER-mfORaH6Me3tWFU0luNN-hbYH-T8PIHMTXJb4B5G5npCQOXv_YGzCR8CiXDTuUOYy48TjqjnJeyh0RzXsUI9nKDyD1Dxax1ecnh54Bh1uinX51Bx42AgKPX2jo_aPFY9jMuMKL7jLzG5mle4eWWMZAiOED5VQfF-dcc7aVjkZyfnPADct1XI4YWgFdWUHF0"/>
-</div>
-<p class="font-body-md text-body-md text-on-surface-variant max-w-xs mb-8">
-                Crafting spatial legacies in Dubai and beyond. Holistic architecture for the conscious inhabitant.
-            </p>
-<div class="flex gap-6">
-<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-all" href="#">Instagram</a>
-<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-all" href="#">LinkedIn</a>
-<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-all" href="#">Pinterest</a>
-</div>
-</div>
-<div class="md:col-span-2 col-start-7">
-<h5 class="font-label-caps text-label-caps text-primary mb-6 uppercase">Company</h5>
-<ul class="space-y-4">
-<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-all" href="approach.html">Philosophy</a></li>
-<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-all" href="journey.html">Our Process</a></li>
-<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-all" href="#">Careers</a></li>
-</ul>
-</div>
-<div class="md:col-span-2">
-<h5 class="font-label-caps text-label-caps text-primary mb-6 uppercase">Connect</h5>
-<ul class="space-y-4">
-<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-all" href="services.html#contact">Contact</a></li>
-<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-all" href="#">Newsletter</a></li>
-<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-all" href="#">Press Kit</a></li>
-</ul>
-</div>
-<div class="md:col-span-2">
-<h5 class="font-label-caps text-label-caps text-primary mb-6 uppercase">Legal</h5>
-<ul class="space-y-4">
-<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-all" href="#">Privacy</a></li>
-<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-all" href="#">Terms</a></li>
-</ul>
-</div>
-</div>
-<div class="max-w-container-max mx-auto border-t border-outline-variant mt-20 pt-8">
-<p class="font-body-md text-body-md text-on-surface-variant">© 2024 INFINITE Holistic Architecture &amp; Fit-Out. Dubai, UAE.</p>
-</div>
-</footer>
+    <!-- Footer -->
+    <footer class="bg-surface-container-low w-full border-t border-primary/10">
+        <div
+            class="grid grid-cols-1 md:grid-cols-12 gap-gutter px-margin-desktop py-stack-lg max-w-container-max mx-auto">
+            <!-- Brand Column -->
+            <div class="md:col-span-4 mb-10 md:mb-0">
+                <div class="flex items-center gap-3 mb-6">
+                    <img alt="INFINITE Logo" class="h-10 w-auto"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDR35q3pXtxKT9ysAnxmsrymE6wXPFPccYp1xIotLGVuF_x3Zz9UmKKp6jDE65PTmspdt-WyyEtHdKZGDibIyRNwawcRy8qcIy27LravkOQgyRnyP9hiJrS-oPZpsO_c0IAE4RVYMRF1Yx0ZhXk0UXF6lXHbtJxCIrVYh6KI9GwYSs8rgV09PEqESO0m0Fkk-TokEl38strQIWFAGsZHqqZiNQgRkg334SYmaVuAi_dJ80s61BsrPE4Z1Fqlix4BfHeLi8" />
+                    <span class="font-headline-sm text-headline-sm text-primary">INFINITE</span>
+                </div>
+                <p class="font-body-md text-body-md text-on-surface-variant mb-8 max-w-xs">
+                    Transforming the architectural landscape of Dubai through holistic design and superior fit-out
+                    execution.
+                </p>
+                <div class="flex gap-4">
+                    <a class="text-primary hover:opacity-70 transition-all" href="#">
+                        <span class="material-symbols-outlined">alternate_email</span>
+                    </a>
+                    <a class="text-primary hover:opacity-70 transition-all" href="#">
+                        <span class="material-symbols-outlined">call</span>
+                    </a>
+                </div>
+            </div>
+            <!-- Links Columns -->
+            <div class="md:col-span-2">
+                <h5 class="font-label-caps text-label-caps text-primary mb-6 uppercase">Company</h5>
+                <ul class="space-y-4">
+                    <li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-all"
+                            href="approach.html">Philosophy</a></li>
+                    <li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-all"
+                            href="journey.html">Our Journey</a></li>
+                    <li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-all"
+                            href="journey.html">Process</a></li>
+                </ul>
+            </div>
+            
+            <div class="md:col-span-2">
+                <h5 class="font-label-caps text-label-caps text-primary mb-6 uppercase">Connect</h5>
+                <ul class="space-y-4">
+                    <li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-all"
+                            href="#">Instagram</a></li>
+                </ul>
+            </div>
+            <!-- Newsletter/CTA -->
+            <div class="md:col-span-2">
+                <h5 class="font-label-caps text-label-caps text-primary mb-6 uppercase">Studio</h5>
+                <p class="font-body-md text-body-md text-on-surface-variant mb-2">Dubai Design District</p>
+                <p class="font-body-md text-body-md text-on-surface-variant mb-4">Building 4, Office 201</p>
+                <a class="font-label-caps text-label-caps text-primary underline underline-offset-4" href="#">Get
+                    Directions</a>
+            </div>
+            <!-- Copyright -->
+            <div
+                class="md:col-span-12 mt-16 pt-8 border-t border-primary/10 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="font-body-md text-body-md text-on-surface-variant">&copy; 2024 INFINITE Holistic Architecture &amp;
+                    Fit-Out. Dubai, UAE.</p>
+                <div class="flex gap-8">
+                    <span
+                        class="font-label-caps text-[10px] text-on-surface-variant uppercase tracking-widest">Architectural
+                        Excellence</span>
+                    <span class="font-label-caps text-[10px] text-on-surface-variant uppercase tracking-widest">Holistic
+                        Vision</span>
+                </div>
+            </div>
+        </div>
+    </footer>
 <script>
     // FAQ Toggle Logic
     function toggleFaq(element) {

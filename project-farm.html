@@ -147,7 +147,8 @@
   .aspect-\[21\/9\] { aspect-ratio: 16/9 !important; }
   .md\:pr-16, .md\:pl-16 { padding: 0 !important; }
 }
-</style></head>
+</style>    <script type="module" src="https://cdn.jsdelivr.net/npm/@hotwired/turbo@8.0.4/+esm"></script>
+</head>
 <body class="font-body-md text-on-surface selection:bg-primary-fixed-dim selection:text-primary">
 <!-- TopNavBar -->
 <nav class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md transition-all duration-400 ease-in-out border-b border-primary/5">
@@ -196,170 +197,89 @@ function closeMobileMenu(){ var m=document.getElementById('mobile-menu'); if(m){
   if(cls) cls.addEventListener('click',closeMobileMenu);
 })();
 </script>
-<main class="pt-20 overflow-hidden">
-<!-- Hero Section -->
-<section class="relative h-[90vh] w-full overflow-hidden flex items-end">
-<div class="absolute inset-0 z-0">
-<img alt="Architectural photography of a Farm Villa combining rustic stone walls with modern glass facades, set in a lush landscape at sunset." class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLuzEXbw0H3e6IaVukZFRmP47D7-RlNsqV6hLsPgHmyVHBgPW3mrNtXDMeZ3WnIxuaJdgR1SBm8wrg5eUfyWM_yQkILoplPwcHO66xM-WcsaCDfg9ohK9sEFU-lDmDg8Fa_QVCLrXW-W7QYUI39KuowfTSS0lr1kmXRt7WYLlLSYhC6U-NrMDbtH3rka4bOcQHq6UxFD7Nies9XOZufkuTwmSyjNMXL0vJ59q3Mhnu367arOfUFO3inwGsk"/>
-<div class="absolute inset-0 bg-black/10"></div>
-</div>
-<div class="relative z-10 w-full px-margin-mobile md:px-margin-desktop pb-20 max-w-container-max mx-auto">
-<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
-<div class="md:col-span-8">
-<span class="font-label-caps text-label-caps text-surface-container-lowest mb-4 block tracking-[0.2em]">PROJECT 04 // ITALY</span>
-<h1 class="font-display-lg text-display-lg md:text-[80px] text-surface-container-lowest reveal-line">
-<span>Farm Villa</span>
-</h1>
-</div>
-</div>
-</div>
-</section>
-<!-- Project Intro: The Natural Context -->
-<section class="py-24 md:py-32 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
-<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-start">
-<div class="md:col-start-2 md:col-span-3">
-<h2 class="font-label-caps text-label-caps text-primary mb-8 border-l border-primary/20 pl-4 py-1">THE NATURAL CONTEXT</h2>
-</div>
-<div class="md:col-span-6">
-<p class="font-headline-md text-headline-md text-on-surface-variant leading-tight mb-12 italic">
-                        "The architecture does not sit upon the landscape, it emerges from it—a silent witness to the passage of time."
-                    </p>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
-<p class="font-body-lg text-body-lg text-on-surface-variant opacity-80">
-                            Situated amidst the rolling hills of the countryside, the Farm Villa represents a masterclass in contextual integration. The project began with a deep study of the site's topographical nuances, ensuring that the footprint of the new structure honored the existing olive groves and natural slopes.
-                        </p>
-<p class="font-body-lg text-body-lg text-on-surface-variant opacity-80">
-                            The orientation maximizes passive solar gain while frame-specific apertures act as living canvases, capturing the seasonal transitions of the valley below. Here, the boundaries between interior comfort and exterior wildness are intentionally blurred.
-                        </p>
-</div>
-</div>
-</div>
-</section>
-<!-- Visual Anchor -->
-<section class="px-margin-mobile md:px-margin-desktop mb-32">
-<div class="relative aspect-[21/9] w-full overflow-hidden">
-<img class="w-full h-full object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-1000" data-alt="A wide architectural shot of the Farm Villa at dusk. The warm interior lighting glows through expansive floor-to-ceiling glass windows, contrasting with the cool, textured stone of the exterior walls. The surrounding landscape is bathed in the soft blue and purple hues of twilight, creating a peaceful and luxurious atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCW0FhN5d1X2xcs93aPDl5BlAz4d1E52VDkUJVt3gCFaobpL-rZmuHudp0p1mG-tj4DvmRMjayb3GnSVTArkM7FEYmzk0rEolro5UPPaYsWBTiT418QiKxH67NVwWFqM3CHot1mxJMuLN_4HwCI7gS7b1EJA9mtqHNo70EOE2B6Pqf0M3doP6QKqxxKaER8IvvMIUZmyGOBPzu7eh3qpD76UtX85SaKFd5kQm_tenbziBJYGtr7XOwGcA"/>
-</div>
-</section>
-<!-- Material Narrative -->
-<section class="bg-surface-container-low py-24 md:py-32">
-<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
-<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
-<div class="md:col-span-5 order-2 md:order-1">
-<div class="space-y-12">
-<div class="border-b border-outline-variant pb-8">
-<h3 class="font-label-caps text-label-caps text-primary mb-4">RECLAIMED TIMBER</h3>
-<p class="font-body-md text-body-md text-on-surface-variant">Sourced from local heritage structures, the structural beams retain their original patina, grounding the modern interior with historical weight.</p>
-</div>
-<div class="border-b border-outline-variant pb-8">
-<h3 class="font-label-caps text-label-caps text-primary mb-4">QUARRIED STONE</h3>
-<p class="font-body-md text-body-md text-on-surface-variant">Hand-cut local limestone creates a monolithic thermal mass that regulates temperature while echoing the ancient geology of the region.</p>
-</div>
-<div class="border-b border-outline-variant pb-8">
-<h3 class="font-label-caps text-label-caps text-primary mb-4">STRUCTURAL GLASS</h3>
-<p class="font-body-md text-body-md text-on-surface-variant">High-performance triple-glazing systems allow for massive spans with minimal framing, bringing the sky into the living space.</p>
-</div>
-</div>
-</div>
-<div class="md:col-span-6 md:col-start-7 order-1 md:order-2 mb-12 md:mb-0">
-<h2 class="font-display-lg text-display-lg text-primary mb-8">Material Narrative</h2>
-<div class="aspect-square w-full bg-white relative">
-<img class="w-full h-full object-cover" data-alt="Macro close-up detail of the building materials used in the Farm Villa. A weathered piece of reclaimed dark wood rests against a rough-hewn, light-colored limestone block. A sliver of polished dark metal and a reflection of a green tree in clear glass complete the composition. The lighting is soft and directional, highlighting the rich textures." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpB1T9cFQt5yALM5IxCsHzHzsnTD8beFZFuXLv2WkrWqfNGKJDDAXtNAFiG0AAfrnd-ZZnB5UfqUcSiAXPaFzvxg3ORP3Z3LRHvNlbQg6tNcnm2tyGhhBZpq6jNeCtbGn6DGDAvEjS_hF9NG7emWmU60MDa_Qdyv5tZp7eWMJbVxlQGTlsuuZURFhcSRCxJ2rOTAcuyEU0WEQLPLFJB8GQDBu0oKxsVaXb_nnjJydtXz_kEVpR8e37Yw"/>
-<div class="absolute bottom-8 right-8 bg-surface/90 backdrop-blur p-6 max-w-xs shadow-sm">
-<p class="font-label-caps text-[10px] tracking-[0.2em] mb-2 uppercase text-primary">Sensory Detail</p>
-<p class="font-body-md text-on-surface italic">"Tactility is the primary language of the Villa. Every surface invites a touch."</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Spatial Energy -->
-<section class="py-24 md:py-40 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto overflow-hidden">
-<div class="text-center mb-24">
-<h2 class="font-display-lg text-display-lg text-primary mb-4">Spatial Energy</h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto opacity-70">Design focused on the movement of light and the rhythm of domestic life.</p>
-</div>
-<div class="flex flex-col md:flex-row gap-gutter">
-<div class="flex-1 group">
-<div class="overflow-hidden mb-6 bg-surface-container">
-<img class="w-full aspect-[3/4] object-cover transition-transform duration-[2s] group-hover:scale-105" data-alt="An interior view of the Farm Villa's living room. The space is vast and open-plan with very high ceilings. The floor is made of large, neutral-toned stone tiles. Minimalist, modern furniture in earthy tones—tans, creams, and dark browns—is arranged thoughtfully. Sunlight streams through a huge window, casting dramatic shadows and illuminating floating dust motes." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWwbUFURDr8r8AOw4UyzJH0jjFUhKvREgdy0VwuDUFtt4Xu2zmOZnvQy8vBJBCRLC5-9E24eMsFXqSHtLDNf27Q6iB2p-2XM06cnX13VRGSnUK0eCRDQ0d9g3U-XaOFDo5KrlfGQAS48k6AOSO_0VNyrh9nVwSYRI6LvkmTLBk2LRc0OpFqqHR0BWE9h3huPCnDFQ09ykeNR2RkYtp-nUwBw44KBxRJFDJ93YAvOpNA2UeI-SqEn4OBg"/>
-</div>
-<h4 class="font-headline-md text-headline-md text-primary mb-2">The Atrium</h4>
-<p class="font-body-md text-body-md text-on-surface-variant">A vertical shaft of light that connects the three levels of the home.</p>
-</div>
-<div class="flex-1 mt-12 md:mt-32 group">
-<div class="overflow-hidden mb-6 bg-surface-container">
-<img class="w-full aspect-[3/4] object-cover transition-transform duration-[2s] group-hover:scale-105" data-alt="A luxurious minimalist kitchen inside the Farm Villa. The cabinetry is made of dark reclaimed wood with a matte finish. A long, seamless island made of the same limestone as the exterior walls sits in the center. Modern built-in appliances are hidden behind wooden panels. The lighting is subtle, with warm under-cabinet LEDs and natural light from a window overlooking a garden." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlyaLiwjdwNln9oNJ4VbI0ooWsl1izVfBDqaatMeAz5zfozuTqqBEgR_-Ebl1PYlQC3qzLsWZqq1V2kVG-DHi3LCaliQAupwg1SVeGG83sdyxLbozOLAGG2Pw-LTF_ZdkIkknk0KjhHM3LKt-yLthR1KbyjEAJYEKLUrKzB753O6Pxj8ooJWSrpmfQ857kkg0PQa8Gi_zrMF22YZOupgZbX3go767fxiTzA8Q3CO6aErcWZCpwzHtjmQ"/>
-</div>
-<h4 class="font-headline-md text-headline-md text-primary mb-2">Social Hearth</h4>
-<p class="font-body-md text-body-md text-on-surface-variant">Designed around a monolithic stone island for culinary assembly.</p>
-</div>
-<div class="flex-1 group">
-<div class="overflow-hidden mb-6 bg-surface-container">
-<img class="w-full aspect-[3/4] object-cover transition-transform duration-[2s] group-hover:scale-105" data-alt="A serene master bedroom in the Farm Villa. A low-profile platform bed with white linen bedding is positioned to face a full-height glass wall. Beyond the glass is a private stone-walled terrace with a single olive tree. The interior walls are a warm plaster texture, and the lighting is soft and diffused. The overall feeling is one of supreme tranquility and connection to nature." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfliqVrysF2n01YYFqh9_3VgEJgqBN6Qk4mU5OjGi4iWsBkfC9q-rIq_J4fTF4qoFh4ZrIpll5VbYu-IiO2tPdBgUUZvQl7FwXmzfR8Uh9TTTE_Sjmh5UW9WHDg2zZRyDGhdhmw5dc1VTenP_YFzQY0P5ntTJQOC97CJqvIBjJGDF5Zi53oOQHV4GN0U3CjNQzPEtX0mDO5qfWaYozlJw_2IsC4AwNglusyhvIxZEUPGbFPRM2ApHO5w"/>
-</div>
-<h4 class="font-headline-md text-headline-md text-primary mb-2">Inner Sanctum</h4>
-<p class="font-body-md text-body-md text-on-surface-variant">Minimalist suites oriented toward the horizon for meditative rest.</p>
-</div>
-</div>
-</section>
-<!-- Final CTA / Quote -->
-<section class="bg-primary text-on-primary py-32 px-margin-mobile md:px-margin-desktop text-center">
-<div class="max-w-3xl mx-auto">
-<span class="material-symbols-outlined text-6xl mb-8 opacity-40">architecture</span>
-<h2 class="font-display-lg text-display-lg mb-12">Building your infinite journey.</h2>
-<div class="flex flex-col md:flex-row gap-gutter justify-center items-center">
-<a class="border border-on-primary px-10 py-4 font-label-caps text-label-caps tracking-widest hover:bg-on-primary hover:text-primary transition-all duration-400" href="services.html#contact">BOOK A CONSULTATION</a>
-<a class="font-label-caps text-label-caps tracking-widest flex items-center gap-2 group" href="projects.html">
-                        VIEW ALL PROJECTS 
-                        <span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_forward</span>
-</a>
-</div>
-</div>
-</section>
+<main class="relative z-10 bg-background py-24 md:py-32 px-margin-mobile md:px-margin-desktop">
+    <div class="max-w-container-max mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="aspect-square bg-surface-container overflow-hidden rounded-lg shadow-sm">
+                <img src="projects_images/farm%20villa/kitchen.png" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" loading="lazy" alt="Project Image">
+            </div>
+            <div class="aspect-square bg-surface-container overflow-hidden rounded-lg shadow-sm">
+                <img src="projects_images/farm%20villa/rent%20villa.png" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" loading="lazy" alt="Project Image">
+            </div>
+            <div class="aspect-square bg-surface-container overflow-hidden rounded-lg shadow-sm">
+                <img src="projects_images/farm%20villa/villa%20for%20rent.png" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" loading="lazy" alt="Project Image">
+            </div>
+        </div>
+    </div>
 </main>
 <!-- Footer Shell -->
-<footer class="bg-surface-container-highest dark:bg-tertiary-container">
-<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter px-margin-mobile md:px-margin-desktop py-16 max-w-container-max mx-auto">
-<div class="md:col-span-4">
-<div class="font-headline-sm text-headline-sm text-primary dark:text-tertiary-fixed mb-6">INFINITE</div>
-<p class="font-body-md text-body-md text-on-surface-variant dark:text-on-tertiary-container max-w-xs mb-8">
-                    Holistic Architecture &amp; Fit-Out. Crafting spaces that transcend the ordinary.
+    <!-- Footer -->
+    <footer class="bg-surface-container-low w-full border-t border-primary/10">
+        <div
+            class="grid grid-cols-1 md:grid-cols-12 gap-gutter px-margin-desktop py-stack-lg max-w-container-max mx-auto">
+            <!-- Brand Column -->
+            <div class="md:col-span-4 mb-10 md:mb-0">
+                <div class="flex items-center gap-3 mb-6">
+                    <img alt="INFINITE Logo" class="h-10 w-auto"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDR35q3pXtxKT9ysAnxmsrymE6wXPFPccYp1xIotLGVuF_x3Zz9UmKKp6jDE65PTmspdt-WyyEtHdKZGDibIyRNwawcRy8qcIy27LravkOQgyRnyP9hiJrS-oPZpsO_c0IAE4RVYMRF1Yx0ZhXk0UXF6lXHbtJxCIrVYh6KI9GwYSs8rgV09PEqESO0m0Fkk-TokEl38strQIWFAGsZHqqZiNQgRkg334SYmaVuAi_dJ80s61BsrPE4Z1Fqlix4BfHeLi8" />
+                    <span class="font-headline-sm text-headline-sm text-primary">INFINITE</span>
+                </div>
+                <p class="font-body-md text-body-md text-on-surface-variant mb-8 max-w-xs">
+                    Transforming the architectural landscape of Dubai through holistic design and superior fit-out
+                    execution.
                 </p>
-</div>
-<div class="md:col-span-2">
-<h4 class="font-label-caps text-label-caps text-primary dark:text-tertiary-fixed mb-6 uppercase tracking-widest">Studio</h4>
-<ul class="space-y-4">
-<li><a class="font-body-md text-body-md text-on-surface-variant dark:text-on-tertiary-container hover:text-primary dark:hover:text-tertiary-fixed transition-all" href="approach.html">Philosophy</a></li>
-<li><a class="font-body-md text-body-md text-on-surface-variant dark:text-on-tertiary-container hover:text-primary dark:hover:text-tertiary-fixed transition-all" href="approach.html">Approach</a></li>
-<li><a class="font-body-md text-body-md text-on-surface-variant dark:text-on-tertiary-container hover:text-primary dark:hover:text-tertiary-fixed transition-all" href="#">Journal</a></li>
-</ul>
-</div>
-<div class="md:col-span-2">
-<h4 class="font-label-caps text-label-caps text-primary dark:text-tertiary-fixed mb-6 uppercase tracking-widest">Connect</h4>
-<ul class="space-y-4">
-<li><a class="font-body-md text-body-md text-on-surface-variant dark:text-on-tertiary-container hover:text-primary dark:hover:text-tertiary-fixed transition-all" href="#">LinkedIn</a></li>
-<li><a class="font-body-md text-body-md text-on-surface-variant dark:text-on-tertiary-container hover:text-primary dark:hover:text-tertiary-fixed transition-all" href="#">Instagram</a></li>
-<li><a class="font-body-md text-body-md text-on-surface-variant dark:text-on-tertiary-container hover:text-primary dark:hover:text-tertiary-fixed transition-all" href="#">Pinterest</a></li>
-</ul>
-</div>
-<div class="md:col-span-4 flex flex-col md:items-end">
-<h4 class="font-label-caps text-label-caps text-primary dark:text-tertiary-fixed mb-6 uppercase tracking-widest">Inquiries</h4>
-<a class="font-headline-sm text-headline-sm text-primary dark:text-tertiary-fixed hover:opacity-60 transition-opacity" href="mailto:hello@infinite.arch">hello@infinite.arch</a>
-<p class="font-body-md text-body-md text-on-surface-variant dark:text-on-tertiary-container mt-4">Dubai, United Arab Emirates</p>
-</div>
-<div class="md:col-span-12 mt-16 pt-8 border-t border-outline-variant/30 flex flex-col md:flex-row justify-between items-center gap-4">
-<p class="font-body-md text-body-md text-on-surface-variant dark:text-on-tertiary-container opacity-60">
-                    © 2024 INFINITE Holistic Architecture &amp; Fit-Out. Dubai, UAE.
-                </p>
-<div class="flex gap-gutter">
-<a class="font-label-caps text-[10px] text-on-surface-variant hover:text-primary transition-all" href="#">Privacy</a>
-<a class="font-label-caps text-[10px] text-on-surface-variant hover:text-primary transition-all" href="#">Terms</a>
-</div>
-</div>
-</div>
-</footer>
+                <div class="flex gap-4">
+                    <a class="text-primary hover:opacity-70 transition-all" href="#">
+                        <span class="material-symbols-outlined">alternate_email</span>
+                    </a>
+                    <a class="text-primary hover:opacity-70 transition-all" href="#">
+                        <span class="material-symbols-outlined">call</span>
+                    </a>
+                </div>
+            </div>
+            <!-- Links Columns -->
+            <div class="md:col-span-2">
+                <h5 class="font-label-caps text-label-caps text-primary mb-6 uppercase">Company</h5>
+                <ul class="space-y-4">
+                    <li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-all"
+                            href="approach.html">Philosophy</a></li>
+                    <li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-all"
+                            href="journey.html">Our Journey</a></li>
+                    <li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-all"
+                            href="journey.html">Process</a></li>
+                </ul>
+            </div>
+            
+            <div class="md:col-span-2">
+                <h5 class="font-label-caps text-label-caps text-primary mb-6 uppercase">Connect</h5>
+                <ul class="space-y-4">
+                    <li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-all"
+                            href="#">Instagram</a></li>
+                </ul>
+            </div>
+            <!-- Newsletter/CTA -->
+            <div class="md:col-span-2">
+                <h5 class="font-label-caps text-label-caps text-primary mb-6 uppercase">Studio</h5>
+                <p class="font-body-md text-body-md text-on-surface-variant mb-2">Dubai Design District</p>
+                <p class="font-body-md text-body-md text-on-surface-variant mb-4">Building 4, Office 201</p>
+                <a class="font-label-caps text-label-caps text-primary underline underline-offset-4" href="#">Get
+                    Directions</a>
+            </div>
+            <!-- Copyright -->
+            <div
+                class="md:col-span-12 mt-16 pt-8 border-t border-primary/10 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="font-body-md text-body-md text-on-surface-variant">&copy; 2024 INFINITE Holistic Architecture &amp;
+                    Fit-Out. Dubai, UAE.</p>
+                <div class="flex gap-8">
+                    <span
+                        class="font-label-caps text-[10px] text-on-surface-variant uppercase tracking-widest">Architectural
+                        Excellence</span>
+                    <span class="font-label-caps text-[10px] text-on-surface-variant uppercase tracking-widest">Holistic
+                        Vision</span>
+                </div>
+            </div>
+        </div>
+    </footer>
 <script>
         // Simple entrance reveal animation
         document.addEventListener('DOMContentLoaded', () => {
