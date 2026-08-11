@@ -1,42 +1,54 @@
 <!DOCTYPE html>
 
-<html class="scroll-smooth" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Services &amp; FAQ | INFINITE Holistic Architecture &amp; Fit-Out</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<style>
+<html class="scroll-smooth" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Services &amp; FAQ | INFINITE Holistic Architecture &amp; Fit-Out</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&amp;family=Manrope:wght@200..800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <style>
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
         }
+
         .glass-effect {
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
         }
+
         .reveal-on-scroll {
             opacity: 0;
             transform: translateY(30px);
             transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
         }
+
         .reveal-on-scroll.active {
             opacity: 1;
             transform: translateY(0);
         }
+
         .faq-answer {
             max-height: 0;
             overflow: hidden;
             transition: max-height 0.4s ease-out;
         }
+
         .faq-item.active .faq-answer {
             max-height: 500px;
         }
+
         .faq-item.active .faq-icon {
             transform: rotate(45deg);
         }
     </style>
-<script id="tailwind-config">
+    <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
             theme: {
@@ -86,319 +98,529 @@
                         "label-caps": ["Manrope"]
                     },
                     "fontSize": {
-                        "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "400"}],
-                        "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400"}],
-                        "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "400"}],
-                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
-                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
-                        "label-caps": ["12px", {"lineHeight": "1.4", "letterSpacing": "0.1em", "fontWeight": "600"}]
+                        "headline-md": ["32px", { "lineHeight": "1.3", "fontWeight": "400" }],
+                        "display-lg": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+                        "headline-sm": ["24px", { "lineHeight": "1.4", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "label-caps": ["12px", { "lineHeight": "1.4", "letterSpacing": "0.1em", "fontWeight": "600" }]
                     }
                 },
             },
         }
     </script>
-<style>
-/* ===== RESPONSIVE FIXES ===== */
-@media (max-width: 767px) {
-  .text-display-lg { font-size: clamp(28px,8vw,48px) !important; line-height: 1.2 !important; }
-  .text-headline-lg { font-size: clamp(22px,6vw,36px) !important; line-height: 1.25 !important; }
-  .text-headline-md { font-size: clamp(20px,5vw,28px) !important; }
-  [class*="px-margin-desktop"] { padding-left: 20px !important; padding-right: 20px !important; }
-  .py-stack-lg { padding-top: 64px !important; padding-bottom: 64px !important; }
-  .pt-40 { padding-top: 6rem !important; }
-  .mb-stack-lg { margin-bottom: 64px !important; }
-  .mt-stack-lg { margin-top: 64px !important; }
-  .gap-20 { gap: 2rem !important; }
-  .gap-16 { gap: 1.5rem !important; }
-  .p-12 { padding: 1.5rem !important; }
-  .py-32 { padding-top: 3rem !important; padding-bottom: 3rem !important; }
-  .py-24 { padding-top: 2rem !important; padding-bottom: 2rem !important; }
-  .mb-24 { margin-bottom: 2rem !important; }
-  .mb-20 { margin-bottom: 1.5rem !important; }
-  header.relative.min-h-screen { min-height: 70vh !important; }
-  .h-\[85vh\], .h-\[90vh\] { min-height: 55vh !important; height: auto !important; }
-}
-@media (max-width: 640px) {
-  .md\:col-span-5, .md\:col-span-7, .md\:col-span-4, .md\:col-span-8,
-  .md\:col-span-3, .md\:col-span-6, .md\:col-span-2, .md\:col-span-12 {
-    grid-column: span 1 / span 1 !important;
-  }
-  .md\:col-start-6, .md\:col-start-7 { grid-column-start: 1 !important; }
-  .lg\:grid-cols-4 { grid-template-columns: 1fr 1fr !important; }
-  .md\:grid-cols-3 { grid-template-columns: 1fr !important; }
-  .md\:grid-cols-2 { grid-template-columns: 1fr !important; }
-  .md\:grid-cols-12 { grid-template-columns: 1fr !important; }
-  .order-2 { order: 2 !important; }
-  .order-1 { order: 1 !important; }
-  .text-right { text-align: left !important; }
-  .md\:text-right { text-align: left !important; }
-  .sticky.top-40 { position: static !important; }
-  .h-\[80vh\] { height: 50vh !important; }
-  .md\:h-\[600px\] { height: auto !important; }
-  .aspect-\[21\/9\] { aspect-ratio: 16/9 !important; }
-  .md\:pr-16, .md\:pl-16 { padding: 0 !important; }
-}
-</style>    <script type="module" src="https://cdn.jsdelivr.net/npm/@hotwired/turbo@8.0.4/+esm"></script>
+    <style>
+        /* ===== RESPONSIVE FIXES ===== */
+        @media (max-width: 767px) {
+            .text-display-lg {
+                font-size: clamp(28px, 8vw, 48px) !important;
+                line-height: 1.2 !important;
+            }
+
+            .text-headline-lg {
+                font-size: clamp(22px, 6vw, 36px) !important;
+                line-height: 1.25 !important;
+            }
+
+            .text-headline-md {
+                font-size: clamp(20px, 5vw, 28px) !important;
+            }
+
+            [class*="px-margin-desktop"] {
+                padding-left: 20px !important;
+                padding-right: 20px !important;
+            }
+
+            .py-stack-lg {
+                padding-top: 64px !important;
+                padding-bottom: 64px !important;
+            }
+
+            .pt-40 {
+                padding-top: 6rem !important;
+            }
+
+            .mb-stack-lg {
+                margin-bottom: 64px !important;
+            }
+
+            .mt-stack-lg {
+                margin-top: 64px !important;
+            }
+
+            .gap-20 {
+                gap: 2rem !important;
+            }
+
+            .gap-16 {
+                gap: 1.5rem !important;
+            }
+
+            .p-12 {
+                padding: 1.5rem !important;
+            }
+
+            .py-32 {
+                padding-top: 3rem !important;
+                padding-bottom: 3rem !important;
+            }
+
+            .py-24 {
+                padding-top: 2rem !important;
+                padding-bottom: 2rem !important;
+            }
+
+            .mb-24 {
+                margin-bottom: 2rem !important;
+            }
+
+            .mb-20 {
+                margin-bottom: 1.5rem !important;
+            }
+
+            header.relative.min-h-screen {
+                min-height: 70vh !important;
+            }
+
+            .h-\[85vh\],
+            .h-\[90vh\] {
+                min-height: 55vh !important;
+                height: auto !important;
+            }
+        }
+
+        @media (max-width: 640px) {
+
+            .md\:col-span-5,
+            .md\:col-span-7,
+            .md\:col-span-4,
+            .md\:col-span-8,
+            .md\:col-span-3,
+            .md\:col-span-6,
+            .md\:col-span-2,
+            .md\:col-span-12 {
+                grid-column: span 1 / span 1 !important;
+            }
+
+            .md\:col-start-6,
+            .md\:col-start-7 {
+                grid-column-start: 1 !important;
+            }
+
+            .lg\:grid-cols-4 {
+                grid-template-columns: 1fr 1fr !important;
+            }
+
+            .md\:grid-cols-3 {
+                grid-template-columns: 1fr !important;
+            }
+
+            .md\:grid-cols-2 {
+                grid-template-columns: 1fr !important;
+            }
+
+            .md\:grid-cols-12 {
+                grid-template-columns: 1fr !important;
+            }
+
+            .order-2 {
+                order: 2 !important;
+            }
+
+            .order-1 {
+                order: 1 !important;
+            }
+
+            .text-right {
+                text-align: left !important;
+            }
+
+            .md\:text-right {
+                text-align: left !important;
+            }
+
+            .sticky.top-40 {
+                position: static !important;
+            }
+
+            .h-\[80vh\] {
+                height: 50vh !important;
+            }
+
+            .md\:h-\[600px\] {
+                height: auto !important;
+            }
+
+            .aspect-\[21\/9\] {
+                aspect-ratio: 16/9 !important;
+            }
+
+            .md\:pr-16,
+            .md\:pl-16 {
+                padding: 0 !important;
+            }
+        }
+    </style>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@hotwired/turbo@8.0.4/+esm"></script>
+    <script src="turbo-init.js" defer></script>
 </head>
+
 <body class="bg-background text-on-surface font-body-md overflow-x-hidden">
-<!-- TopNavBar -->
-<nav class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md transition-all duration-400 ease-in-out border-b border-primary/5">
-<div class="flex justify-between items-center px-margin-desktop py-4 w-full max-w-container-max mx-auto">
-<div class="flex items-center gap-4">
-<img alt="INFINITE Logo" class="h-12 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFmiThjT4IX5GBC37a5q4tnUK9zzxK6_JkuDxJlow9VCgFnpBaB5E2h0incMlvmJIYaYzZcUIv82iRJh4oX5G7Q2HRNWyWddgJZG4E9LBWVvdWIMfWvhO8XLJSRMF7Ve0mguEYoJQgZ2y2tm6JRKI0GoutKDlcHP7MJVi9RO9z2ScAfbtGuAAMzFzSrhYHZItxVD3FcpaCUUxM5tATUVpS0_ZRcMipvUIuT2qKzWQrt_Bz0FeuR_DsNMzMabQpcAQySOw"/>
-<span class="font-headline-md text-headline-md tracking-tighter text-primary">INFINITE</span>
-</div>
-<div class="hidden md:flex gap-10 items-center">
-<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-400 ease-in-out uppercase" href="index.html">Home</a>
-<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-400 ease-in-out uppercase" href="approach.html">Approach</a>
-<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-400 ease-in-out uppercase" href="journey.html">Journey</a>
-<a class="font-label-caps text-label-caps text-primary border-b-2 border-primary pb-1 transition-colors duration-400 ease-in-out uppercase" href="services.html">Services</a>
-<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-400 ease-in-out uppercase" href="projects.html">Projects</a>
-<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-400 ease-in-out uppercase" href="services.html#contact">Contact</a>
-</div>
-<button id="mobile-hamburger" class="md:hidden flex flex-col justify-center items-center gap-[5px] p-1 cursor-pointer border-none bg-transparent" aria-label="Open navigation menu" style="z-index:200;">
-  <span style="display:block;width:24px;height:2px;background:#3e1010;transition:all .3s;"></span>
-  <span style="display:block;width:24px;height:2px;background:#3e1010;transition:all .3s;"></span>
-  <span style="display:block;width:24px;height:2px;background:#3e1010;transition:all .3s;"></span>
-</button><a href="services.html#contact" style="text-decoration:none;"><button class="bg-primary text-on-primary px-8 py-3 font-label-caps text-label-caps uppercase tracking-widest transition-all duration-400 hover:opacity-90">
-            Inquire
-        </button></a>
-</div>
-</nav>
-<!-- Mobile Full-Screen Menu -->
-<div id="mobile-menu" style="display:none;position:fixed;inset:0;z-index:150;background:#fff8f7;flex-direction:column;align-items:center;justify-content:center;gap:2.5rem;" aria-hidden="true">
-  <button id="mobile-close" style="position:absolute;top:1.5rem;right:1.5rem;background:none;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;" aria-label="Close menu">
-    <span class="material-symbols-outlined" style="font-size:2rem;color:#3e1010;">close</span>
-  </button>
-  <a href="index.html" onclick="closeMobileMenu()" style="font-family:Manrope,sans-serif;font-size:13px;letter-spacing:0.15em;font-weight:600;color:#3e1010;text-transform:uppercase;text-decoration:none;">Home</a>
-  <a href="approach.html" onclick="closeMobileMenu()" style="font-family:Manrope,sans-serif;font-size:13px;letter-spacing:0.15em;font-weight:600;color:#3e1010;text-transform:uppercase;text-decoration:none;">Approach</a>
-  <a href="journey.html" onclick="closeMobileMenu()" style="font-family:Manrope,sans-serif;font-size:13px;letter-spacing:0.15em;font-weight:600;color:#3e1010;text-transform:uppercase;text-decoration:none;">Journey</a>
-  <a href="services.html" onclick="closeMobileMenu()" style="font-family:Manrope,sans-serif;font-size:13px;letter-spacing:0.15em;font-weight:600;color:#3e1010;text-transform:uppercase;text-decoration:none;">Services</a>
-  <a href="projects.html" onclick="closeMobileMenu()" style="font-family:Manrope,sans-serif;font-size:13px;letter-spacing:0.15em;font-weight:600;color:#3e1010;text-transform:uppercase;text-decoration:none;">Projects</a>
-  <a href="services.html#contact" onclick="closeMobileMenu()" style="font-family:Manrope,sans-serif;font-size:13px;letter-spacing:0.15em;font-weight:600;color:#3e1010;text-transform:uppercase;text-decoration:none;">Contact</a>
-  <a href="services.html#contact" style="background:#3e1010;color:#fff;padding:1rem 2.5rem;font-family:Manrope,sans-serif;font-size:12px;letter-spacing:0.2em;font-weight:600;text-transform:uppercase;text-decoration:none;margin-top:1rem;">Inquire</a>
-</div>
-<script>
-function openMobileMenu(){ var m=document.getElementById('mobile-menu'); if(m){m.style.display='flex';document.body.style.overflow='hidden';} }
-function closeMobileMenu(){ var m=document.getElementById('mobile-menu'); if(m){m.style.display='none';document.body.style.overflow='';} }
-(function(){
-  var btn=document.getElementById('mobile-hamburger');
-  var cls=document.getElementById('mobile-close');
-  if(btn) btn.addEventListener('click',openMobileMenu);
-  if(cls) cls.addEventListener('click',closeMobileMenu);
-})();
-</script>
-<!-- Hero Section -->
-<header class="pt-40 pb-stack-lg px-margin-desktop max-w-container-max mx-auto relative overflow-hidden">
-<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
-<div class="md:col-span-7">
-<span class="font-label-caps text-label-caps text-primary uppercase tracking-widest mb-6 block">Capabilities &amp; Expertise</span>
-<h1 class="font-display-lg text-display-lg mb-8 leading-tight text-primary">Elevating Spaces Through <span class="italic">Technical Integrity</span> &amp; Human Artistry.</h1>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
-                We offer a vertically integrated suite of services that bridge the gap between architectural vision and tangible execution, ensuring every square foot resonates with purpose.
-            </p>
-</div>
-<div class="md:col-span-5 relative">
-<div class="aspect-[4/5] bg-surface-container-high overflow-hidden shadow-xl">
-<img class="w-full h-full object-cover" data-alt="A high-end minimalist interior showing a blend of architectural precision and warm lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6ml3Pg9HVqb5owHB5J85xlIB676WyEiV_7EGqO_-aLQxhhtCIyljXzzyMJuIDCNY0fJGqr9iErWjbsYCXMw9W4KY2v3vxmFBsx0JkvLqCRCmVozJ-PsSpaTIplW8bowxKlmmosShsu6XByTt23IlgEf2i_EuCczsrv546a2A47Q-MuzL4bqfdEiNaL9PjJ6oM1f8Kiu8A_WbvHcjVjfTpxNgfl0twdzvXphDuYGU6HmFFLfUUXkf0ZA"/>
-</div>
-</div>
-</div>
-</header>
-<!-- Services Detailed Breakdown -->
-<section class="py-stack-lg bg-surface-container-low px-margin-desktop">
-<div class="max-w-container-max mx-auto">
-<div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
-<div class="max-w-2xl">
-<h2 class="font-headline-md text-headline-md text-primary mb-4">Core Competencies</h2>
-<p class="font-body-md text-body-md text-on-surface-variant">Our process is non-linear and holistic. We don't just design; we curate experiences that balance the technical demands of construction with the emotional needs of the inhabitant.</p>
-</div>
-<div class="font-label-caps text-label-caps text-primary border-b border-primary pb-2">01 — 04</div>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
-<!-- Service 1 -->
-<div class="reveal-on-scroll group">
-<div class="mb-8 overflow-hidden aspect-square bg-surface shadow-sm">
-<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA14VsSV8QE-i97K_FypswiS_lfdoQmAi41NIJ4KbJcKB-McIIbAG4xhSESDSaLN-zy1tbi5MqotYYI7nZjCT5qc1Hu6zh5SG-H2N-U7GfQSC5Bb3Rpid23v7aRJyKc6RqR9n4h00VouSKw6OqJm-IhIAMr63UGmLJtTh7_uk5hrwouWFu54pQwkNucL2S3CYmUV8prHHAGYnjj6IrqDtRsIDVb_tPMl2vfDUNOcl2BLPolz79S3g8GOA"/>
-</div>
-<h3 class="font-headline-sm text-headline-sm text-primary mb-4">Holistic Architecture</h3>
-<p class="font-body-md text-body-md text-on-surface-variant mb-6">Designing structures from the inside out, where the façade and flow are intrinsically linked to the site's environment and the user's journey.</p>
-<ul class="space-y-2">
-<li class="flex items-center gap-2 font-label-caps text-[10px] text-on-surface uppercase tracking-tighter">
-<span class="w-1.5 h-1.5 bg-primary rounded-full"></span> Site Analysis &amp; Urbanism
-                    </li>
-<li class="flex items-center gap-2 font-label-caps text-[10px] text-on-surface uppercase tracking-tighter">
-<span class="w-1.5 h-1.5 bg-primary rounded-full"></span> Concept Development
-                    </li>
-<li class="flex items-center gap-2 font-label-caps text-[10px] text-on-surface uppercase tracking-tighter">
-<span class="w-1.5 h-1.5 bg-primary rounded-full"></span> Sustainable Design
-                    </li>
-</ul>
-</div>
-<!-- Service 2 -->
-<div class="reveal-on-scroll group" style="transition-delay: 100ms;">
-<div class="mb-8 overflow-hidden aspect-square bg-surface shadow-sm">
-<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIfW_9ffGh6cj78h_6hkuLWLBZx0otGQzq0la1W-xpa_ur5RhdKgn_tULFAV4OiSxZ7IbFXuu4gTcafIVBH5Qq5QfahnDldzvWCGWSpA3O8k8AnZOTnFB3mkwMwxVandZXcN8MJRE1eEkjlcS3vcnp6HNMhX_LNT8S9bimKDpmrj1eiWHC3g0ZrE55tMjxm-7PgiJB5zB6vTI30LrjeBi-WMqK8pBtGp-otnP5G_FkBdObpM-vrruBlQ"/>
-</div>
-<h3 class="font-headline-sm text-headline-sm text-primary mb-4">Interior Design</h3>
-<p class="font-body-md text-body-md text-on-surface-variant mb-6">Curating tactile environments through material honesty and spatial intelligence. We create interiors that feel both expansive and intimate.</p>
-<ul class="space-y-2">
-<li class="flex items-center gap-2 font-label-caps text-[10px] text-on-surface uppercase tracking-tighter">
-<span class="w-1.5 h-1.5 bg-primary rounded-full"></span> Custom Furniture &amp; FF&amp;E
-                    </li>
-<li class="flex items-center gap-2 font-label-caps text-[10px] text-on-surface uppercase tracking-tighter">
-<span class="w-1.5 h-1.5 bg-primary rounded-full"></span> Lighting Orchestration
-                    </li>
-<li class="flex items-center gap-2 font-label-caps text-[10px] text-on-surface uppercase tracking-tighter">
-<span class="w-1.5 h-1.5 bg-primary rounded-full"></span> Material Specification
-                    </li>
-</ul>
-</div>
-<!-- Service 3 -->
-<div class="reveal-on-scroll group" style="transition-delay: 200ms;">
-<div class="mb-8 overflow-hidden aspect-square bg-surface shadow-sm">
-<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCw9_fELYSdly_HLzFy033bRfRufa0rOoZqqiOCFPzysGMwlE7PL5hyEsJAPHZhbZqQw0iItXkZ_xlaX9zcZNPCU5QwuIxcJjO0XenXXDmKNdnFZ0LOKDEd3mhwZRkzhL0fCqa8KVvsHNKwMCkWkwDJKS0lBA0ARKC4Um4VFTibrSk3uJCEt_4sGKDev1FDzRCrdhWWqAnd3UfRXXjdNXkxdDYViedypQOC5PgFJSVS3WdOgrd8GaHhdg"/>
-</div>
-<h3 class="font-headline-sm text-headline-sm text-primary mb-4">Fit-Out &amp; Execution</h3>
-<p class="font-body-md text-body-md text-on-surface-variant mb-6">Precision-led construction management. We translate complex drawings into flawless realities, managing every craft and technical detail.</p>
-<ul class="space-y-2">
-<li class="flex items-center gap-2 font-label-caps text-[10px] text-on-surface uppercase tracking-tighter">
-<span class="w-1.5 h-1.5 bg-primary rounded-full"></span> Project Management
-                    </li>
-<li class="flex items-center gap-2 font-label-caps text-[10px] text-on-surface uppercase tracking-tighter">
-<span class="w-1.5 h-1.5 bg-primary rounded-full"></span> Government Approvals
-                    </li>
-<li class="flex items-center gap-2 font-label-caps text-[10px] text-on-surface uppercase tracking-tighter">
-<span class="w-1.5 h-1.5 bg-primary rounded-full"></span> On-site Supervision
-                    </li>
-</ul>
-</div>
-<!-- Service 4 -->
-<div class="reveal-on-scroll group" style="transition-delay: 300ms;">
-<div class="mb-8 overflow-hidden aspect-square bg-surface shadow-sm">
-<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRJ7F2M-r0EXJfPM8qANrsgmzzTmQzdxsa7tbp8ry2YdFkNP5l4AYSq67vj-KergnnWMothSQRcqNUstA1l1D3qTCEwdBGz2u1aCBzKMEGWFTK_FpFiKuTecFvFhQoPsT0hO5I1CCiOl2CVc9-2EuUh7NjwwuaxATXs1ZDzt3p6rSXHCthCvcPceaaOcek1TKpepSg9Qz2AkP1Lf8uBRE4rkX46-01qEkiI7NX-g0qDAYDxcK5h9iNyw"/>
-</div>
-<h3 class="font-headline-sm text-headline-sm text-primary mb-4">Spatial Well-Being</h3>
-<p class="font-body-md text-body-md text-on-surface-variant mb-6">Expert consultation on how environments affect human psychology and physiology. Applying biophilic design and ergonomic flow.</p>
-<ul class="space-y-2">
-<li class="flex items-center gap-2 font-label-caps text-[10px] text-on-surface uppercase tracking-tighter">
-<span class="w-1.5 h-1.5 bg-primary rounded-full"></span> Wellness Audits
-                    </li>
-<li class="flex items-center gap-2 font-label-caps text-[10px] text-on-surface uppercase tracking-tighter">
-<span class="w-1.5 h-1.5 bg-primary rounded-full"></span> Biophilic Integration
-                    </li>
-<li class="flex items-center gap-2 font-label-caps text-[10px] text-on-surface uppercase tracking-tighter">
-<span class="w-1.5 h-1.5 bg-primary rounded-full"></span> Acoustic Engineering
-                    </li>
-</ul>
-</div>
-</div>
-</div>
-</section>
-<!-- FAQ Section -->
-<section class="py-stack-lg px-margin-desktop max-w-container-max mx-auto">
-<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
-<div class="md:col-span-4">
-<h2 class="font-headline-md text-headline-md text-primary mb-6">Common Inquiries</h2>
-<p class="font-body-md text-body-md text-on-surface-variant mb-8">Everything you need to know about partnering with us to build your vision.</p>
-<div class="bg-secondary-container p-8">
-<p class="font-label-caps text-label-caps text-primary mb-4">Still have questions?</p>
-<a class="flex items-center gap-2 font-headline-sm text-headline-sm text-primary hover:opacity-80" href="#contact">
-                    Speak with an architect <span class="material-symbols-outlined">arrow_forward</span>
-</a>
-</div>
-</div>
-<div class="md:col-span-8 flex flex-col gap-4">
-<!-- FAQ 1 -->
-<div class="faq-item group border-b border-surface-container-highest pb-6 cursor-pointer" onclick="toggleFaq(this)">
-<div class="flex justify-between items-center py-4">
-<h4 class="font-headline-sm text-headline-sm text-primary group-hover:opacity-70 transition-opacity">What is holistic architecture?</h4>
-<span class="faq-icon material-symbols-outlined text-primary transition-transform duration-400">add</span>
-</div>
-<div class="faq-answer">
-<p class="font-body-md text-body-md text-on-surface-variant pb-4 leading-relaxed">
-                        Holistic architecture is an approach that considers the building as a whole, living system. It integrates the structure, its environment, the interiors, and the psychological impact on occupants into a single, unified design narrative. We prioritize harmony between form, function, and nature.
-                    </p>
-</div>
-</div>
-<!-- FAQ 2 -->
-<div class="faq-item group border-b border-surface-container-highest pb-6 cursor-pointer" onclick="toggleFaq(this)">
-<div class="flex justify-between items-center py-4">
-<h4 class="font-headline-sm text-headline-sm text-primary group-hover:opacity-70 transition-opacity">Do you manage government approvals and permits?</h4>
-<span class="faq-icon material-symbols-outlined text-primary transition-transform duration-400">add</span>
-</div>
-<div class="faq-answer">
-<p class="font-body-md text-body-md text-on-surface-variant pb-4 leading-relaxed">
-                        Yes, INFINITE provides full end-to-end management, including all necessary approvals from local authorities (DDA, Dubai Municipality, Civil Defence, etc.). Our team handles the technical documentation and liaison to ensure a seamless project commencement.
-                    </p>
-</div>
-</div>
-<!-- FAQ 3 -->
-<div class="faq-item group border-b border-surface-container-highest pb-6 cursor-pointer" onclick="toggleFaq(this)">
-<div class="flex justify-between items-center py-4">
-<h4 class="font-headline-sm text-headline-sm text-primary group-hover:opacity-70 transition-opacity">What is the typical timeline for a fit-out project?</h4>
-<span class="faq-icon material-symbols-outlined text-primary transition-transform duration-400">add</span>
-</div>
-<div class="faq-answer">
-<p class="font-body-md text-body-md text-on-surface-variant pb-4 leading-relaxed">
-                        Timelines vary based on scope and scale. A typical commercial or luxury residential fit-out can range from 12 to 24 weeks. During the initial consultation, we provide a detailed project roadmap with key milestones from design freeze to handover.
-                    </p>
-</div>
-</div>
-<!-- FAQ 4 -->
-<div class="faq-item group border-b border-surface-container-highest pb-6 cursor-pointer" onclick="toggleFaq(this)">
-<div class="flex justify-between items-center py-4">
-<h4 class="font-headline-sm text-headline-sm text-primary group-hover:opacity-70 transition-opacity">How do you handle budget management?</h4>
-<span class="faq-icon material-symbols-outlined text-primary transition-transform duration-400">add</span>
-</div>
-<div class="faq-answer">
-<p class="font-body-md text-body-md text-on-surface-variant pb-4 leading-relaxed">
-                        We operate with total transparency. Budgets are defined at the conceptual stage and tracked meticulously through our 'Technical Integrity' protocol. We provide detailed BOQs (Bill of Quantities) and regular financial updates to avoid any surprises.
-                    </p>
-</div>
-</div>
-<!-- FAQ 5 -->
-<div class="faq-item group border-b border-surface-container-highest pb-6 cursor-pointer" onclick="toggleFaq(this)">
-<div class="flex justify-between items-center py-4">
-<h4 class="font-headline-sm text-headline-sm text-primary group-hover:opacity-70 transition-opacity">Can I visit projects currently under construction?</h4>
-<span class="faq-icon material-symbols-outlined text-primary transition-transform duration-400">add</span>
-</div>
-<div class="faq-answer">
-<p class="font-body-md text-body-md text-on-surface-variant pb-4 leading-relaxed">
-                        We encourage it. Seeing our craftsmanship in person is the best way to understand our quality standards. Site visits can be arranged upon request, subject to safety protocols and client privacy agreements.
-                    </p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Contact & Enquiry Form -->
-<section class="py-stack-lg bg-primary text-on-primary px-margin-desktop relative overflow-hidden" id="contact">
-<!-- Abstract Background Shape -->
-<div class="absolute -right-20 -bottom-20 w-96 h-96 bg-background rounded-full blur-[100px] opacity-10"></div>
-<div class="max-w-container-max mx-auto relative z-10">
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-20">
-<div class="flex flex-col justify-center">
-<h2 class="font-display-lg text-display-lg">Let's build something <span class="italic">unforgettable</span>.</h2>
-</div>
-<div class="bg-surface-container-lowest/10 backdrop-blur-sm p-8 md:p-12 border border-on-primary/10 flex flex-col justify-center">
-<div class="space-y-12">
-<div>
-<p class="font-label-caps text-label-caps text-on-primary/60 mb-3 uppercase flex items-center gap-2"><span class="material-symbols-outlined text-lg">mail</span> Email Us</p>
-<p class="font-headline-sm text-headline-sm hover:text-surface-variant transition-colors"><a href="mailto:hello@infinite.ae">hello@infinite.ae</a></p>
-</div>
-<div>
-<p class="font-label-caps text-label-caps text-on-primary/60 mb-3 uppercase flex items-center gap-2">
-<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
-  <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c-.003 1.396.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
-</svg> WhatsApp</p>
-<p class="font-headline-sm text-headline-sm hover:text-surface-variant transition-colors"><a href="https://wa.me/97140000000" target="_blank">+971 4 000 0000</a></p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
+    <!-- TopNavBar -->
+    <nav
+        class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md transition-all duration-400 ease-in-out border-b border-primary/5">
+        <div class="flex justify-between items-center px-margin-desktop py-4 w-full max-w-container-max mx-auto">
+            <a href="index.html" class="flex items-center hover:opacity-90 transition-opacity">
+                <img alt="INFINITE Logo" class="h-12 w-auto object-contain" src="projects_images/logo_navbar.png" />
+            </a>
+            <div class="hidden md:flex gap-10 items-center">
+                <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-400 ease-in-out uppercase"
+                    href="index.html">Home</a>
+                <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-400 ease-in-out uppercase"
+                    href="approach.html">Approach</a>
+                <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-400 ease-in-out uppercase"
+                    href="journey.html">Journey</a>
+                <a class="font-label-caps text-label-caps text-primary border-b-2 border-primary pb-1 transition-colors duration-400 ease-in-out uppercase"
+                    href="services.html">Services</a>
+                <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-400 ease-in-out uppercase"
+                    href="projects.html">Projects</a>
+                <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-400 ease-in-out uppercase"
+                    href="services.html#contact">Contact</a>
+            </div>
+            <button id="mobile-hamburger"
+                class="md:hidden flex flex-col justify-center items-center gap-[5px] p-1 cursor-pointer border-none bg-transparent"
+                aria-label="Open navigation menu" style="z-index:200;">
+                <span style="display:block;width:24px;height:2px;background:#3e1010;transition:all .3s;"></span>
+                <span style="display:block;width:24px;height:2px;background:#3e1010;transition:all .3s;"></span>
+                <span style="display:block;width:24px;height:2px;background:#3e1010;transition:all .3s;"></span>
+            </button><a href="services.html#contact" style="text-decoration:none;"><button
+                    class="bg-primary text-on-primary px-8 py-3 font-label-caps text-label-caps uppercase tracking-widest transition-all duration-400 hover:opacity-90">
+                    Inquire
+                </button></a>
+        </div>
+    </nav>
+    <!-- Mobile Full-Screen Menu -->
+    <div id="mobile-menu"
+        style="display:none;position:fixed;inset:0;z-index:150;background:#fff8f7;flex-direction:column;align-items:center;justify-content:center;gap:2.5rem;"
+        aria-hidden="true">
+        <button id="mobile-close"
+            style="position:absolute;top:1.5rem;right:1.5rem;background:none;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;"
+            aria-label="Close menu">
+            <span class="material-symbols-outlined" style="font-size:2rem;color:#3e1010;">close</span>
+        </button>
+        <a href="index.html" onclick="closeMobileMenu()"
+            style="font-family:Manrope,sans-serif;font-size:13px;letter-spacing:0.15em;font-weight:600;color:#3e1010;text-transform:uppercase;text-decoration:none;">Home</a>
+        <a href="approach.html" onclick="closeMobileMenu()"
+            style="font-family:Manrope,sans-serif;font-size:13px;letter-spacing:0.15em;font-weight:600;color:#3e1010;text-transform:uppercase;text-decoration:none;">Approach</a>
+        <a href="journey.html" onclick="closeMobileMenu()"
+            style="font-family:Manrope,sans-serif;font-size:13px;letter-spacing:0.15em;font-weight:600;color:#3e1010;text-transform:uppercase;text-decoration:none;">Journey</a>
+        <a href="services.html" onclick="closeMobileMenu()"
+            style="font-family:Manrope,sans-serif;font-size:13px;letter-spacing:0.15em;font-weight:600;color:#3e1010;text-transform:uppercase;text-decoration:none;">Services</a>
+        <a href="projects.html" onclick="closeMobileMenu()"
+            style="font-family:Manrope,sans-serif;font-size:13px;letter-spacing:0.15em;font-weight:600;color:#3e1010;text-transform:uppercase;text-decoration:none;">Projects</a>
+        <a href="services.html#contact" onclick="closeMobileMenu()"
+            style="font-family:Manrope,sans-serif;font-size:13px;letter-spacing:0.15em;font-weight:600;color:#3e1010;text-transform:uppercase;text-decoration:none;">Contact</a>
+        <a href="services.html#contact"
+            style="background:#3e1010;color:#fff;padding:1rem 2.5rem;font-family:Manrope,sans-serif;font-size:12px;letter-spacing:0.2em;font-weight:600;text-transform:uppercase;text-decoration:none;margin-top:1rem;">Inquire</a>
+    </div>
+    <script>
+        function openMobileMenu() { var m = document.getElementById('mobile-menu'); if (m) { m.style.display = 'flex'; document.body.style.overflow = 'hidden'; } }
+        function closeMobileMenu() { var m = document.getElementById('mobile-menu'); if (m) { m.style.display = 'none'; document.body.style.overflow = ''; } }
+        (function () {
+            var btn = document.getElementById('mobile-hamburger');
+            var cls = document.getElementById('mobile-close');
+            if (btn) btn.addEventListener('click', openMobileMenu);
+            if (cls) cls.addEventListener('click', closeMobileMenu);
+        })();
+    </script>
+    <!-- Hero Section -->
+    <header class="pt-40 pb-stack-lg px-margin-desktop max-w-container-max mx-auto relative overflow-hidden">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+            <div class="md:col-span-7">
+                <span
+                    class="font-label-caps text-label-caps text-primary uppercase tracking-widest mb-6 block">Capabilities
+                    &amp; Expertise</span>
+                <h1 class="font-display-lg text-display-lg mb-8 leading-tight text-primary">Elevating Spaces Through
+                    <span class="italic">Technical Integrity</span> &amp; Human Artistry.
+                </h1>
+                <p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                    We offer a vertically integrated suite of services that bridge the gap between architectural vision
+                    and tangible execution, ensuring every square foot resonates with purpose.
+                </p>
+            </div>
+            <div class="md:col-span-5 relative">
+                <div class="aspect-[4/5] bg-surface-container-high overflow-hidden shadow-xl">
+                    <img class="w-full h-full object-cover"
+                        data-alt="A high-end minimalist interior showing a blend of architectural precision and warm lighting."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6ml3Pg9HVqb5owHB5J85xlIB676WyEiV_7EGqO_-aLQxhhtCIyljXzzyMJuIDCNY0fJGqr9iErWjbsYCXMw9W4KY2v3vxmFBsx0JkvLqCRCmVozJ-PsSpaTIplW8bowxKlmmosShsu6XByTt23IlgEf2i_EuCczsrv546a2A47Q-MuzL4bqfdEiNaL9PjJ6oM1f8Kiu8A_WbvHcjVjfTpxNgfl0twdzvXphDuYGU6HmFFLfUUXkf0ZA" />
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Services Detailed Breakdown -->
+    <section class="py-stack-lg bg-surface-container-low px-margin-desktop">
+        <div class="max-w-container-max mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+                <div class="max-w-2xl">
+                    <h2 class="font-headline-md text-headline-md text-primary mb-4">Core Competencies</h2>
+                    <p class="font-body-md text-body-md text-on-surface-variant">Our process is non-linear and holistic.
+                        We don't just design; we curate experiences that balance the technical demands of construction
+                        with the emotional needs of the inhabitant.</p>
+                </div>
+                <div class="font-label-caps text-label-caps text-primary border-b border-primary pb-2">01 — 04</div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+                <!-- Service 1 -->
+                <div class="reveal-on-scroll group">
+                    <div class="mb-8 overflow-hidden aspect-square bg-surface shadow-sm">
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuA14VsSV8QE-i97K_FypswiS_lfdoQmAi41NIJ4KbJcKB-McIIbAG4xhSESDSaLN-zy1tbi5MqotYYI7nZjCT5qc1Hu6zh5SG-H2N-U7GfQSC5Bb3Rpid23v7aRJyKc6RqR9n4h00VouSKw6OqJm-IhIAMr63UGmLJtTh7_uk5hrwouWFu54pQwkNucL2S3CYmUV8prHHAGYnjj6IrqDtRsIDVb_tPMl2vfDUNOcl2BLPolz79S3g8GOA" />
+                    </div>
+                    <h3 class="font-headline-sm text-headline-sm text-primary mb-4">Holistic Architecture</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant mb-6">Designing structures from the
+                        inside out, where the façade and flow are intrinsically linked to the site's environment and the
+                        user's journey.</p>
+                    <ul class="space-y-2">
+                        <li
+                            class="flex items-center gap-2 font-label-caps text-[10px] text-on-surface uppercase tracking-tighter">
+                            <span class="w-1.5 h-1.5 bg-primary rounded-full"></span> Site Analysis &amp; Urbanism
+                        </li>
+                        <li
+                            class="flex items-center gap-2 font-label-caps text-[10px] text-on-surface uppercase tracking-tighter">
+                            <span class="w-1.5 h-1.5 bg-primary rounded-full"></span> Concept Development
+                        </li>
+                        <li
+                            class="flex items-center gap-2 font-label-caps text-[10px] text-on-surface uppercase tracking-tighter">
+                            <span class="w-1.5 h-1.5 bg-primary rounded-full"></span> Sustainable Design
+                        </li>
+                    </ul>
+                </div>
+                <!-- Service 2 -->
+                <div class="reveal-on-scroll group" style="transition-delay: 100ms;">
+                    <div class="mb-8 overflow-hidden aspect-square bg-surface shadow-sm">
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIfW_9ffGh6cj78h_6hkuLWLBZx0otGQzq0la1W-xpa_ur5RhdKgn_tULFAV4OiSxZ7IbFXuu4gTcafIVBH5Qq5QfahnDldzvWCGWSpA3O8k8AnZOTnFB3mkwMwxVandZXcN8MJRE1eEkjlcS3vcnp6HNMhX_LNT8S9bimKDpmrj1eiWHC3g0ZrE55tMjxm-7PgiJB5zB6vTI30LrjeBi-WMqK8pBtGp-otnP5G_FkBdObpM-vrruBlQ" />
+                    </div>
+                    <h3 class="font-headline-sm text-headline-sm text-primary mb-4">Interior Design</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant mb-6">Curating tactile environments
+                        through material honesty and spatial intelligence. We create interiors that feel both expansive
+                        and intimate.</p>
+                    <ul class="space-y-2">
+                        <li
+                            class="flex items-center gap-2 font-label-caps text-[10px] text-on-surface uppercase tracking-tighter">
+                            <span class="w-1.5 h-1.5 bg-primary rounded-full"></span> Custom Furniture &amp; FF&amp;E
+                        </li>
+                        <li
+                            class="flex items-center gap-2 font-label-caps text-[10px] text-on-surface uppercase tracking-tighter">
+                            <span class="w-1.5 h-1.5 bg-primary rounded-full"></span> Lighting Orchestration
+                        </li>
+                        <li
+                            class="flex items-center gap-2 font-label-caps text-[10px] text-on-surface uppercase tracking-tighter">
+                            <span class="w-1.5 h-1.5 bg-primary rounded-full"></span> Material Specification
+                        </li>
+                    </ul>
+                </div>
+                <!-- Service 3 -->
+                <div class="reveal-on-scroll group" style="transition-delay: 200ms;">
+                    <div class="mb-8 overflow-hidden aspect-square bg-surface shadow-sm">
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCw9_fELYSdly_HLzFy033bRfRufa0rOoZqqiOCFPzysGMwlE7PL5hyEsJAPHZhbZqQw0iItXkZ_xlaX9zcZNPCU5QwuIxcJjO0XenXXDmKNdnFZ0LOKDEd3mhwZRkzhL0fCqa8KVvsHNKwMCkWkwDJKS0lBA0ARKC4Um4VFTibrSk3uJCEt_4sGKDev1FDzRCrdhWWqAnd3UfRXXjdNXkxdDYViedypQOC5PgFJSVS3WdOgrd8GaHhdg" />
+                    </div>
+                    <h3 class="font-headline-sm text-headline-sm text-primary mb-4">Fit-Out &amp; Execution</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant mb-6">Precision-led construction
+                        management. We translate complex drawings into flawless realities, managing every craft and
+                        technical detail.</p>
+                    <ul class="space-y-2">
+                        <li
+                            class="flex items-center gap-2 font-label-caps text-[10px] text-on-surface uppercase tracking-tighter">
+                            <span class="w-1.5 h-1.5 bg-primary rounded-full"></span> Project Management
+                        </li>
+                        <li
+                            class="flex items-center gap-2 font-label-caps text-[10px] text-on-surface uppercase tracking-tighter">
+                            <span class="w-1.5 h-1.5 bg-primary rounded-full"></span> Government Approvals
+                        </li>
+                        <li
+                            class="flex items-center gap-2 font-label-caps text-[10px] text-on-surface uppercase tracking-tighter">
+                            <span class="w-1.5 h-1.5 bg-primary rounded-full"></span> On-site Supervision
+                        </li>
+                    </ul>
+                </div>
+                <!-- Service 4 -->
+                <div class="reveal-on-scroll group" style="transition-delay: 300ms;">
+                    <div class="mb-8 overflow-hidden aspect-square bg-surface shadow-sm">
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRJ7F2M-r0EXJfPM8qANrsgmzzTmQzdxsa7tbp8ry2YdFkNP5l4AYSq67vj-KergnnWMothSQRcqNUstA1l1D3qTCEwdBGz2u1aCBzKMEGWFTK_FpFiKuTecFvFhQoPsT0hO5I1CCiOl2CVc9-2EuUh7NjwwuaxATXs1ZDzt3p6rSXHCthCvcPceaaOcek1TKpepSg9Qz2AkP1Lf8uBRE4rkX46-01qEkiI7NX-g0qDAYDxcK5h9iNyw" />
+                    </div>
+                    <h3 class="font-headline-sm text-headline-sm text-primary mb-4">Spatial Well-Being</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant mb-6">Expert consultation on how
+                        environments affect human psychology and physiology. Applying biophilic design and ergonomic
+                        flow.</p>
+                    <ul class="space-y-2">
+                        <li
+                            class="flex items-center gap-2 font-label-caps text-[10px] text-on-surface uppercase tracking-tighter">
+                            <span class="w-1.5 h-1.5 bg-primary rounded-full"></span> Wellness Audits
+                        </li>
+                        <li
+                            class="flex items-center gap-2 font-label-caps text-[10px] text-on-surface uppercase tracking-tighter">
+                            <span class="w-1.5 h-1.5 bg-primary rounded-full"></span> Biophilic Integration
+                        </li>
+                        <li
+                            class="flex items-center gap-2 font-label-caps text-[10px] text-on-surface uppercase tracking-tighter">
+                            <span class="w-1.5 h-1.5 bg-primary rounded-full"></span> Acoustic Engineering
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- FAQ Section -->
+    <section class="py-stack-lg px-margin-desktop max-w-container-max mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+            <div class="md:col-span-4">
+                <h2 class="font-headline-md text-headline-md text-primary mb-6">Common Inquiries</h2>
+                <p class="font-body-md text-body-md text-on-surface-variant mb-8">Everything you need to know about
+                    partnering with us to build your vision.</p>
+                <div class="bg-secondary-container p-8">
+                    <p class="font-label-caps text-label-caps text-primary mb-4">Still have questions?</p>
+                    <a class="flex items-center gap-2 font-headline-sm text-headline-sm text-primary hover:opacity-80"
+                        href="#contact">
+                        Speak with an architect <span class="material-symbols-outlined">arrow_forward</span>
+                    </a>
+                </div>
+            </div>
+            <div class="md:col-span-8 flex flex-col gap-4">
+                <!-- FAQ 1 -->
+                <div class="faq-item group border-b border-surface-container-highest pb-6 cursor-pointer"
+                    onclick="toggleFaq(this)">
+                    <div class="flex justify-between items-center py-4">
+                        <h4
+                            class="font-headline-sm text-headline-sm text-primary group-hover:opacity-70 transition-opacity">
+                            What is holistic architecture?</h4>
+                        <span
+                            class="faq-icon material-symbols-outlined text-primary transition-transform duration-400">add</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p class="font-body-md text-body-md text-on-surface-variant pb-4 leading-relaxed">
+                            Holistic architecture is an approach that considers the building as a whole, living system.
+                            It integrates the structure, its environment, the interiors, and the psychological impact on
+                            occupants into a single, unified design narrative. We prioritize harmony between form,
+                            function, and nature.
+                        </p>
+                    </div>
+                </div>
+                <!-- FAQ 2 -->
+                <div class="faq-item group border-b border-surface-container-highest pb-6 cursor-pointer"
+                    onclick="toggleFaq(this)">
+                    <div class="flex justify-between items-center py-4">
+                        <h4
+                            class="font-headline-sm text-headline-sm text-primary group-hover:opacity-70 transition-opacity">
+                            Do you manage government approvals and permits?</h4>
+                        <span
+                            class="faq-icon material-symbols-outlined text-primary transition-transform duration-400">add</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p class="font-body-md text-body-md text-on-surface-variant pb-4 leading-relaxed">
+                            Yes, INFINITE provides full end-to-end management, including all necessary approvals from
+                            local authorities (DDA, Dubai Municipality, Civil Defence, etc.). Our team handles the
+                            technical documentation and liaison to ensure a seamless project commencement.
+                        </p>
+                    </div>
+                </div>
+                <!-- FAQ 3 -->
+                <div class="faq-item group border-b border-surface-container-highest pb-6 cursor-pointer"
+                    onclick="toggleFaq(this)">
+                    <div class="flex justify-between items-center py-4">
+                        <h4
+                            class="font-headline-sm text-headline-sm text-primary group-hover:opacity-70 transition-opacity">
+                            What is the typical timeline for a fit-out project?</h4>
+                        <span
+                            class="faq-icon material-symbols-outlined text-primary transition-transform duration-400">add</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p class="font-body-md text-body-md text-on-surface-variant pb-4 leading-relaxed">
+                            Timelines vary based on scope and scale. A typical commercial or luxury residential fit-out
+                            can range from 12 to 24 weeks. During the initial consultation, we provide a detailed
+                            project roadmap with key milestones from design freeze to handover.
+                        </p>
+                    </div>
+                </div>
+                <!-- FAQ 4 -->
+                <div class="faq-item group border-b border-surface-container-highest pb-6 cursor-pointer"
+                    onclick="toggleFaq(this)">
+                    <div class="flex justify-between items-center py-4">
+                        <h4
+                            class="font-headline-sm text-headline-sm text-primary group-hover:opacity-70 transition-opacity">
+                            How do you handle budget management?</h4>
+                        <span
+                            class="faq-icon material-symbols-outlined text-primary transition-transform duration-400">add</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p class="font-body-md text-body-md text-on-surface-variant pb-4 leading-relaxed">
+                            We operate with total transparency. Budgets are defined at the conceptual stage and tracked
+                            meticulously through our 'Technical Integrity' protocol. We provide detailed BOQs (Bill of
+                            Quantities) and regular financial updates to avoid any surprises.
+                        </p>
+                    </div>
+                </div>
+                <!-- FAQ 5 -->
+                <div class="faq-item group border-b border-surface-container-highest pb-6 cursor-pointer"
+                    onclick="toggleFaq(this)">
+                    <div class="flex justify-between items-center py-4">
+                        <h4
+                            class="font-headline-sm text-headline-sm text-primary group-hover:opacity-70 transition-opacity">
+                            Can I visit projects currently under construction?</h4>
+                        <span
+                            class="faq-icon material-symbols-outlined text-primary transition-transform duration-400">add</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p class="font-body-md text-body-md text-on-surface-variant pb-4 leading-relaxed">
+                            We encourage it. Seeing our craftsmanship in person is the best way to understand our
+                            quality standards. Site visits can be arranged upon request, subject to safety protocols and
+                            client privacy agreements.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact & Enquiry Form -->
+    <section class="py-stack-lg bg-primary text-on-primary px-margin-desktop relative overflow-hidden" id="contact">
+        <!-- Abstract Background Shape -->
+        <div class="absolute -right-20 -bottom-20 w-96 h-96 bg-background rounded-full blur-[100px] opacity-10"></div>
+        <div class="max-w-container-max mx-auto relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-20">
+                <div class="flex flex-col justify-center">
+                    <h2 class="font-display-lg text-display-lg">Let's build something <span
+                            class="italic">unforgettable</span>.</h2>
+                </div>
+                <div
+                    class="bg-surface-container-lowest/10 backdrop-blur-sm p-8 md:p-12 border border-on-primary/10 flex flex-col justify-center">
+                    <div class="space-y-12">
+                        <div>
+                            <p
+                                class="font-label-caps text-label-caps text-on-primary/60 mb-3 uppercase flex items-center gap-2">
+                                <span class="material-symbols-outlined text-lg">mail</span> Email Us
+                            </p>
+                            <p class="font-headline-sm text-headline-sm hover:text-surface-variant transition-colors"><a
+                                    href="mailto:hello@infinite.ae">hello@infinite.ae</a></p>
+                        </div>
+                        <div>
+                            <p
+                                class="font-label-caps text-label-caps text-on-primary/60 mb-3 uppercase flex items-center gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+                                    viewBox="0 0 16 16">
+                                    <path
+                                        d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c-.003 1.396.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
+                                </svg> WhatsApp
+                            </p>
+                            <p class="font-headline-sm text-headline-sm hover:text-surface-variant transition-colors"><a
+                                    href="https://wa.me/97140000000" target="_blank">+971 4 000 0000</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- Footer -->
     <footer class="bg-surface-container-low py-stack-lg border-none">
         <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
@@ -426,7 +648,7 @@ function closeMobileMenu(){ var m=document.getElementById('mobile-menu'); if(m){
                                 href="projects.html">Projects</a></li>
                     </ul>
                 </div>
-               
+
                 <div class="md:col-span-4">
                     <h5 class="font-label-caps text-label-caps text-primary mb-6">SOCIAL</h5>
                     <ul class="flex gap-6">
@@ -450,53 +672,53 @@ function closeMobileMenu(){ var m=document.getElementById('mobile-menu'); if(m){
             </div>
         </div>
     </footer>
-<script>
-    // FAQ Toggle Logic
-    function toggleFaq(element) {
-        const isActive = element.classList.contains('active');
-        
-        // Close all other FAQs
-        document.querySelectorAll('.faq-item').forEach(item => {
-            item.classList.remove('active');
-        });
+    <script>
+        // FAQ Toggle Logic
+        function toggleFaq(element) {
+            const isActive = element.classList.contains('active');
 
-        // If it wasn't active, open it
-        if (!isActive) {
-            element.classList.add('active');
+            // Close all other FAQs
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.classList.remove('active');
+            });
+
+            // If it wasn't active, open it
+            if (!isActive) {
+                element.classList.add('active');
+            }
         }
-    }
 
-    // Reveal animations on scroll
-    const observerOptions = {
-        threshold: 0.1
-    };
+        // Reveal animations on scroll
+        const observerOptions = {
+            threshold: 0.1
+        };
 
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('active');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal-on-scroll').forEach(el => observer.observe(el));
+
+        // Smooth nav background change on scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('py-0');
+                nav.classList.add('shadow-sm');
+                nav.querySelector('div').classList.remove('h-20');
+                nav.querySelector('div').classList.add('h-16');
+            } else {
+                nav.classList.remove('py-0');
+                nav.classList.remove('shadow-sm');
+                nav.querySelector('div').classList.add('h-20');
+                nav.querySelector('div').classList.remove('h-16');
             }
         });
-    }, observerOptions);
+    </script>
+</body>
 
-    document.querySelectorAll('.reveal-on-scroll').forEach(el => observer.observe(el));
-
-    // Smooth nav background change on scroll
-    window.addEventListener('scroll', () => {
-        const nav = document.querySelector('nav');
-        if (window.scrollY > 50) {
-            nav.classList.add('py-0');
-            nav.classList.add('shadow-sm');
-            nav.querySelector('div').classList.remove('h-20');
-            nav.querySelector('div').classList.add('h-16');
-        } else {
-            nav.classList.remove('py-0');
-            nav.classList.remove('shadow-sm');
-            nav.querySelector('div').classList.add('h-20');
-            nav.querySelector('div').classList.remove('h-16');
-        }
-    });
-</script>
-</body></html>
-
-
+</html>

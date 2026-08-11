@@ -282,6 +282,7 @@
         }
     </style>
     <script type="module" src="https://cdn.jsdelivr.net/npm/@hotwired/turbo@8.0.4/+esm"></script>
+    <script src="turbo-init.js" defer></script>
 </head>
 
 <body class="font-body-md text-body-md selection:bg-secondary-fixed selection:text-on-secondary-fixed">
@@ -289,11 +290,9 @@
     <nav
         class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md transition-all duration-400 ease-in-out border-b border-primary/5">
         <div class="flex justify-between items-center px-margin-desktop py-4 w-full max-w-container-max mx-auto">
-            <div class="flex items-center gap-4">
-                <img alt="INFINITE Logo" class="h-12 w-auto"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFmiThjT4IX5GBC37a5q4tnUK9zzxK6_JkuDxJlow9VCgFnpBaB5E2h0incMlvmJIYaYzZcUIv82iRJh4oX5G7Q2HRNWyWddgJZG4E9LBWVvdWIMfWvhO8XLJSRMF7Ve0mguEYoJQgZ2y2tm6JRKI0GoutKDlcHP7MJVi9RO9z2ScAfbtGuAAMzFzSrhYHZItxVD3FcpaCUUxM5tATUVpS0_ZRcMipvUIuT2qKzWQrt_Bz0FeuR_DsNMzMabQpcAQySOw" />
-                <span class="font-headline-md text-headline-md tracking-tighter text-primary">INFINITE</span>
-            </div>
+            <a href="index.html" class="flex items-center hover:opacity-90 transition-opacity">
+                <img alt="INFINITE Logo" class="h-12 w-auto object-contain" src="projects_images/logo_navbar.png" />
+            </a>
             <div class="hidden md:flex gap-10 items-center">
                 <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-400 ease-in-out uppercase"
                     href="index.html">Home</a>
@@ -584,7 +583,7 @@
         </section>
     </main>
     <!-- Footer -->
-   <footer class="bg-surface-container-low py-stack-lg border-none">
+    <footer class="bg-surface-container-low py-stack-lg border-none">
         <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
             <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter mb-24">
                 <div class="md:col-span-4 mb-12 md:mb-0">
@@ -610,7 +609,7 @@
                                 href="projects.html">Projects</a></li>
                     </ul>
                 </div>
-               
+
                 <div class="md:col-span-4">
                     <h5 class="font-label-caps text-label-caps text-primary mb-6">SOCIAL</h5>
                     <ul class="flex gap-6">
