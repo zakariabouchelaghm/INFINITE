@@ -1,218 +1,392 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 
-<html class="light" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Farm Villa | INFINITE Holistic Architecture</title>
-<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;1,400&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            "colors": {
-                    "on-primary-fixed": "#380c0c",
-                    "secondary-container": "#ece1d1",
-                    "on-secondary-fixed": "#201b11",
-                    "on-tertiary-fixed": "#291801",
-                    "surface-variant": "#efdfdf",
-                    "outline": "#857372",
-                    "on-error": "#ffffff",
-                    "on-primary": "#ffffff",
-                    "tertiary": "#0f0600",
-                    "secondary": "#655d51",
-                    "primary-container": "#3e1010",
-                    "background": "#fff8f7",
-                    "primary-fixed": "#ffdad7",
-                    "on-tertiary-container": "#9f8260",
-                    "on-secondary": "#ffffff",
-                    "on-secondary-container": "#6b6357",
-                    "surface-container": "#faeaea",
-                    "primary-fixed-dim": "#ffb3af",
-                    "primary": "#1b0001",
-                    "outline-variant": "#d7c2c0",
-                    "on-error-container": "#93000a",
-                    "on-primary-fixed-variant": "#6f3634",
-                    "surface-container-low": "#fff0f0",
-                    "surface-dim": "#e6d6d6",
-                    "error-container": "#ffdad6",
-                    "on-primary-container": "#bb7471",
-                    "surface-container-lowest": "#ffffff",
-                    "surface": "#fff8f7",
-                    "on-surface": "#221a1a",
-                    "on-background": "#221a1a",
-                    "on-surface-variant": "#534342",
-                    "tertiary-fixed-dim": "#e2c19b",
-                    "surface-tint": "#8b4d4a",
-                    "surface-container-highest": "#efdfdf",
-                    "inverse-primary": "#ffb3af",
-                    "error": "#ba1a1a",
-                    "surface-container-high": "#f4e5e4",
-                    "tertiary-fixed": "#ffddb6",
-                    "secondary-fixed": "#ece1d1",
-                    "on-secondary-fixed-variant": "#4d463a",
-                    "on-tertiary-fixed-variant": "#594325",
-                    "tertiary-container": "#2e1c03",
-                    "surface-bright": "#fff8f7",
-                    "secondary-fixed-dim": "#d0c5b6",
-                    "on-tertiary": "#ffffff",
-                    "inverse-on-surface": "#fdeded",
-                    "inverse-surface": "#372e2e"
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Farm Villa | INFINITE Holistic Architecture</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;1,400&amp;family=Manrope:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed": "#380c0c",
+                        "secondary-container": "#ece1d1",
+                        "on-secondary-fixed": "#201b11",
+                        "on-tertiary-fixed": "#291801",
+                        "surface-variant": "#efdfdf",
+                        "outline": "#857372",
+                        "on-error": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "tertiary": "#0f0600",
+                        "secondary": "#655d51",
+                        "primary-container": "#3e1010",
+                        "background": "#fff8f7",
+                        "primary-fixed": "#ffdad7",
+                        "on-tertiary-container": "#9f8260",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-container": "#6b6357",
+                        "surface-container": "#faeaea",
+                        "primary-fixed-dim": "#ffb3af",
+                        "primary": "#1b0001",
+                        "outline-variant": "#d7c2c0",
+                        "on-error-container": "#93000a",
+                        "on-primary-fixed-variant": "#6f3634",
+                        "surface-container-low": "#fff0f0",
+                        "surface-dim": "#e6d6d6",
+                        "error-container": "#ffdad6",
+                        "on-primary-container": "#bb7471",
+                        "surface-container-lowest": "#ffffff",
+                        "surface": "#fff8f7",
+                        "on-surface": "#221a1a",
+                        "on-background": "#221a1a",
+                        "on-surface-variant": "#534342",
+                        "tertiary-fixed-dim": "#e2c19b",
+                        "surface-tint": "#8b4d4a",
+                        "surface-container-highest": "#efdfdf",
+                        "inverse-primary": "#ffb3af",
+                        "error": "#ba1a1a",
+                        "surface-container-high": "#f4e5e4",
+                        "tertiary-fixed": "#ffddb6",
+                        "secondary-fixed": "#ece1d1",
+                        "on-secondary-fixed-variant": "#4d463a",
+                        "on-tertiary-fixed-variant": "#594325",
+                        "tertiary-container": "#2e1c03",
+                        "surface-bright": "#fff8f7",
+                        "secondary-fixed-dim": "#d0c5b6",
+                        "on-tertiary": "#ffffff",
+                        "inverse-on-surface": "#fdeded",
+                        "inverse-surface": "#372e2e"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "margin-mobile": "20px",
+                        "unit": "8px",
+                        "container-max": "1280px",
+                        "margin-desktop": "64px"
+                    },
+                    "fontFamily": {
+                        "headline-lg-mobile": ["Libre Caslon Text"],
+                        "body-md": ["Manrope"],
+                        "body-lg": ["Manrope"],
+                        "headline-lg": ["Libre Caslon Text"],
+                        "display-lg": ["Libre Caslon Text"],
+                        "label-caps": ["Manrope"],
+                        "headline-md": ["Libre Caslon Text"]
+                    },
+                    "fontSize": {
+                        "headline-lg-mobile": ["32px", { "lineHeight": "1.2", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-lg": ["48px", { "lineHeight": "1.2", "fontWeight": "400" }],
+                        "display-lg": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+                        "label-caps": ["12px", { "lineHeight": "1.4", "letterSpacing": "0.1em", "fontWeight": "600" }],
+                        "headline-md": ["32px", { "lineHeight": "1.3", "fontWeight": "400" }]
+                    }
+                },
             },
-            "borderRadius": {
-                    "DEFAULT": "0.25rem",
-                    "lg": "0.5rem",
-                    "xl": "0.75rem",
-                    "full": "9999px"
-            },
-            "spacing": {
-                    "gutter": "24px",
-                    "margin-mobile": "20px",
-                    "unit": "8px",
-                    "container-max": "1280px",
-                    "margin-desktop": "64px"
-            },
-            "fontFamily": {
-                    "headline-lg-mobile": ["Libre Caslon Text"],
-                    "body-md": ["Manrope"],
-                    "body-lg": ["Manrope"],
-                    "headline-lg": ["Libre Caslon Text"],
-                    "display-lg": ["Libre Caslon Text"],
-                    "label-caps": ["Manrope"],
-                    "headline-md": ["Libre Caslon Text"]
-            },
-            "fontSize": {
-                    "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "400"}],
-                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
-                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
-                    "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "400"}],
-                    "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400"}],
-                    "label-caps": ["12px", {"lineHeight": "1.4", "letterSpacing": "0.1em", "fontWeight": "600"}],
-                    "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "400"}]
-            }
-          },
-        },
-      }
+        }
     </script>
-<style>
-        body { background-color: #fff8f7; -webkit-font-smoothing: antialiased; }
-        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
-        .parallax-section { background-attachment: fixed; background-position: center; background-repeat: no-repeat; background-size: cover; }
-        .mask-overlay { background: linear-gradient(to bottom, rgba(255, 248, 247, 0) 0%, rgba(255, 248, 247, 1) 100%); }
-        .reveal-line { overflow: hidden; }
-        .reveal-line span { display: inline-block; transform: translateY(100%); transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
-        .revealed span { transform: translateY(0%); }
+    <style>
+        body {
+            background-color: #fff8f7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .parallax-section {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .mask-overlay {
+            background: linear-gradient(to bottom, rgba(255, 248, 247, 0) 0%, rgba(255, 248, 247, 1) 100%);
+        }
+
+        .reveal-line {
+            overflow: hidden;
+        }
+
+        .reveal-line span {
+            display: inline-block;
+            transform: translateY(100%);
+            transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .revealed span {
+            transform: translateY(0%);
+        }
     </style>
-<style>
-/* ===== RESPONSIVE FIXES ===== */
-@media (max-width: 767px) {
-  .text-display-lg { font-size: clamp(28px,8vw,48px) !important; line-height: 1.2 !important; }
-  .text-headline-lg { font-size: clamp(22px,6vw,36px) !important; line-height: 1.25 !important; }
-  .text-headline-md { font-size: clamp(20px,5vw,28px) !important; }
-  [class*="px-margin-desktop"] { padding-left: 20px !important; padding-right: 20px !important; }
-  .py-stack-lg { padding-top: 64px !important; padding-bottom: 64px !important; }
-  .pt-40 { padding-top: 6rem !important; }
-  .mb-stack-lg { margin-bottom: 64px !important; }
-  .mt-stack-lg { margin-top: 64px !important; }
-  .gap-20 { gap: 2rem !important; }
-  .gap-16 { gap: 1.5rem !important; }
-  .p-12 { padding: 1.5rem !important; }
-  .py-32 { padding-top: 3rem !important; padding-bottom: 3rem !important; }
-  .py-24 { padding-top: 2rem !important; padding-bottom: 2rem !important; }
-  .mb-24 { margin-bottom: 2rem !important; }
-  .mb-20 { margin-bottom: 1.5rem !important; }
-  header.relative.min-h-screen { min-height: 70vh !important; }
-  .h-\[85vh\], .h-\[90vh\] { min-height: 55vh !important; height: auto !important; }
-}
-@media (max-width: 640px) {
-  .md\:col-span-5, .md\:col-span-7, .md\:col-span-4, .md\:col-span-8,
-  .md\:col-span-3, .md\:col-span-6, .md\:col-span-2, .md\:col-span-12 {
-    grid-column: span 1 / span 1 !important;
-  }
-  .md\:col-start-6, .md\:col-start-7 { grid-column-start: 1 !important; }
-  .lg\:grid-cols-4 { grid-template-columns: 1fr 1fr !important; }
-  .md\:grid-cols-3 { grid-template-columns: 1fr !important; }
-  .md\:grid-cols-2 { grid-template-columns: 1fr !important; }
-  .md\:grid-cols-12 { grid-template-columns: 1fr !important; }
-  .order-2 { order: 2 !important; }
-  .order-1 { order: 1 !important; }
-  .text-right { text-align: left !important; }
-  .md\:text-right { text-align: left !important; }
-  .sticky.top-40 { position: static !important; }
-  .h-\[80vh\] { height: 50vh !important; }
-  .md\:h-\[600px\] { height: auto !important; }
-  .aspect-\[21\/9\] { aspect-ratio: 16/9 !important; }
-  .md\:pr-16, .md\:pl-16 { padding: 0 !important; }
-}
-</style>    <script type="module" src="https://cdn.jsdelivr.net/npm/@hotwired/turbo@8.0.4/+esm"></script>
+    <style>
+        /* ===== RESPONSIVE FIXES ===== */
+        @media (max-width: 767px) {
+            .text-display-lg {
+                font-size: clamp(28px, 8vw, 48px) !important;
+                line-height: 1.2 !important;
+            }
+
+            .text-headline-lg {
+                font-size: clamp(22px, 6vw, 36px) !important;
+                line-height: 1.25 !important;
+            }
+
+            .text-headline-md {
+                font-size: clamp(20px, 5vw, 28px) !important;
+            }
+
+            [class*="px-margin-desktop"] {
+                padding-left: 20px !important;
+                padding-right: 20px !important;
+            }
+
+            .py-stack-lg {
+                padding-top: 64px !important;
+                padding-bottom: 64px !important;
+            }
+
+            .pt-40 {
+                padding-top: 6rem !important;
+            }
+
+            .mb-stack-lg {
+                margin-bottom: 64px !important;
+            }
+
+            .mt-stack-lg {
+                margin-top: 64px !important;
+            }
+
+            .gap-20 {
+                gap: 2rem !important;
+            }
+
+            .gap-16 {
+                gap: 1.5rem !important;
+            }
+
+            .p-12 {
+                padding: 1.5rem !important;
+            }
+
+            .py-32 {
+                padding-top: 3rem !important;
+                padding-bottom: 3rem !important;
+            }
+
+            .py-24 {
+                padding-top: 2rem !important;
+                padding-bottom: 2rem !important;
+            }
+
+            .mb-24 {
+                margin-bottom: 2rem !important;
+            }
+
+            .mb-20 {
+                margin-bottom: 1.5rem !important;
+            }
+
+            header.relative.min-h-screen {
+                min-height: 70vh !important;
+            }
+
+            .h-\[85vh\],
+            .h-\[90vh\] {
+                min-height: 55vh !important;
+                height: auto !important;
+            }
+        }
+
+        @media (max-width: 640px) {
+
+            .md\:col-span-5,
+            .md\:col-span-7,
+            .md\:col-span-4,
+            .md\:col-span-8,
+            .md\:col-span-3,
+            .md\:col-span-6,
+            .md\:col-span-2,
+            .md\:col-span-12 {
+                grid-column: span 1 / span 1 !important;
+            }
+
+            .md\:col-start-6,
+            .md\:col-start-7 {
+                grid-column-start: 1 !important;
+            }
+
+            .lg\:grid-cols-4 {
+                grid-template-columns: 1fr 1fr !important;
+            }
+
+            .md\:grid-cols-3 {
+                grid-template-columns: 1fr !important;
+            }
+
+            .md\:grid-cols-2 {
+                grid-template-columns: 1fr !important;
+            }
+
+            .md\:grid-cols-12 {
+                grid-template-columns: 1fr !important;
+            }
+
+            .order-2 {
+                order: 2 !important;
+            }
+
+            .order-1 {
+                order: 1 !important;
+            }
+
+            .text-right {
+                text-align: left !important;
+            }
+
+            .md\:text-right {
+                text-align: left !important;
+            }
+
+            .sticky.top-40 {
+                position: static !important;
+            }
+
+            .h-\[80vh\] {
+                height: 50vh !important;
+            }
+
+            .md\:h-\[600px\] {
+                height: auto !important;
+            }
+
+            .aspect-\[21\/9\] {
+                aspect-ratio: 16/9 !important;
+            }
+
+            .md\:pr-16,
+            .md\:pl-16 {
+                padding: 0 !important;
+            }
+        }
+    </style>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@hotwired/turbo@8.0.4/+esm"></script>
 </head>
+
 <body class="font-body-md text-on-surface selection:bg-primary-fixed-dim selection:text-primary">
-<!-- TopNavBar -->
-<nav class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md transition-all duration-400 ease-in-out border-b border-primary/5">
-<div class="flex justify-between items-center px-margin-desktop py-4 w-full max-w-container-max mx-auto">
-<div class="flex items-center gap-4">
-<img alt="INFINITE Logo" class="h-12 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFmiThjT4IX5GBC37a5q4tnUK9zzxK6_JkuDxJlow9VCgFnpBaB5E2h0incMlvmJIYaYzZcUIv82iRJh4oX5G7Q2HRNWyWddgJZG4E9LBWVvdWIMfWvhO8XLJSRMF7Ve0mguEYoJQgZ2y2tm6JRKI0GoutKDlcHP7MJVi9RO9z2ScAfbtGuAAMzFzSrhYHZItxVD3FcpaCUUxM5tATUVpS0_ZRcMipvUIuT2qKzWQrt_Bz0FeuR_DsNMzMabQpcAQySOw"/>
-<span class="font-headline-md text-headline-md tracking-tighter text-primary">INFINITE</span>
-</div>
-<div class="hidden md:flex gap-10 items-center">
-<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-400 ease-in-out uppercase" href="index.html">Home</a>
-<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-400 ease-in-out uppercase" href="approach.html">Approach</a>
-<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-400 ease-in-out uppercase" href="journey.html">Journey</a>
-<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-400 ease-in-out uppercase" href="services.html">Services</a>
-<a class="font-label-caps text-label-caps text-primary border-b-2 border-primary pb-1 transition-colors duration-400 ease-in-out uppercase" href="projects.html">Projects</a>
-<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-400 ease-in-out uppercase" href="services.html#contact">Contact</a>
-</div>
-<button id="mobile-hamburger" class="md:hidden flex flex-col justify-center items-center gap-[5px] p-1 cursor-pointer border-none bg-transparent" aria-label="Open navigation menu" style="z-index:200;">
-  <span style="display:block;width:24px;height:2px;background:#3e1010;transition:all .3s;"></span>
-  <span style="display:block;width:24px;height:2px;background:#3e1010;transition:all .3s;"></span>
-  <span style="display:block;width:24px;height:2px;background:#3e1010;transition:all .3s;"></span>
-</button><a href="services.html#contact" style="text-decoration:none;"><button class="bg-primary text-on-primary px-8 py-3 font-label-caps text-label-caps uppercase tracking-widest transition-all duration-400 hover:opacity-90">
-            Inquire
-        </button></a>
-</div>
-</nav>
-<!-- Mobile Full-Screen Menu -->
-<div id="mobile-menu" style="display:none;position:fixed;inset:0;z-index:150;background:#fff8f7;flex-direction:column;align-items:center;justify-content:center;gap:2.5rem;" aria-hidden="true">
-  <button id="mobile-close" style="position:absolute;top:1.5rem;right:1.5rem;background:none;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;" aria-label="Close menu">
-    <span class="material-symbols-outlined" style="font-size:2rem;color:#3e1010;">close</span>
-  </button>
-  <a href="index.html" onclick="closeMobileMenu()" style="font-family:Manrope,sans-serif;font-size:13px;letter-spacing:0.15em;font-weight:600;color:#3e1010;text-transform:uppercase;text-decoration:none;">Home</a>
-  <a href="approach.html" onclick="closeMobileMenu()" style="font-family:Manrope,sans-serif;font-size:13px;letter-spacing:0.15em;font-weight:600;color:#3e1010;text-transform:uppercase;text-decoration:none;">Approach</a>
-  <a href="journey.html" onclick="closeMobileMenu()" style="font-family:Manrope,sans-serif;font-size:13px;letter-spacing:0.15em;font-weight:600;color:#3e1010;text-transform:uppercase;text-decoration:none;">Journey</a>
-  <a href="services.html" onclick="closeMobileMenu()" style="font-family:Manrope,sans-serif;font-size:13px;letter-spacing:0.15em;font-weight:600;color:#3e1010;text-transform:uppercase;text-decoration:none;">Services</a>
-  <a href="projects.html" onclick="closeMobileMenu()" style="font-family:Manrope,sans-serif;font-size:13px;letter-spacing:0.15em;font-weight:600;color:#3e1010;text-transform:uppercase;text-decoration:none;">Projects</a>
-  <a href="services.html#contact" onclick="closeMobileMenu()" style="font-family:Manrope,sans-serif;font-size:13px;letter-spacing:0.15em;font-weight:600;color:#3e1010;text-transform:uppercase;text-decoration:none;">Contact</a>
-  <a href="services.html#contact" style="background:#3e1010;color:#fff;padding:1rem 2.5rem;font-family:Manrope,sans-serif;font-size:12px;letter-spacing:0.2em;font-weight:600;text-transform:uppercase;text-decoration:none;margin-top:1rem;">Inquire</a>
-</div>
-<script>
-function openMobileMenu(){ var m=document.getElementById('mobile-menu'); if(m){m.style.display='flex';document.body.style.overflow='hidden';} }
-function closeMobileMenu(){ var m=document.getElementById('mobile-menu'); if(m){m.style.display='none';document.body.style.overflow='';} }
-(function(){
-  var btn=document.getElementById('mobile-hamburger');
-  var cls=document.getElementById('mobile-close');
-  if(btn) btn.addEventListener('click',openMobileMenu);
-  if(cls) cls.addEventListener('click',closeMobileMenu);
-})();
-</script>
-<main class="relative z-10 bg-background py-24 md:py-32 px-margin-mobile md:px-margin-desktop">
-    <div class="max-w-container-max mx-auto">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="aspect-square bg-surface-container overflow-hidden rounded-lg shadow-sm">
-                <img src="projects_images/farm%20villa/kitchen.png" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" loading="lazy" alt="Project Image">
+    <!-- TopNavBar -->
+    <nav
+        class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md transition-all duration-400 ease-in-out border-b border-primary/5">
+        <div class="flex justify-between items-center px-margin-desktop py-4 w-full max-w-container-max mx-auto">
+            <div class="flex items-center gap-4">
+                <img alt="INFINITE Logo" class="h-12 w-auto"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFmiThjT4IX5GBC37a5q4tnUK9zzxK6_JkuDxJlow9VCgFnpBaB5E2h0incMlvmJIYaYzZcUIv82iRJh4oX5G7Q2HRNWyWddgJZG4E9LBWVvdWIMfWvhO8XLJSRMF7Ve0mguEYoJQgZ2y2tm6JRKI0GoutKDlcHP7MJVi9RO9z2ScAfbtGuAAMzFzSrhYHZItxVD3FcpaCUUxM5tATUVpS0_ZRcMipvUIuT2qKzWQrt_Bz0FeuR_DsNMzMabQpcAQySOw" />
+                <span class="font-headline-md text-headline-md tracking-tighter text-primary">INFINITE</span>
             </div>
-            <div class="aspect-square bg-surface-container overflow-hidden rounded-lg shadow-sm">
-                <img src="projects_images/farm%20villa/rent%20villa.png" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" loading="lazy" alt="Project Image">
+            <div class="hidden md:flex gap-10 items-center">
+                <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-400 ease-in-out uppercase"
+                    href="index.html">Home</a>
+                <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-400 ease-in-out uppercase"
+                    href="approach.html">Approach</a>
+                <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-400 ease-in-out uppercase"
+                    href="journey.html">Journey</a>
+                <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-400 ease-in-out uppercase"
+                    href="services.html">Services</a>
+                <a class="font-label-caps text-label-caps text-primary border-b-2 border-primary pb-1 transition-colors duration-400 ease-in-out uppercase"
+                    href="projects.html">Projects</a>
+                <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-400 ease-in-out uppercase"
+                    href="services.html#contact">Contact</a>
             </div>
-            <div class="aspect-square bg-surface-container overflow-hidden rounded-lg shadow-sm">
-                <img src="projects_images/farm%20villa/villa%20for%20rent.png" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" loading="lazy" alt="Project Image">
+            <button id="mobile-hamburger"
+                class="md:hidden flex flex-col justify-center items-center gap-[5px] p-1 cursor-pointer border-none bg-transparent"
+                aria-label="Open navigation menu" style="z-index:200;">
+                <span style="display:block;width:24px;height:2px;background:#3e1010;transition:all .3s;"></span>
+                <span style="display:block;width:24px;height:2px;background:#3e1010;transition:all .3s;"></span>
+                <span style="display:block;width:24px;height:2px;background:#3e1010;transition:all .3s;"></span>
+            </button><a href="services.html#contact" style="text-decoration:none;"><button
+                    class="bg-primary text-on-primary px-8 py-3 font-label-caps text-label-caps uppercase tracking-widest transition-all duration-400 hover:opacity-90">
+                    Inquire
+                </button></a>
+        </div>
+    </nav>
+    <!-- Mobile Full-Screen Menu -->
+    <div id="mobile-menu"
+        style="display:none;position:fixed;inset:0;z-index:150;background:#fff8f7;flex-direction:column;align-items:center;justify-content:center;gap:2.5rem;"
+        aria-hidden="true">
+        <button id="mobile-close"
+            style="position:absolute;top:1.5rem;right:1.5rem;background:none;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;"
+            aria-label="Close menu">
+            <span class="material-symbols-outlined" style="font-size:2rem;color:#3e1010;">close</span>
+        </button>
+        <a href="index.html" onclick="closeMobileMenu()"
+            style="font-family:Manrope,sans-serif;font-size:13px;letter-spacing:0.15em;font-weight:600;color:#3e1010;text-transform:uppercase;text-decoration:none;">Home</a>
+        <a href="approach.html" onclick="closeMobileMenu()"
+            style="font-family:Manrope,sans-serif;font-size:13px;letter-spacing:0.15em;font-weight:600;color:#3e1010;text-transform:uppercase;text-decoration:none;">Approach</a>
+        <a href="journey.html" onclick="closeMobileMenu()"
+            style="font-family:Manrope,sans-serif;font-size:13px;letter-spacing:0.15em;font-weight:600;color:#3e1010;text-transform:uppercase;text-decoration:none;">Journey</a>
+        <a href="services.html" onclick="closeMobileMenu()"
+            style="font-family:Manrope,sans-serif;font-size:13px;letter-spacing:0.15em;font-weight:600;color:#3e1010;text-transform:uppercase;text-decoration:none;">Services</a>
+        <a href="projects.html" onclick="closeMobileMenu()"
+            style="font-family:Manrope,sans-serif;font-size:13px;letter-spacing:0.15em;font-weight:600;color:#3e1010;text-transform:uppercase;text-decoration:none;">Projects</a>
+        <a href="services.html#contact" onclick="closeMobileMenu()"
+            style="font-family:Manrope,sans-serif;font-size:13px;letter-spacing:0.15em;font-weight:600;color:#3e1010;text-transform:uppercase;text-decoration:none;">Contact</a>
+        <a href="services.html#contact"
+            style="background:#3e1010;color:#fff;padding:1rem 2.5rem;font-family:Manrope,sans-serif;font-size:12px;letter-spacing:0.2em;font-weight:600;text-transform:uppercase;text-decoration:none;margin-top:1rem;">Inquire</a>
+    </div>
+    <script>
+        function openMobileMenu() { var m = document.getElementById('mobile-menu'); if (m) { m.style.display = 'flex'; document.body.style.overflow = 'hidden'; } }
+        function closeMobileMenu() { var m = document.getElementById('mobile-menu'); if (m) { m.style.display = 'none'; document.body.style.overflow = ''; } }
+        (function () {
+            var btn = document.getElementById('mobile-hamburger');
+            var cls = document.getElementById('mobile-close');
+            if (btn) btn.addEventListener('click', openMobileMenu);
+            if (cls) cls.addEventListener('click', closeMobileMenu);
+        })();
+    </script>
+    <main class="relative z-10 bg-background py-24 md:py-32 px-margin-mobile md:px-margin-desktop">
+        <div class="max-w-container-max mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="aspect-square bg-surface-container overflow-hidden rounded-lg shadow-sm">
+                    <img src="projects_images/farm%20villa/kitchen.png"
+                        class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                        loading="lazy" alt="Project Image">
+                </div>
+                <div class="aspect-square bg-surface-container overflow-hidden rounded-lg shadow-sm">
+                    <img src="projects_images/farm%20villa/rent%20villa.png"
+                        class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                        loading="lazy" alt="Project Image">
+                </div>
+                <div class="aspect-square bg-surface-container overflow-hidden rounded-lg shadow-sm">
+                    <img src="projects_images/farm%20villa/Front.png"
+                        class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                        loading="lazy" alt="Project Image">
+                </div>
             </div>
         </div>
-    </div>
-</main>
-<!-- Footer Shell -->
+    </main>
+    <!-- Footer Shell -->
     <!-- Footer -->
     <footer class="bg-surface-container-low w-full border-t border-primary/10">
         <div
@@ -249,7 +423,7 @@ function closeMobileMenu(){ var m=document.getElementById('mobile-menu'); if(m){
                             href="journey.html">Process</a></li>
                 </ul>
             </div>
-            
+
             <div class="md:col-span-2">
                 <h5 class="font-label-caps text-label-caps text-primary mb-6 uppercase">Connect</h5>
                 <ul class="space-y-4">
@@ -268,7 +442,8 @@ function closeMobileMenu(){ var m=document.getElementById('mobile-menu'); if(m){
             <!-- Copyright -->
             <div
                 class="md:col-span-12 mt-16 pt-8 border-t border-primary/10 flex flex-col md:flex-row justify-between items-center gap-4">
-                <p class="font-body-md text-body-md text-on-surface-variant">&copy; 2024 INFINITE Holistic Architecture &amp;
+                <p class="font-body-md text-body-md text-on-surface-variant">&copy; 2024 INFINITE Holistic Architecture
+                    &amp;
                     Fit-Out. Dubai, UAE.</p>
                 <div class="flex gap-8">
                     <span
@@ -280,7 +455,7 @@ function closeMobileMenu(){ var m=document.getElementById('mobile-menu'); if(m){
             </div>
         </div>
     </footer>
-<script>
+    <script>
         // Simple entrance reveal animation
         document.addEventListener('DOMContentLoaded', () => {
             const lines = document.querySelectorAll('.reveal-line');
@@ -319,6 +494,6 @@ function closeMobileMenu(){ var m=document.getElementById('mobile-menu'); if(m){
             });
         });
     </script>
-</body></html>
+</body>
 
-
+</html>
